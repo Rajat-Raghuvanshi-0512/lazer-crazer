@@ -1,0 +1,100 @@
+#franchise-banner {
+    background: #010825;
+    backdrop-filter: blur(6.5px);
+    height: 100vh;
+    width: 100%;
+}
+
+#franchise-heading {
+    position: relative;
+    top: 200px;
+}
+
+#franchise-banner h1 {
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 132.9%;
+    text-align: center;
+    letter-spacing: 0.105em;
+    color: #2CF80B;
+    font-size: 2.5rem;
+}
+
+#franchise-banner h2 {
+    position: relative;
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 132.9%;
+    text-align: center;
+    letter-spacing: 0.105em;
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+#franchise-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+#franchise-banner-text {
+    position: absolute;
+    bottom: 25%;
+    left: 11%;
+}
+
+#franchise-banner-text button {
+    background: #2CF70B;
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 129.4%;
+    letter-spacing: -0.01em;
+    color: #010825;
+    text-shadow: 0px 18.0531px 21.2345px rgba(255, 255, 255, 0.29);
+    padding: 10px;
+    margin-left: 4%;
+}
+
+
+#franchise-banner-text ul li {
+    list-style: none;
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 158.5%;
+    color: #FFFFFF;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+}
+
+#franchise-temple {
+    height: 550px;
+    width: auto;
+    position: absolute;
+    bottom: 13%;
+    right: 0;
+}
+
+#franchise-temple img {
+    height: 100%;
+    width: 100%;
+}
+
+#franchise-base {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#franchise-base img {
+    height: 100%;
+    width: auto;
+}

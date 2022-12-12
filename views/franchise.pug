@@ -1,0 +1,155 @@
+doctype html 
+html 
+    head
+        title Lazer Crazer
+        block style
+        style
+            include ../static/style.css
+            include ../static/franchise.css
+        meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+        link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
+    block content 
+        body 
+            div#navbar
+                div#ul1-wrapper
+                    ul#ul1
+                        li #[a(href='/') HOME]
+                        li #[a(href='/') EVENT]
+                        li #[a(href='/') FRANCHISE]
+                            img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                div#nav-logo
+                    img#logo-background(src="../static/img/logo-background.png" alt="")
+                    img#main-logo(src="../static/img/logo.png" alt="")
+                div#ul2-wrapper
+                    ul#ul2 
+                        li #[a(href='/') RENTING]
+                        li #[a(href='/') MERCHANDISE]
+                        li #[a(href='/') BOOKING]
+                div#nav-planet 
+                    img(src="../static/img/nav-planet.png" alt="")
+
+            div#mobile-navbar
+                div#visible-navbar
+                    div#mobile-logo
+                        img(src="../static/img/logo.png" alt="")
+                    div#hamburger-icon
+                        span.bar
+                        span.bar
+                        span.bar
+                div#nav-items
+                    ul 
+                        li#home #[a(href='/') HOME]
+                            img#navigator(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/') EVENT]
+                        li #[a(href='/') FRANCHISE] 
+                        li #[a(href='/') RENTING]
+                        li #[a(href='/') MERCHANDISE]
+                        li #[a(href='/') BOOKING]
+                    div#navM-planet1
+                        img(src="../static/img/navM-planet.png" alt="")
+            div#planet-container
+                div#navM-planet2
+                    img(src="../static/img/navM-planet.png" alt="")
+
+            
+            div#franchise-banner
+                div#franchise-heading
+                    h1 FRANCHISE
+                    h2 FOR LASER TAG CLUB
+
+                div#franchise-content
+                    div#franchise-banner-text
+                        ul 
+                            li 
+                                img(src="../static/img/bullets.png", alt="")
+                                p Reliale Equipmet
+                            li 
+                                img(src="../static/img/bullets2.png", alt="")
+                                p Free Software
+                            li 
+                                img(src="../static/img/bullets3.png", alt="")
+                                p Working with franchise on equal terms
+                        button GET A QUOTE
+
+                    div#franchise-temple
+                        img(src="../static/img/franchise-temple.png", alt="")
+                div#franchise-base
+                    img(src="../static/img/franchise-base.png", alt="")
+
+
+
+
+
+            div#clientAndForm
+                div#clients
+                    img(src="../static/img/client1.png" alt="")
+                    img(src="../static/img/client2.png" alt="")
+                    img(src="../static/img/client3.png" alt="")
+                    img(src="../static/img/client4.png" alt="")
+                    img(src="../static/img/client5.png" alt="")
+                    img(src="../static/img/client6.png" alt="")
+                div#contactForm
+                    form(action="get") 
+                        p GET IN TOUCH WITH US
+                        div#row1
+                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name")
+
+                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone")
+
+                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email")
+                        div#row2
+                            textarea.textarea.myInput(name="message" id='message' cols="30" rows="10" placeholder="Send Comments")
+                        button#sendRequest SEND REQUEST
+
+
+            footer#footer            
+                div#footer-design
+                    img(src="../static/img/footer-design.png" alt="")
+                div#footer-design2
+                    img(src="../static/img/footer-design2.png" alt="")
+                div#brand-section
+                    div#brand-logo
+                        img(src="../static/img/banner-logo.png" alt="")
+                    p DELHI’S LARGEST AND TOP RATED LASER TAG ARENA IN HAUZ KHAS VILLAGE
+                div#mid-section
+                    p Lazer Crazer Laser Tag
+                    div#pixy Website by 
+                        a(href='https://pixysquare.com/' target='_blank')  www.pixysquare.com 
+                            div (click & connect)
+                    div#social-icons
+                        img(src="../static/img/fb.png" alt="")
+                        img(src="../static/img/insta.png" alt="")
+                        img(src="../static/img/youtube.png" alt="")
+                div#contact-section
+                    div#address
+                        img(src="../static/img/location.png" alt="")
+                        p 1A Hauz khas village, New delhi, india, 110016
+                    div#mobile
+                        img(src="../static/img/phone.png" alt="")
+                        p +91 8840175266/ 9971385510
+                    div#mail
+                        img(src="../static/img/envelope.png" alt="")
+                        p Lazercrazer@gmail.com
+
+            div#copyright
+                p Copyright c 2021 Lazer Crazer Tag Center. All rights reserved 
+
+            div#loading
+                div#loading-design1
+                    img(src="../static/img/loading-design1.png" alt="")
+
+                div#loading-planet
+                    img(src="../static/img/loading-planet.png" alt="")
+                div#progressBar
+                    div#progress
+                    div#progress-perc 0%
+
+                div#loading-design2
+                    img(src="../static/img/loading-design2.png" alt="")
+
+
+            block scripts
+                script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
+                script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
+                script 
+                    include ../static/script.js
