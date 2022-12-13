@@ -346,6 +346,13 @@
     }
 }
 @media screen and (max-width: 1000px) {
+    #client-blend {
+        top: -7%;
+    }
+    #knowMore-content-img {
+        width: 215px;
+        bottom: 78%;
+    }
     #activities-banner-lDesign {
         display: none;
     }
@@ -462,6 +469,16 @@
         bottom: 17%;
         width: 100%;
         padding: 0 25px;
+    }
+    #mobile-activities-para {
+        font-size: .8rem;
+    }
+    #mobile-arrow img {
+        height: 70px;
+        width: 70px;
+    }
+    #client-blend {
+        top: -8%;
     }
     
 }
