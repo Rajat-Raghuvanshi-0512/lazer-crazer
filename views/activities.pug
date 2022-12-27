@@ -29,12 +29,13 @@ html
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#home-navigator(src="../static/img/home-navigator.png" alt="")
-                a#nav-logo(href='/')
+                #nav-logo
                     img#logo-background(src="../static/img/logo-activities-background.png" alt="")
-                    picture
-                        source(type="image/webp" srcset="/static/img/logo.webp")
-                        source(type="image/png" srcset="/static/img/logo.png")
-                        img#main-logo(src="../static/img/logo.png" alt="")
+                    a(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img#main-logo(src="../static/img/logo.png" alt="")
                 div#ul2-wrapper
                     ul#ul2 
                         li #[a(href='/') RENTING]

@@ -27,15 +27,16 @@ html
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#home-navigator(src="../static/img/home-navigator.png" alt="")
-                a#nav-logo(href='/')
+                #nav-logo
                     picture
                         source(type="image/webp" srcset="/static/img/logo-background.webp")
                         source(type="image/png" srcset="/static/img/logo-background.png")
                         img#logo-background(src="../static/img/logo-background.png" alt="")
-                    picture
-                        source(type="image/webp" srcset="/static/img/logo.webp")
-                        source(type="image/png" srcset="/static/img/logo.png")
-                        img#main-logo(src="../static/img/logo.png" alt="")
+                    a(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img#main-logo(src="../static/img/logo.png" alt="")
                 div#ul2-wrapper
                     ul#ul2 
                         li #[a(href='/') RENTING]
@@ -558,7 +559,7 @@ html
                         p.learnMore learn more &#8594;
 
 
-                    a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='#contact-form')
+                    a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='/event')
                         div.cta-box-img
                             picture
                                 source(type="image/webp" srcset="/static/img/cta-img1.webp")
@@ -586,7 +587,7 @@ html
                         h3 Booking
                         p unstoppable fun, & great memories waiting to be made.
                         p.learnMore learn more &#8594;
-                    a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='#contact-form ')
+                    a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='#contact-form')
                         div.cta-box-img
                             picture
                                 source(type="image/webp" srcset="/static/img/cta-img3.webp")

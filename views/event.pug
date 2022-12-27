@@ -28,15 +28,16 @@ html
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#home-navigator(src="../static/img/home-navigator.png" alt="")
-                a#nav-logo(href='/')
+                #nav-logo
                     picture
                         source(type="image/webp" srcset="/static/img/logo-background.webp")
                         source(type="image/png" srcset="/static/img/logo-background.png")
                         img#logo-background(src="../static/img/logo-background.png" alt="")
-                    picture
-                        source(type="image/webp" srcset="/static/img/logo.webp")
-                        source(type="image/png" srcset="/static/img/logo.png")
-                        img#main-logo(src="../static/img/logo.png" alt="")
+                    a(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img#main-logo(src="../static/img/logo.png" alt="")
                 div#ul2-wrapper
                     ul#ul2 
                         li #[a(href='/') RENTING]
@@ -151,6 +152,7 @@ html
                             p.para-inactive Are you looking for the best birthday party ever? 
                             p.para-active You and your guests will look forward to this party, love playing it, and will talk about it for some time. 
                             p.pContainerM Be it your kids or your friends which you are trying to please; Lazer Crazer Laser Tag has the best birthday party options for each scenario.
+                            a.learnMore(href='#contact-form') learn more
 
                     div#partyContainer2.partyContainer
                         a.moreDetails(href='/')
@@ -164,6 +166,7 @@ html
                             p.para-inactive Team building at the highest level. Attractive packages for small and large company celebrations. 
                             p.para-active We provide several gaming options, all designed to challenge, team build, and promote strategic planning in a fun and creative environment. 
                             p.pContainerM We are 100% mobile and can come to your corporate park or facility or meet you at your off-site location and set up a mission field or You can also book a corporate event at our laser tag arena.
+                            a.learnMore(href='#contact-form') learn more
 
                     div#partyContainer3.partyContainer
                         a.moreDetails(href='/')
@@ -177,6 +180,7 @@ html
                             p.para-inactive Tired of the same old party? An action-packed, fun, memorable party awaits you with Laser Crazer
                             p.para-active If you have an environment that's ready for play, great! If not - we will bring our inflatable obstacles to construct your customized laser tag arena on your property
                             p.pContainerM We are 100% mobile. We will Bring The Fun to You! We offer party packages to meet ALL budgets 
+                            a.learnMore(href='#contact-form') learn more
 
             div#hostParty        
                 div#event-parallax5

@@ -125,9 +125,11 @@
     height: 100%;
     width: 100%;
 }
+
 #activities-banner-mobile {
     display: none;
 }
+
 #activities-banner-mobile img {
     height: 100%;
     width: 100%;
@@ -334,25 +336,46 @@
 #type1-bgM {
     display: none;
 }
+
 @media (min-width: 1000px) and (max-width: 1300px) {
     #activities-banner-lDesign {
         height: 130px;
     }
+
     #kid-jumping {
         height: 125px;
     }
+
     #console-controls {
         height: 80px;
     }
+
+    #arrow1 {
+        margin: -11px 0;
+        height: 50px;
+    }
+
+    #arrow2 {
+        margin: -11px 0;
+        height: 50px;
+    }
+
+    #arrow3 {
+        margin: -11px 0;
+        height: 50px;
+    }
 }
+
 @media screen and (max-width: 1000px) {
     #client-blend {
         top: -7%;
     }
+
     #knowMore-content-img {
         width: 215px;
         bottom: 78%;
     }
+
     #activities-banner-lDesign {
         display: none;
     }
@@ -395,9 +418,11 @@
         justify-content: start;
         top: 20%;
     }
+
     #activities-banner {
         height: 100%;
     }
+
     #activities-banner-mobile {
         display: block;
         position: absolute;
@@ -405,6 +430,7 @@
         width: 100%;
         padding: 0 15px;
     }
+
     #mobile-arrow {
         display: block;
         position: absolute;
@@ -414,51 +440,65 @@
         align-items: center;
         justify-content: center;
     }
+
     #mobile-arrow img {
         height: 80px;
         width: 80px;
     }
+
     #arrow-container {
         display: none;
     }
+
     .type2 {
         flex-direction: column-reverse;
     }
+
     .type2-bg {
         height: 100%;
     }
+
     .type2-content p {
         width: 100%;
         font-size: .8rem;
         margin-bottom: 35px;
         padding: 0 42px 0 0;
     }
+
     #type1-bgM {
         display: block;
     }
+
     #type1-bgD {
         display: none;
     }
+
     #type1 {
         height: unset;
     }
+
     #type1-content {
         top: 14%;
         left: 12%;
     }
+
     #type1-content p {
         padding: 0 42px 0 0;
     }
+
     #type1-bg {
         width: 90%;
         margin: auto;
     }
+
     #types-heading {
         font-size: 1.4rem;
     }
+
     #order-change {
         flex-direction: column;
     }
+
     #order-change .type2-bg {
         height: 270px;
     }
@@ -470,15 +510,18 @@
         width: 100%;
         padding: 0 25px;
     }
+
     #mobile-activities-para {
         font-size: .8rem;
     }
+
     #mobile-arrow img {
         height: 70px;
         width: 70px;
     }
+
     #client-blend {
         top: -8%;
     }
-    
+
 }
