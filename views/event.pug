@@ -1,6 +1,14 @@
 doctype html 
 html 
     head
+        //- Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NZ24JXK');
+        //- End Google Tag Manager
         title Lazer Crazer
         block style
         style
@@ -10,6 +18,10 @@ html
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
+            //- Google Tag Manager (noscript)
+            noscript
+                iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+            //- End Google Tag Manager (noscript)
             div#navbar
                 div#ul1-wrapper
                     ul#ul1
@@ -74,9 +86,9 @@ html
                         li#home #[a(href='/') HOME]
                             img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/event') EVENT]
-                        li #[a(href='/') FRANCHISE] 
+                        li #[a(href='/franchise') FRANCHISE] 
                         li #[a(href='/') RENTING]
-                        li #[a(href='/') ACTIVITIES]
+                        li #[a(href='/activities') ACTIVITIES]
                         li #[a(href='/') BOOKING]
                     div#navM-planet1
                         img(src="../static/img/navM-planet.png" alt="")
@@ -272,7 +284,7 @@ html
                         div#row2
                             input(type="email" name="email" id='email' Class="myInput" placeholder="Email")
 
-                            select.myInput(name="Parties")
+                            select.myInput(name="Parties" id='select1')
                                 option#placeholder(value="" disabled selected) Types of parties
                                 option(value="Birthday") Birthday 
                                 option(value="Corporate") Corporate
@@ -342,7 +354,7 @@ html
 
             div#copyright
                 p Copyright © 2022 Lazer Crazer. All rights reserved / 
-                    a(href='/') Privacy Policy 
+                    a(href='/privacy' target="_blank") Privacy Policy 
 
             div#loading
                 div#loading-design1

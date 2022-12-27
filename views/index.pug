@@ -1,6 +1,14 @@
 doctype html 
 html 
     head
+        //- Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NZ24JXK');
+        //- End Google Tag Manager
         title Lazer Crazer
         block style
         style
@@ -9,6 +17,11 @@ html
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
+            //- Google Tag Manager (noscript)
+            noscript
+                iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+            //- End Google Tag Manager (noscript)
+
             div#navbar
                 div#ul1-wrapper
                     ul#ul1
@@ -49,7 +62,7 @@ html
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#home-navigator(src="../static/img/home-navigator.png" alt="")
-                        li #[a(href='/') BOOKING]
+                        li #[a(href='/calender') BOOKING]
                             picture
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
@@ -79,7 +92,7 @@ html
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/event') EVENT]
-                        li #[a(href='/') FRANCHISE] 
+                        li #[a(href='/franchise') FRANCHISE] 
                         li #[a(href='/') RENTING]
                         li #[a(href='/activities') ACTIVITIES]
                         li #[a(href='/') BOOKING]
@@ -103,7 +116,7 @@ html
                     picture
                         source(type="image/webp" srcset="/static/img/logo-background2.webp")
                         source(type="image/png" srcset="/static/img/logo-background2.png")
-                        img(src="../static/img/logo-background2.png", alt="")
+                        img(src="../static/img/logo-background2.png" alt="")
                 div#green-stars
                     picture
                         source(type="image/webp" srcset="/static/img/green-stars.webp")
@@ -150,17 +163,17 @@ html
                         source(type="image/png" srcset="/static/img/banner-bottom-object.png")
                         img(src="../static/img/banner-bottom-object.png" alt="")
                 div#banner-bottom-object2
-                    img(src="../static/img/banner-bottom-object2.png", alt="")
+                    img(src="../static/img/banner-bottom-object2.png" alt="")
                 div#banner-bottom-background
                     picture
                         source(type="image/webp" srcset="/static/img/banner-bottom-background.webp")
                         source(type="image/png" srcset="/static/img/banner-bottom-background.png")
-                        img(src="../static/img/banner-bottom-background.png" alt="")
+                        img(src="../static/img/banner-bottom-background.png" alt="Stone pedestal for gunmans")
                 div#banner-left-object
                     picture
                         source(type="image/webp" srcset="/static/img/banner-left-object.webp")
                         source(type="image/png" srcset="/static/img/banner-left-object.png")
-                        img(src="../static/img/banner-left-object.png" alt="")
+                        img(src="../static/img/banner-left-object.png" alt="Volcanic mountain")
                 div#banner-right-object
                     picture
                         source(type="image/webp" srcset="/static/img/banner-right-object.webp")
@@ -170,12 +183,12 @@ html
                     picture
                         source(type="image/webp" srcset="/static/img/gunman.webp")
                         source(type="image/png" srcset="/static/img/gunman.png")
-                        img(src="../static/img/gunman.png" alt="")
+                        img(src="../static/img/gunman.png" alt="Two gunmans standing next to each other")
                 div#gunman-mobile
                     picture
                         source(type="image/webp" srcset="/static/img/gunman-mobile.webp")
                         source(type="image/png" srcset="/static/img/gunman-mobile.png")
-                        img(src="../static/img/gunman-mobile.png" alt="")
+                        img(src="../static/img/gunman-mobile.png" alt="Two gunmans standing next to each other")
                 div#glow-gunman
                     picture
                         source(type="image/webp" srcset="/static/img/glow-gunman.webp")
@@ -187,9 +200,9 @@ html
                         source(type="image/png" srcset="/static/img/parallax-object1.png")
                         img#move(src="../static/img/parallax-object1.png" alt="")
                 div#bottom-blend
-                    //- img(src="../static/bottom-blend.png", alt="")
+                    //- img(src="../static/bottom-blend.png" alt="")
             div#banner-about-blend
-            
+
             div#about-us
                 h1#desktop-visible ABOUT US
                 h2#mobile-visible DELHI’S LARGEST AND 
@@ -203,7 +216,7 @@ html
                 div#about-us-content
                     div#weapon-container2
                         img(src="../static/img/laser-and-gunM.png" alt="")
-                        
+
                     div#about-us-para
                         h3 NEW DESTINATION OF 
                             span#green FUN!
@@ -242,37 +255,37 @@ html
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img1.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img1.png")
-                                    img(src="../static/img/gallery-img1.png" alt="")
+                                    img(src="../static/img/gallery-img1.png" alt="People having fun at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img2.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img2.png")
-                                    img(src="../static/img/gallery-img2.png" alt="")
+                                    img(src="../static/img/gallery-img2.png" alt="People having fun at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img3.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img3.png")
-                                    img(src="../static/img/gallery-img3.png" alt="")
+                                    img(src="../static/img/gallery-img3.png" alt="People having fun at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img4.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img4.png")
-                                    img(src="../static/img/gallery-img4.png" alt="")
+                                    img(src="../static/img/gallery-img4.png" alt="People having fun at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img5.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img5.png")
-                                    img(src="../static/img/gallery-img5.png" alt="")
+                                    img(src="../static/img/gallery-img5.png" alt="People having fun at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img6.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img6.png")
-                                    img(src="../static/img/gallery-img6.png" alt="")
+                                    img(src="../static/img/gallery-img6.png" alt="People having fun at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img7.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img7.png")
-                                    img(src="../static/img/gallery-img7.png" alt="")
+                                    img(src="../static/img/gallery-img7.png" alt="People having fun at Lazer Crazer Tag Arena")
 
                     div#gallery-content2
                         div#gallery-row2
@@ -280,42 +293,42 @@ html
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img8.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img8.png")
-                                    img(src="../static/img/gallery-img8.png" alt="")
+                                    img(src="../static/img/gallery-img8.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img9.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img9.png")
-                                    img(src="../static/img/gallery-img9.png" alt="")
+                                    img(src="../static/img/gallery-img9.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img10.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img10.png")
-                                    img(src="../static/img/gallery-img10.png" alt="")
+                                    img(src="../static/img/gallery-img10.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img11.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img11.png")
-                                    img(src="../static/img/gallery-img11.png" alt="")
+                                    img(src="../static/img/gallery-img11.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img12.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img12.png")
-                                    img(src="../static/img/gallery-img12.png" alt="")
+                                    img(src="../static/img/gallery-img12.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img13.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img13.png")
-                                    img(src="../static/img/gallery-img13.png" alt="")
+                                    img(src="../static/img/gallery-img13.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img14.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img14.png")
-                                    img(src="../static/img/gallery-img14.png" alt="")
+                                    img(src="../static/img/gallery-img14.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
                             div.gallery-img
                                 picture
                                     source(type="image/webp" srcset="/static/img/gallery-img15.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img15.png")
-                                    img(src="../static/img/gallery-img15.png" alt="")
+                                    img(src="../static/img/gallery-img15.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
 
 
             div#pricing
@@ -525,7 +538,7 @@ html
                             picture
                                 source(type="image/webp" srcset="/static/img/cta1.webp")
                                 source(type="image/png" srcset="/static/img/cta1.png")
-                                img(src="../static/img/cta1.png", alt="")
+                                img(src="../static/img/cta1.png" alt="")
                         h3 Private Party
                         p Get your party started at the city's most thrilling Laser tag arena. Just tell us what you need, and we will do our best to fulfill it.
                         p.learnMore learn more &#8594;
@@ -539,7 +552,7 @@ html
                             picture
                                 source(type="image/webp" srcset="/static/img/cta2.webp")
                                 source(type="image/png" srcset="/static/img/cta2.png")
-                                img(src="../static/img/cta2.png", alt="")
+                                img(src="../static/img/cta2.png" alt="")
                         h3 Booking
                         p unstoppable fun, & great memories waiting to be made. Are you ready to live life on The Edge?
                         p.learnMore learn more &#8594;
@@ -553,7 +566,7 @@ html
                             picture
                                 source(type="image/webp" srcset="/static/img/cta3.webp")
                                 source(type="image/png" srcset="/static/img/cta3.png")
-                                img(src="../static/img/cta3.png", alt="")
+                                img(src="../static/img/cta3.png" alt="")
                         h3 Rental
                         p No need to travel in order to enjoy Laser Tag. We ship the adventure straight to your doorstep.
                         p.learnMore learn more &#8594;
@@ -569,7 +582,7 @@ html
                             picture
                                 source(type="image/webp" srcset="/static/img/cta1.webp")
                                 source(type="image/png" srcset="/static/img/cta1.png")
-                                img(src="../static/img/cta1.png", alt="")
+                                img(src="../static/img/cta1.png" alt="")
                         h3 Private Party
                         p Get your party started at the city's most thrilling Laser tag arena
                         p.learnMore learn more &#8594;
@@ -583,7 +596,7 @@ html
                             picture
                                 source(type="image/webp" srcset="/static/img/cta2.webp")
                                 source(type="image/png" srcset="/static/img/cta2.png")
-                                img(src="../static/img/cta2.png", alt="")
+                                img(src="../static/img/cta2.png" alt="")
                         h3 Booking
                         p unstoppable fun, & great memories waiting to be made.
                         p.learnMore learn more &#8594;
@@ -597,16 +610,16 @@ html
                             picture
                                 source(type="image/webp" srcset="/static/img/cta3.webp")
                                 source(type="image/png" srcset="/static/img/cta3.png")
-                                img(src="../static/img/cta3.png", alt="")
+                                img(src="../static/img/cta3.png" alt="")
                         h3 Rental
                         p We ship adventure straight to your doorstep
                         p.learnMore learn more &#8594;
 
             div#testimonials
                 div#parallax-object14
-                    img#move14(src="../static/img/parallax-object14.png", alt="")
+                    img#move14(src="../static/img/parallax-object14.png" alt="")
                 div#parallax-object15
-                    img#move15(src="../static/img/parallax-object15.png", alt="")
+                    img#move15(src="../static/img/parallax-object15.png" alt="")
                 h1 TESTIMONIALS
                 div#testimonials-content
                     div#testimonials-bg
@@ -719,10 +732,10 @@ html
                                     img.stars(src="../static/img/star.png" alt="")
                                     img.stars(src="../static/img/star.png" alt="")
                                     img.stars(src="../static/img/star.png" alt="")
-                
+
                 div#testimonials-content2
                     div#stars2
-                        img(src="../static/img/stars2.png", alt="")
+                        img(src="../static/img/stars2.png" alt="")
                     div#testimonials-bg2
                         div#testimonials-para2
                             p OVER 1000+ 5 STAR REVIEWS ON GOOGLE.
@@ -815,12 +828,12 @@ html
                                     img.stars(src="../static/img/star.png" alt="")
                                     img.stars(src="../static/img/star.png" alt="")
 
-                    
+
 
 
 
             div#clientAndForm
-                
+
                 div#contact-form
                     form#contactForm
                         p GET IN TOUCH WITH US
@@ -873,7 +886,7 @@ html
 
             div#copyright
                 p Copyright © 2022 Lazer Crazer. All rights reserved / 
-                    a(href='/') Privacy Policy 
+                    a(href='/privacy') Privacy Policy 
 
             div#loading
                 div#loading-design1
@@ -896,7 +909,7 @@ html
                         source(type="image/webp" srcset="/static/img/loading-design2.webp")
                         source(type="image/png" srcset="/static/img/loading-design2.png")
                         img(src="../static/img/loading-design2.png" alt="")
-            
+
             a(href='https://wa.me/918840175266?text=Hello')#whatsapp-icon
                 svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="wa-messenger-svg-whatsapp wh-svg-icon")
                     path(d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd")
