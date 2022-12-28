@@ -330,17 +330,29 @@ padding: 10px 0px;
 
 
 @media only screen and (max-width: 753px) {
+    .mainsection{
+        width: 88%;
+    }
     .popupsubsection{
         
         width: 340px;
         height: 550px;
         
     }
+    .submainsection{
+        padding: 47px 39px;
+    }
     .innerpopup{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+    .slotlist{
+        width: 87vw;
+    }
+    .slots{
+        width: 87px;
     }
     .popupsubmit{
         margin-top: 40px;
@@ -350,6 +362,7 @@ padding: 10px 0px;
     #cancel{
         margin-left: 10px;
     }
+    
 }
 
 
