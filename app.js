@@ -1,17 +1,29 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const connectToMongo = require('./db');
 const port = 3000;
 const nodemailer = require('nodemailer');
+const cors = require('cors');
+connectToMongo();
+
 
 
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
-app.use(express.json())
+app.use(express.json());
 
 // PUG SPECIFIC STUFF
 app.set('view engine', 'pug') // Set the template engine as pug
-app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/services'), path.join(__dirname, 'views/portfolio')]) // Set the views directory
+app.set('views', path.join(__dirname, 'views'))
+
+
+// BOOKING API
+
+app.use(cors())
+// Available Routes
+app.use("/api/date", require("./routes/date"));
+app.use("/api/booking", require("./routes/booking"));
 
 // ENDPOINTS
 app.get('/', (req, res) => {
@@ -29,6 +41,19 @@ app.get('/event', (req, res) => {
 app.get('/activities', (req, res) => {
     const params = {}
     res.status(200).render('activities.pug', params);
+});
+app.get('/privacy', (req, res) => {
+    const params = {}
+    res.status(200).render('privacy.pug', params);
+});
+
+// app.get('/calender', function (req, res) {
+//     res.sendFile(path.join(__dirname, '/views/calender.html'));
+// });
+
+app.get('/calender', (req, res) => {
+    const params = {}
+    res.status(200).render('calender.pug', params);
 });
 
 app.post('/', (req, res) => {
@@ -48,7 +73,8 @@ app.post('/', (req, res) => {
         text: `Name: ${req.body.name}, 
         Email: ${req.body.email}, 
         Phone: ${req.body.phone}, 
-        Message: ${req.body.message}` 
+        Type: ${req.body.select1},
+        Message: ${req.body.message}`
     };
     transporter.sendMail(mailOptions1, (error, info) => {
         if (error) {

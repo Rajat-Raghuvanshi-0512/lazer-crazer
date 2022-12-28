@@ -206,7 +206,7 @@
 .partyContainer {
     background: rgba(0, 16, 80, 0.31);
     margin: 0 4px;
-    height: 420px;
+    height: 435px;
     min-width: 300px;
     width: 300px;
     transition: .5s all;
@@ -518,7 +518,7 @@
 
 #knowMore-content-para p {
     font-weight: 400;
-    font-size: .8rem;
+    font-size: .85rem;
     line-height: 222.4%;
     letter-spacing: -0.05em;
     padding-left: 45px;
@@ -821,6 +821,25 @@ select {
     width: 100%;
     position: relative;
     transition: .25s all;
+}
+
+.learnMore {
+    visibility: hidden;
+    color: #2CF70B !important;
+    margin-top: 10px;
+    font-size: .85rem !important;
+    transition: .2s all;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+}
+.partyContainer.active .learnMore {
+    visibility: visible !important;
+}
+
+.clients-container {
+    position: relative;
+    top: 50px;
 }
 
 /* RESPONSIVE DESIGN > '1000px' */
@@ -1202,10 +1221,10 @@ select {
 
     #client-blend {
         position: relative;
-        top: -6%;
+        top: -7%;
         z-index: -1;
         height: 150px;
-        background: linear-gradient(180deg, #007DB5 20.62%, rgba(67, 197, 247, 0) 100%);
+        background: linear-gradient(180deg, rgb(12 138 193) 20.62%, rgba(67, 197, 247, 0) 100%);
     }
 
     #footer {
