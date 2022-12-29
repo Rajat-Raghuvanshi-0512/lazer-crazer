@@ -41,6 +41,7 @@ border-radius: 8.03407px;
 .textsection{
     font-family: 'IBM Plex Sans';
     color: white;
+    
 }
 .adder{
     display: flex;
@@ -89,7 +90,9 @@ border-radius: 8.03407px;
     color: white;
     margin-top: 5px;
 
-    font-family:'IBM Plex Sans' ;
+    font-family:'Lexend Giga';
+    /* font-weight: 500; */
+    font-size: 12px ;
 }
 .bottomsection{
     display: flex;
@@ -100,10 +103,11 @@ border-radius: 8.03407px;
     color:white;
     font-family: 'IBM Plex Sans';
 }
-/* .slottext{
+.slottext{
+    font-family:'Lexend Giga';
+    font-size: 12px ;
     
-    
-} */
+}
 .slotlist{
     display: flex;
     gap: 25px;
@@ -129,7 +133,7 @@ border-radius: 8.03407px;
     font-family: 'Lexend Giga';
     /* position: absolute; */
     font-size: 0.6rem;
-    /* margin-left: 18vw; */
+    margin-left: 9vw;
     /* top: 85.4%; */
     display: flex;
     align-items: center;
@@ -199,7 +203,36 @@ border-radius: 8.03407px;
 
 
 /*  */
+@media only screen and (max-width: 753px) {
+    .slotsection{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .slotlist{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .bottomsection{
+        flex-direction: column;
+        align-items: center
+    }
+    .submitsection{
+        position: static;
+        /* top: 48px;
+        right: ; */
+        
+        margin-top:40px ;
+    }
+  }
   
+
+
+
+
   @media only screen and (max-width: 723px) {
     .slotlist{
         width:56vw

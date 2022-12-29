@@ -15,7 +15,7 @@ counttag.innerHTML=`${count}`;
 
 
 
-
+let flag=0;
 
 const slots=document.getElementsByClassName('slots');
 console.log(slots);
@@ -23,6 +23,7 @@ slottag.addEventListener('click',(event)=>{
     currenttarget=event.target;
     console.log(currenttarget.classList);
     if(currenttarget.classList.contains('slots')){
+        flag=1;
         currenttarget.style.borderColor='#2CF80B'
         currenttarget.style.boxShadow='0 0 20px #2CF70B'
         time=currenttarget.innerHTML;
@@ -81,6 +82,34 @@ const renderCalendar = () => {
 }
 renderCalendar();
 
+
+
+
+
+
+
+const todaysmonthyear=document.getElementsByClassName('current-date')[0];
+const changeddate=todaysmonthyear.innerHTML;
+let givenmonth=date.getMonth();
+let y= changeddate.substring(0,changeddate.length-5)
+let z= changeddate.substring(changeddate.length-4);
+for (let i = 0; i < 12; i++) {
+    const element = months[i];
+    if(element==y){
+        givenmonth=i;
+    }
+}
+
+
+let selecteddate=date.getDate();
+let selectedmonth=givenmonth;
+let selectedyear=z;
+
+
+
+
+
+
 prevNextIcon.forEach(icon => { // getting prev and next icons
     icon.addEventListener("click", () => { // adding click event on both icons
         // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
@@ -95,14 +124,29 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
             date = new Date(); // pass the current date as date value
         }
         renderCalendar(); // calling renderCalendar function
+        const todaysmonthyear=document.getElementsByClassName('current-date')[0];
+        const changeddate=todaysmonthyear.innerHTML;
+        let givenmonth=date.getMonth();
+        let y= changeddate.substring(0,changeddate.length-5)
+        let z= changeddate.substring(changeddate.length-4);
+        for (let i = 0; i < 12; i++) {
+            const element = months[i];
+            if(element==y){
+                givenmonth=i;
+            }
+        }
+
+
+         selecteddate=date.getDate();
+         selectedmonth=givenmonth;
+         selectedyear=z;
+
     });
 });
 
 
 
-let selecteddate=date.getDate();
-let selectedmonth=date.getMonth();
-let selectedyear=date.getFullYear();
+
 
 
 const fetchslots=()=>{
@@ -159,13 +203,19 @@ fetchslots();
 
 
 
-const linkele=document.querySelectorAll(".days li")
+//calender date elements link  element was there
+
+
+
 // console.log(linkele)
 
 daysTag.addEventListener("click",(event)=>{
     currenttarget=event.target;
     console.log(currenttarget.tagName)
+const linkele=document.querySelectorAll(".days li")
+
     if(currenttarget.tagName==='LI'){
+        flag=0;
         currenttarget.classList.add('active');
         selecteddate=currenttarget.innerHTML;
         console.log(selecteddate)
@@ -195,7 +245,8 @@ daysTag.addEventListener("click",(event)=>{
 
 const submitbutton=document.getElementsByClassName('submitsection')[0];
 submitbutton.addEventListener('click',(event)=>{
-    let today =selectedyear+'/'+(selectedmonth+1)+'/'+selecteddate;
+    if(flag){
+        let today =selectedyear+'/'+(selectedmonth+1)+'/'+selecteddate;
     console.log(today)
     console.log(count)
     console.log(time)
@@ -207,6 +258,8 @@ submitbutton.addEventListener('click',(event)=>{
     popupsection.style.opacity='1';
     popupsection.style.transition='0.5s';
     popupsection.style.zIndex='1';
+    }
+    
 
    
 

@@ -36,7 +36,7 @@ header .icons span{
   width: 38px;
   margin: 0 1px;
   cursor: pointer;
-  color: #878787;
+  color: white;
   text-align: center;
   line-height: 38px;
   font-size: 0.90rem;
@@ -48,6 +48,7 @@ header .icons span{
 }
 header .icons span:hover{
   background: #f2f2f2;
+  color: black;
 }
 .dateheading{
     display: flex;
@@ -114,7 +115,5 @@ header .current-date{
   border-color: #2CF70B;
   box-shadow: 0 0 20px #2CF70B;
 }
-.days li:not(.active):not(.todaysdate):hover::before{
-  background: black;
-}
+
 
