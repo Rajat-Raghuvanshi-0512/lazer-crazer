@@ -46,10 +46,10 @@ app.get('/privacy', (req, res) => {
     const params = {}
     res.status(200).render('privacy.pug', params);
 });
-
-// app.get('/calender', function (req, res) {
-//     res.sendFile(path.join(__dirname, '/views/calender.html'));
-// });
+app.get('/rental', (req, res) => {
+    const params = {}
+    res.status(200).render('rental.pug', params);
+});
 
 app.get('/calender', (req, res) => {
     const params = {}

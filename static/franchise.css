@@ -2,11 +2,17 @@
     font-weight: bold;
 }
 
+
 #franchise-banner {
     background: #010825;
     backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
     height: 100vh;
     width: 100%;
+    position: relative;
+    top: 0;
+    max-width: 100vw !important;
+    width: 100vw !important;
 }
 
 #franchise-heading {
@@ -786,7 +792,7 @@
 @media screen and (max-width: 1000px) {
     #franchise-banner {
         background: linear-gradient(0deg, #001272 0%, #000832 85.73%, #00116B 99.99%);
-        height: 90vh;
+        height: 90%;
     }
 
     #franchise-banner h1 {
@@ -901,6 +907,9 @@
     }
 
     .fContainer-bg {
+        width: 168px;
+    }
+    .fContainer-bgActive {
         width: 168px;
     }
 

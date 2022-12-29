@@ -22,7 +22,7 @@ html(lang='en' dir='ltr')
             picture
               source(type="image/webp" srcset="/static/img/home-navigator.webp")
               source(type="image/png" srcset="/static/img/home-navigator.png")
-              img#home-navigator.main(src="../static/img/home-navigator.png" alt="")
+              img#home-navigator(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/event') EVENT]
             picture
               source(type="image/webp" srcset="/static/img/home-navigator.webp")
@@ -54,7 +54,7 @@ html(lang='en' dir='ltr')
             picture
               source(type="image/webp" srcset="/static/img/home-navigator.webp")
               source(type="image/png" srcset="/static/img/home-navigator.png")
-              img#home-navigator(src="../static/img/home-navigator.png" alt="")
+              img#home-navigator.main(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/calender') BOOKING]
             picture
               source(type="image/webp" srcset="/static/img/home-navigator.webp")
@@ -88,18 +88,15 @@ html(lang='en' dir='ltr')
           li #[a(href='/franchise') FRANCHISE] 
           li #[a(href='/') RENTING]
           li #[a(href='/activities') ACTIVITIES]
-          li #[a(href='/') BOOKING]
+          li #[a(href='/calender') BOOKING]
         div#navM-planet1
           picture
             source(type="image/webp" srcset="/static/img/navM-planet.webp")
             source(type="image/png" srcset="/static/img/navM-planet.png")
             img(src="../static/img/navM-planet.png" alt="")
     div#planet-container
-      div#navM-planet2
-        picture
-          source(type="image/webp" srcset="/static/img/navM-planet.webp")
-          source(type="image/png" srcset="/static/img/navM-planet.png")
-          img(src="../static/img/navM-planet.png" alt="")
+      div#booking-planet
+        img(src="../static/img/booking-planet.png" alt="")
 
     div#booking
       .booking-heading
@@ -192,13 +189,13 @@ html(lang='en' dir='ltr')
                 .popuptext
                   | Fill The Form To Download Price List
                 .popupsubmitsection
-                  form(action='' method='post')
+                  form#contactFormB(action='' method='post')
                     .popupsections
                       span.details Your Name
-                      input(type='text' required='')
+                      input(type='text' required='' id='name')
                     .popupsections
                       span.details Mobile No
-                      input(type='text' required='')
+                      input(type='text' required='' id='phone')
                     .popupsections
                       span.details Package
                       select#package(name='Packages')
@@ -208,12 +205,24 @@ html(lang='en' dir='ltr')
                         option(value='PRO') PRO
                     .popupsections
                       span.details Email
-                      input(type='email' required='')
+                      input(type='email' required='' id='email')
                 .popupsubmit
-                  input(type='button' value='Submit')
+                  input(type='button' value='Submit' id='sendRequest2')
                   // <div class="bookingstatus">Booked Successfully</div>
                   #cancel
                     | Cancel
+
+    div#contact-sectionB
+      div#box-container
+        div.contact-content
+          img(src="../static/img/booking-loc.png", alt="")
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mauris scelerisque 
+        div.contact-content
+          img(src="../static/img/booking-message.png", alt="")
+          p Lorem ipsum dolor sit amet,
+        div.contact-content
+          img(src="../static/img/booking-call.png", alt="")
+          p 1234567890 
 
     footer#footer            
       div#footer-design

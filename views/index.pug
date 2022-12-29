@@ -14,6 +14,13 @@ html
         style
             include ../static/style.css
         meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+
+        //- LINK TAGS FOR WEBSITE"S FAVICON
+        link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon_io/favicon-16x16.png")
+        link(rel="manifest" href="../static/img/favicon_io/site.webmanifest")
+
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
@@ -52,7 +59,7 @@ html
                             img#main-logo(src="../static/img/logo.png" alt="")
                 div#ul2-wrapper
                     ul#ul2 
-                        li #[a(href='/') RENTING]
+                        li #[a(href='/rental') RENTING]
                             picture
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
@@ -93,9 +100,9 @@ html
                                 img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/event') EVENT]
                         li #[a(href='/franchise') FRANCHISE] 
-                        li #[a(href='/') RENTING]
+                        li #[a(href='/rental') RENTING]
                         li #[a(href='/activities') ACTIVITIES]
-                        li #[a(href='/') BOOKING]
+                        li #[a(href='/calender') BOOKING]
                     div#navM-planet1
                         picture
                             source(type="image/webp" srcset="/static/img/navM-planet.webp")

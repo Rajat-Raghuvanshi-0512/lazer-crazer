@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lexend+Giga&family=Nunito+Sans&display=swap');
 
+
+
 .blurback {
-    filter: blur(20px);
-    pointer-events: none;
-    user-select: none;
+    /* filter: blur(20px); */
+    /* pointer-events: none; */
+    /* user-select: none; */
+}
+
+#booking-planet {
+    display: none;
 }
 
 #booking {
@@ -53,7 +59,7 @@
 
 .wholebookingsection {
     position: relative;
-    top: 0;
+    /* top: 80px; */
 }
 
 .bookingsection {
@@ -64,6 +70,7 @@
     top: 9.5%;
     /* height: 100%; */
     width: 100%;
+    z-index: 100;
 }
 
 .mainsection {
@@ -79,6 +86,7 @@
     border-radius: 8.03407px;
 
 }
+
 
 .submainsection {
     padding: 47px 52px;
@@ -204,6 +212,46 @@
 .submitsectiontext {
     font-family: 'Lexend Giga';
 
+}
+
+#contact-sectionB {
+    background: linear-gradient(180deg, #007cb4 20.62%, rgba(67, 197, 247, 0) 100%);
+    position: relative;
+    top: -250px;
+}
+#box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+}
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 45%;
+    border: 1px solid #2CF80B;
+    padding: 6% 2%;
+}
+.contact-content img {
+    height: auto;
+    width: 68px;
+}
+
+.contact-content p {
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .85rem;
+    line-height: 129.4%;
+    letter-spacing: -0.11em;
+    color: #FFFFFF;
 }
 
 @media only screen and (max-width: 672px) {
@@ -410,11 +458,19 @@
 }
 
 #footer {
-    top: 200px;
+    top: 0;
+    margin-top: -100px !important;
 }
+
 #copyright {
     position: relative;
-    top: 200px;
+    top: 0;
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) { 
+    #contact-sectionB {
+        top: -130px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -425,16 +481,106 @@
         height: 100%;
         width: 100%;
     }
+
     .booking-bgM img {
         height: 100%;
         width: 100%;
     }
+
     .booking-bg {
         display: none;
     }
+
+    .booking-heading h1 {
+        font-size: 1.35rem;
+        text-align: left;
+    }
+
+    .booking-heading h2 {
+        font-size: .8rem;
+        font-weight: 400;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    #booking {
+        top: 150px;
+    }
+
+    .booking-heading {
+        padding-right: 35%;
+        padding-left: 5%;
+    }
+
+    #booking-planet {
+        display: block;
+        height: 120px;
+        width: 148px;
+        top: 92px;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    #booking-planet img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .wholebookingsection {
+        top: 50px;
+    }
+
+    .bookingsection {
+        top: 0;
+    }
+
+    #box-container {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .contact-content {
+        width: 75%;
+        flex-direction: column;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    #contact-sectionB {
+        top: 150px;
+    }
+    .contact-content p {
+        font-weight: 400;
+        font-size: .75rem;
+        padding: 0 10px;
+        margin-top: 14px;
+        text-align: center
+    }
+    .contact-content img {
+        height: auto;
+        width: 50px;
+    }
+    #footer {
+        margin-top: 275px !important;
+    }
+}
+@media only screen and (max-width: 390px) {
+    #contact-sectionB {
+        top: 194px;
+        z-index: -1;
+    }
+    #footer {
+        margin-top: 300px !important;
+    }
 }
 
+
 @media only screen and (max-width: 753px) {
+    .mainsection {
+        width: 88%;
+    }
+
     .popupsubsection {
 
         width: 340px;
@@ -442,11 +588,23 @@
 
     }
 
+    .submainsection {
+        padding: 47px 39px;
+    }
+
     .innerpopup {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .slotlist {
+        width: 87vw;
+    }
+
+    .slots {
+        width: 87px;
     }
 
     .popupsubmit {
@@ -458,4 +616,5 @@
     #cancel {
         margin-left: 10px;
     }
+
 }

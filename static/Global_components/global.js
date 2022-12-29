@@ -1,15 +1,15 @@
-const counttag=document.getElementsByClassName('middlesection')[0];
-const leftsub=document.getElementsByClassName('leftadder')[0];
-const rightadd=document.getElementsByClassName('rightadder')[0];
-const slottag=document.querySelector('.slotlist');
+const counttag = document.getElementsByClassName('middlesection')[0];
+const leftsub = document.getElementsByClassName('leftadder')[0];
+const rightadd = document.getElementsByClassName('rightadder')[0];
+const slottag = document.querySelector('.slotlist');
 
 
 
-let time="";
+let time = "";
 
 console.log(slottag)
-let count=1;
-counttag.innerHTML=`${count}`;
+let count = 1;
+counttag.innerHTML = `${count}`;
 
 
 
@@ -17,23 +17,23 @@ counttag.innerHTML=`${count}`;
 
 
 
-const slots=document.getElementsByClassName('slots');
+const slots = document.getElementsByClassName('slots');
 console.log(slots);
-slottag.addEventListener('click',(event)=>{
-    currenttarget=event.target;
+slottag.addEventListener('click', (event) => {
+    currenttarget = event.target;
     console.log(currenttarget.classList);
-    if(currenttarget.classList.contains('slots')){
-        currenttarget.style.borderColor='#2CF80B'
-        currenttarget.style.boxShadow='0 0 20px #2CF70B'
-        time=currenttarget.innerHTML;
-        
+    if (currenttarget.classList.contains('slots')) {
+        currenttarget.style.borderColor = '#2CF80B'
+        currenttarget.style.boxShadow = '0 0 20px #2CF70B'
+        time = currenttarget.innerHTML;
+
         for (let i = 0; i < slots.length; i++) {
-            const element= slots[i];
-            if(element===currenttarget){
+            const element = slots[i];
+            if (element === currenttarget) {
                 continue;
             }
-            else{
-                element.style.borderColor='white'
+            else {
+                element.style.borderColor = 'white'
                 element.style.removeProperty('box-shadow')
             }
         }
@@ -43,23 +43,23 @@ slottag.addEventListener('click',(event)=>{
 
 //calender part
 const daysTag = document.querySelector(".days"),
-currentDate = document.querySelector(".current-date"),
-prevNextIcon = document.querySelectorAll(".icons span");
+    currentDate = document.querySelector(".current-date"),
+    prevNextIcon = document.querySelectorAll(".icons span");
 
 // getting new date, current year and month
 let date = new Date(),
-currYear = date.getFullYear(),
-currMonth = date.getMonth();
+    currYear = date.getFullYear(),
+    currMonth = date.getMonth();
 
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+    "August", "September", "October", "November", "December"];
 
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+        lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+        lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
     let liTag = "";
 
     for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
@@ -68,8 +68,8 @@ const renderCalendar = () => {
 
     for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
         // adding active class to li if the current day, month, and year matched
-        let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
-                     && currYear === new Date().getFullYear() ? "active" : "";
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth()
+            && currYear === new Date().getFullYear() ? "active" : "";
         liTag += `<li class="${isToday}">${i}</li>`;
     }
 
@@ -86,7 +86,7 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
         // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
         currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
 
-        if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+        if (currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
             // creating a new date of current year & month and pass it as date value
             date = new Date(currYear, currMonth);
             currYear = date.getFullYear(); // updating current year with new date year
@@ -100,56 +100,56 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 
 
 
-let selecteddate=date.getDate();
-let selectedmonth=date.getMonth();
-let selectedyear=date.getFullYear();
+let selecteddate = date.getDate();
+let selectedmonth = date.getMonth();
+let selectedyear = date.getFullYear();
 
 
-const fetchslots=()=>{
-    let todaysdate =selectedyear+'/'+(selectedmonth+1)+'/'+selecteddate;
-        console.log(todaysdate)
+const fetchslots = () => {
+    let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
+    console.log(todaysdate)
 
 
-        //fetching the API 
-        let fetchedslots=[];
+    //fetching the API 
+    let fetchedslots = [];
 
-        const api_url ="http://localhost:3000/api/date/getslots/";
-  
-            // Defining async function
-            fetch(api_url, {
-                method: 'POST',
-                body: JSON.stringify({
-                    slotdate:todaysdate,
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8'
-                }
-            }).then(function (response) {
-                if (response.ok) {
-                    return response.json();
-                }
-            }).then(function (data) {
-                console.log(data);
-                fetchedslots=data.slots
-            }).then(function(){
-                
+    const api_url = "https://www.lazercrazer.in/api/date/getslots/";
 
-                const slotlist=document.getElementsByClassName('slotlist')[0];
-
-                let slots="";
-                for (let i = 0; i < fetchedslots.length; i++) {
-                    const element = fetchedslots[i];
-                    if(element.slotcount>=count){
-                        slots+=`<div class="slots">${element.slottime}</div>`;
-                    }
-                    
-                }
+    // Defining async function
+    fetch(api_url, {
+        method: 'POST',
+        body: JSON.stringify({
+            slotdate: todaysdate,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        }
+    }).then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+    }).then(function (data) {
+        console.log(data);
+        fetchedslots = data.slots
+    }).then(function () {
 
 
-                slotlist.innerHTML=slots
+        const slotlist = document.getElementsByClassName('slotlist')[0];
+
+        let slots = "";
+        for (let i = 0; i < fetchedslots.length; i++) {
+            const element = fetchedslots[i];
+            if (element.slotcount >= count) {
+                slots += `<div class="slots">${element.slottime}</div>`;
+            }
+
+        }
 
 
-            })
+        slotlist.innerHTML = slots
+
+
+    })
 
 }
 
@@ -159,23 +159,23 @@ fetchslots();
 
 
 
-const linkele=document.querySelectorAll(".days li")
+const linkele = document.querySelectorAll(".days li")
 // console.log(linkele)
 
-daysTag.addEventListener("click",(event)=>{
-    currenttarget=event.target;
+daysTag.addEventListener("click", (event) => {
+    currenttarget = event.target;
     console.log(currenttarget.tagName)
-    if(currenttarget.tagName==='LI'){
+    if (currenttarget.tagName === 'LI') {
         currenttarget.classList.add('active');
-        selecteddate=currenttarget.innerHTML;
+        selecteddate = currenttarget.innerHTML;
         console.log(selecteddate)
 
         for (let i = 0; i < linkele.length; i++) {
             const element = linkele[i];
-            if(element===currenttarget){
+            if (element === currenttarget) {
                 continue;
             }
-            else{
+            else {
                 element.classList.remove('active');
             }
         }
@@ -183,73 +183,73 @@ daysTag.addEventListener("click",(event)=>{
 
 
         fetchslots();
-            
-            
 
-        }
-       
+
 
     }
+
+
+}
 )
 
 
-const submitbutton=document.getElementsByClassName('submitsection')[0];
-submitbutton.addEventListener('click',(event)=>{
-    let today =selectedyear+'/'+(selectedmonth+1)+'/'+selecteddate;
+const submitbutton = document.getElementsByClassName('submitsection')[0];
+submitbutton.addEventListener('click', (event) => {
+    let today = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
     console.log(today)
     console.log(count)
     console.log(time)
-    const bookingsection=document.getElementsByClassName('bookingsection')[0];
+    const bookingsection = document.getElementsByClassName('bookingsection')[0];
     bookingsection.classList.add('blurback')
-    const popupsection=document.getElementsByClassName('popupsubsection')[0];
-    popupsection.style.top='50%';
-    popupsection.style.visibility='visible';
-    popupsection.style.opacity='1';
-    popupsection.style.transition='0.5s';
-    popupsection.style.zIndex='1';
+    const popupsection = document.getElementsByClassName('popupsubsection')[0];
+    popupsection.style.top = '50%';
+    popupsection.style.visibility = 'visible';
+    popupsection.style.opacity = '1';
+    popupsection.style.transition = '0.5s';
+    popupsection.style.zIndex = '1';
 
-   
+
 
 });
 
 
 
 
-rightadd.addEventListener("click",(event)=>{
-    
+rightadd.addEventListener("click", (event) => {
+
     count++;
-    if(count==16){
-        count=15
+    if (count == 16) {
+        count = 15
     }
-    counttag.innerHTML=`${count}`;
-    fetchslots();     
+    counttag.innerHTML = `${count}`;
+    fetchslots();
 });
-leftsub.addEventListener("click",(event)=>{
-    counttag.innerHTML=`${count}`;
+leftsub.addEventListener("click", (event) => {
+    counttag.innerHTML = `${count}`;
     count--;
-    if(count==0){
-        count=1
+    if (count == 0) {
+        count = 1
     }
-    fetchslots();        
-        
+    fetchslots();
+
 
 });
 
 
 //popup cancel Javascript
-const cancelbutton=document.getElementById('cancel');
-cancelbutton.addEventListener('click',(event)=>{
-    const bookingsection=document.getElementsByClassName('bookingsection')[0];
+const cancelbutton = document.getElementById('cancel');
+cancelbutton.addEventListener('click', (event) => {
+    const bookingsection = document.getElementsByClassName('bookingsection')[0];
     bookingsection.classList.remove('blurback')
-    const popupsection=document.getElementsByClassName('popupsubsection')[0];
-    popupsection.style.top='40%';
-    popupsection.style.visibility='hidden';
-    popupsection.style.opacity='0';
-    popupsection.style.transition='0.5s';
-    popupsection.style.zIndex='-1';
-    
-    
-   
+    const popupsection = document.getElementsByClassName('popupsubsection')[0];
+    popupsection.style.top = '40%';
+    popupsection.style.visibility = 'hidden';
+    popupsection.style.opacity = '0';
+    popupsection.style.transition = '0.5s';
+    popupsection.style.zIndex = '-1';
+
+
+
 });
 
 
@@ -257,18 +257,18 @@ cancelbutton.addEventListener('click',(event)=>{
 //final submit option
 
 
-const finalsubmitbutton=document.querySelectorAll('.popupsubmit input')[0];
+const finalsubmitbutton = document.querySelectorAll('.popupsubmit input')[0];
 
-finalsubmitbutton.addEventListener('click',(event)=>{
-    const arr=document.querySelectorAll(".popupsections input");
-    const arrp=document.querySelectorAll(".popupsections select");
-    let clientname=arr[0].value;
-    let clientphoneno=arr[1].value;
-    let clientemail=arr[2].value;
-    let package=arrp[0].value
+finalsubmitbutton.addEventListener('click', (event) => {
+    const arr = document.querySelectorAll(".popupsections input");
+    const arrp = document.querySelectorAll(".popupsections select");
+    let clientname = arr[0].value;
+    let clientphoneno = arr[1].value;
+    let clientemail = arr[2].value;
+    let package = arrp[0].value
 
-    let todaysdate =selectedyear+'/'+(selectedmonth+1)+'/'+selecteddate;
-        console.log(todaysdate)
+    let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
+    console.log(todaysdate)
 
 
 
@@ -294,29 +294,19 @@ finalsubmitbutton.addEventListener('click',(event)=>{
 
 
 
+    const api_url = "https://www.lazercrazer.in/api/booking/addbooking";
 
-
-
-
-
-
-
-
-
-
-    const api_url ="http://localhost:5000/api/booking/addbooking";
-  
     // Defining async function
     fetch(api_url, {
         method: 'POST',
         body: JSON.stringify({
-        name:clientname,
-        email:clientemail,
-        phoneno:clientphoneno,
-        date:todaysdate,
-        slotcount:count,
-        slot:time,
-        package:package
+            name: clientname,
+            email: clientemail,
+            phoneno: clientphoneno,
+            date: todaysdate,
+            slotcount: count,
+            slot: time,
+            package: package
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -333,51 +323,77 @@ finalsubmitbutton.addEventListener('click',(event)=>{
 
         // paste SMTP request here
 
+        const contactFormB = document.querySelector("#contactFormB");
+        let name = document.getElementById("name");
+        let phone = document.getElementById("phone");
+        let email = document.getElementById("email");
+        let select2 = document.getElementById("package");
+        // let submitButton = document.querySelector("#sendRequest2");
 
 
+        contactFormB.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let formData = {
+                name: name.value,
+                phone: phone.value,
+                email: email.value,
+                select2: select2.value,
+            }
+            let xhr = new XMLHttpRequest();
 
+            xhr.open('POST', '/');
+            xhr.setRequestHeader('content-type', 'application/json');
+            xhr.send(JSON.stringify(formData));
+            xhr.onload = function () {
+                console.log(xhr.responseText);
 
+                if (xhr.responseText == 'success') {
+                    name.value = '';
+                    email.value = '';
+                    phone.value = '';
+                    select2.value = '';
+                } else {
+                    alert('Something went wrong!')
+                }
+            }
+        });
 
 
         //SMTP request ends here
 
 
-
-
-
-        
-        const api_url1 ="http://localhost:5000/api/date/bookslot" 
-    fetch(api_url1, {
-        method: 'PUT',
-        body: JSON.stringify({
-            slotdate:todaysdate,
-            time:time,
-            slots:count
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-        }
-    }).then(function (response) {
-        if (response.ok) {
-            return response.json();
-        }
-    }).then(function (data) {
-        console.log(data);
-    });
+        const api_url1 = "https://www.lazercrazer.in/api/date/bookslot"
+        fetch(api_url1, {
+            method: 'PUT',
+            body: JSON.stringify({
+                slotdate: todaysdate,
+                time: time,
+                slots: count
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        }).then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        }).then(function (data) {
+            console.log(data);
+        });
 
 
 
 
 
-        const bookingsection=document.getElementsByClassName('bookingsection')[0];
-    bookingsection.classList.remove('blurback')
-    const popupsection=document.getElementsByClassName('popupsubsection')[0];
-    popupsection.style.top='40%';
-    popupsection.style.visibility='hidden';
-    popupsection.style.opacity='0';
-    popupsection.style.transition='0.5s';
-    popupsection.style.zIndex='-1';
-    
+        const bookingsection = document.getElementsByClassName('bookingsection')[0];
+        bookingsection.classList.remove('blurback')
+        const popupsection = document.getElementsByClassName('popupsubsection')[0];
+        popupsection.style.top = '40%';
+        popupsection.style.visibility = 'hidden';
+        popupsection.style.opacity = '0';
+        popupsection.style.transition = '0.5s';
+        popupsection.style.zIndex = '-1';
+
     });
 
 }
