@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 .blurback {
     /* filter: blur(20px); */
     /* pointer-events: none; */
@@ -74,11 +75,32 @@
 }
 
 .mainsection {
+=======
+.blurback{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+.bookingsection{
+    display: flex;
+    
+
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    background-color: rgb(35, 209, 215);
+}
+.mainsection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     width: 80%;
     /* height: 527px; */
     /* background-color:aquamarine ;
     border: 3px solid blue; */
     background: linear-gradient(136.67deg, rgba(44, 247, 11, 0.07) 4.87%, rgba(11, 162, 247, 0.07) 99.53%);
+<<<<<<< HEAD
     box-shadow: 0px 3.5707px 3.5707px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5.80239px);
     /* Note: backdrop-filter has minimal browser support */
@@ -100,12 +122,37 @@
 }
 
 .adder {
+=======
+box-shadow: 0px 3.5707px 3.5707px rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(5.80239px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 8.03407px;
+
+}
+.submainsection{
+    padding: 47px 52px;
+}
+.numbersection{
+
+}
+.textsection{
+    font-family: 'IBM Plex Sans';
+    color: white;
+    
+}
+.adder{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     display: flex;
     margin-top: 20px;
     gap: 15px;
 }
+<<<<<<< HEAD
 
 .leftadder {
+=======
+.leftadder{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     color: white;
     height: 25px;
     display: flex;
@@ -116,8 +163,12 @@
     border-radius: 20px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
 .rightadder {
+=======
+.rightadder{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     color: white;
     height: 25px;
     display: flex;
@@ -128,8 +179,12 @@
     border-radius: 20px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
 .middlesection {
+=======
+.middlesection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     color: white;
     height: 25px;
     display: flex;
@@ -140,12 +195,17 @@
     box-shadow: 0 0 5px #2CF70B;
     border-radius: 5px;
 }
+<<<<<<< HEAD
 
 .calendersection {
+=======
+.calendersection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     display: flex;
     margin-top: 40px;
     gap: 50px;
 }
+<<<<<<< HEAD
 
 .calendertext {
     color: white;
@@ -170,6 +230,31 @@
     
 } */
 .slotlist {
+=======
+.calendertext{
+    color: white;
+    margin-top: 5px;
+
+    font-family:'Lexend Giga';
+    /* font-weight: 500; */
+    font-size: 12px ;
+}
+.bottomsection{
+    display: flex;
+    align-items:flex-end;
+}
+.slotsection{
+    margin-top: 5px;
+    color:white;
+    font-family: 'IBM Plex Sans';
+}
+.slottext{
+    font-family:'Lexend Giga';
+    font-size: 12px ;
+    
+}
+.slotlist{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
@@ -177,8 +262,12 @@
     align-items: center;
     width: 50vw;
 }
+<<<<<<< HEAD
 
 .slots {
+=======
+.slots{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     /* margin-right: 5px;
     margin-left: 5px; */
     border: 1px solid white;
@@ -190,6 +279,7 @@
     border-radius: 5px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
 .submitsection {
     color: black;
@@ -197,12 +287,21 @@
     /* position: absolute; */
     font-size: 0.6rem;
     /* margin-left: 18vw; */
+=======
+.submitsection{
+    color:black;
+    font-family: 'Lexend Giga';
+    /* position: absolute; */
+    font-size: 0.6rem;
+    margin-left: 9vw;
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     /* top: 85.4%; */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 109px;
     height: 31px;
+<<<<<<< HEAD
     background-color: #2CF80B;
 
     cursor: pointer;
@@ -265,36 +364,73 @@
     }
 
     .submainsection {
+=======
+   background-color:#2CF80B;
+   
+   cursor: pointer;
+   font-weight: 500;
+}
+.submitsectiontext{
+    font-family:'Lexend Giga';
+
+}
+@media only screen and (max-width: 672px) {
+    .bookingsection{
+        /* height: 700px; */
+        width: 100%;
+    }
+    .mainsection{
+        /* height: 650px; */
+    }
+    
+    .submainsection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 47px 20px;
     }
+<<<<<<< HEAD
 
     .calendersection {
+=======
+    .calendersection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0px;
     }
+<<<<<<< HEAD
 
     .wrapper header {
         padding: 10px 30px 5px;
     }
 
     .slotsection {
+=======
+    .wrapper header{
+        padding: 10px 30px 5px;
+    }
+    .slotsection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
         margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
     }
+<<<<<<< HEAD
 
     .slotlist {
+=======
+    .slotlist{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
         flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
     }
+<<<<<<< HEAD
 
     .bottomsection {
         flex-direction: column;
@@ -329,11 +465,76 @@
 
 
 /* @media only screen and (max-width: 804px) {
+=======
+    .bottomsection{
+        flex-direction: column;
+        align-items: center
+    }
+    .submitsection{
+        position: static;
+        /* top: 48px;
+        right: ; */
+        
+        margin-top:40px ;
+    }
+    header .current-date{
+        color: #2CF80B;
+    }
+  }
+
+
+/*  */
+@media only screen and (max-width: 753px) {
+    .slotsection{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .slotlist{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .bottomsection{
+        flex-direction: column;
+        align-items: center
+    }
+    .submitsection{
+        position: static;
+        /* top: 48px;
+        right: ; */
+        
+        margin-top:40px ;
+    }
+  }
+  
+
+
+
+
+  @media only screen and (max-width: 723px) {
+    .slotlist{
+        width:56vw
+    }
+    .submainsection {
+        padding: 47px 39px;
+    }
+  }
+  
+
+  /* @media only screen and (max-width: 804px) {
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     .submitsection{
         margin-left: 2vw;
     }
   } */
 
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
 
 
 
@@ -342,6 +543,7 @@
 
 
 
+<<<<<<< HEAD
 
 /* popup css starts here */
 
@@ -350,17 +552,31 @@
 
 
 .popupsubsection {
+=======
+  /* popup css starts here */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lexend+Giga&family=Nunito+Sans&family=Potta+One&display=swap');
+
+
+.popupsubsection{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     z-index: -1;
     position: fixed;
     top: 40%;
     left: 50%;
+<<<<<<< HEAD
     transform: translate(-50%, -50%);
+=======
+    transform: translate(-50%,-50%);
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
     width: 774px;
     height: 291px;
     background-color: #263238;
+<<<<<<< HEAD
     border: 3px solid #2CF80B;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     ;
@@ -395,20 +611,57 @@
 }
 
 .popupsection span {
+=======
+    border:3px solid #2CF80B;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+.popupsubmitsection{
+    margin-top: 23px;
+   
+}
+.popupsubmitsection form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.innerpopup{
+    padding:30px 40px ;
+}
+.popuptext{
+    font-family: 'Potta One', cursive;
+    color: white;
+}
+.popupsections{
+color: white;
+display: flex;
+flex-direction: column;
+padding: 10px 0px;
+}
+.popupsection span{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     font-family: 'Lexend Giga', sans-serif;
     font-size: 12px;
     margin-bottom: 5px;
 }
+<<<<<<< HEAD
 
 .popupsections input {
+=======
+.popupsections input{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     border: 1px solid #2CF80B;
     height: 25px;
     width: 315px;
     background-color: #263238;
     color: white;
 }
+<<<<<<< HEAD
 
 .popupsections select {
+=======
+.popupsections select{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     border: 1px solid #2CF80B;
     height: 25px;
     width: 315px;
@@ -417,17 +670,25 @@
     font-family: 'Lexend Giga', sans-serif;
 
 }
+<<<<<<< HEAD
 
 .popupsubmit {
     display: flex;
 }
 
 .popupsubmit input {
+=======
+.popupsubmit{
+    display: flex;
+}
+.popupsubmit input{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     color: #263238;
     font-size: 12px;
     font-family: 'Lexend Giga', sans-serif;
     width: 109px;
     height: 31px;
+<<<<<<< HEAD
     background-color: #2CF80B;
     display: flex;
     align-items: center;
@@ -440,11 +701,25 @@
 }
 
 #cancel {
+=======
+   background-color:#2CF80B;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+   margin-left: 10px;
+   cursor: pointer;
+   border: none;
+
+}
+#cancel{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
     color: #263238;
     font-size: 12px;
     font-family: 'Lexend Giga', sans-serif;
     width: 109px;
     height: 31px;
+<<<<<<< HEAD
     background-color: #2CF80B;
     display: flex;
     align-items: center;
@@ -593,11 +868,42 @@
     }
 
     .innerpopup {
+=======
+   background-color:#2CF80B;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+   margin-left: 10px;
+   cursor: pointer;
+   border: none;
+   margin-left: 453px;
+   
+}
+
+
+
+@media only screen and (max-width: 753px) {
+    .mainsection{
+        width: 88%;
+    }
+    .popupsubsection{
+        
+        width: 340px;
+        height: 550px;
+        
+    }
+    .submainsection{
+        padding: 47px 39px;
+    }
+    .innerpopup{
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+<<<<<<< HEAD
 
     .slotlist {
         width: 87vw;
@@ -618,3 +924,23 @@
     }
 
 }
+=======
+    .slotlist{
+        width: 87vw;
+    }
+    .slots{
+        width: 87px;
+    }
+    .popupsubmit{
+        margin-top: 40px;
+        flex-direction: column;
+    
+    }
+    #cancel{
+        margin-left: 10px;
+    }
+    
+}
+
+
+>>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
