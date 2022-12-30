@@ -1,0 +1,316 @@
+doctype html 
+html 
+    head
+        //- Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NZ24JXK');
+        //- End Google Tag Manager
+        title Lazer Crazer
+        block style
+        style
+            include ../static/style.css
+            include ../static/event.css
+            include ../static/activities.css
+        meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+        link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
+    block content 
+        body 
+            //- Google Tag Manager (noscript)
+            noscript
+                iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+            //- End Google Tag Manager (noscript)
+
+            div#navbar
+                div#ul1-wrapper
+                    ul#ul1
+                        li #[a(href='/') HOME]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/event') EVENT]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/franchise') FRANCHISE]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                #nav-logo
+                    img#logo-background(src="../static/img/logo-activities-background.png" alt="")
+                    a(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img#main-logo(src="../static/img/logo.png" alt="")
+                div#ul2-wrapper
+                    ul#ul2 
+                        li #[a(href='/') RENTING]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/activities') ACTIVITIES]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator.main(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/calender') BOOKING]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                div#nav-planet 
+                    picture
+                        source(type="image/webp" srcset="/static/img/nav-planet.webp")
+                        source(type="image/png" srcset="/static/img/nav-planet.png")
+                        img(src="../static/img/nav-planet.png" alt="")
+
+            div#mobile-navbar
+                div#visible-navbar
+                    a#mobile-logo(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img(src="../static/img/logo.png" alt="")
+                    div#hamburger-icon
+                        span.bar
+                        span.bar
+                        span.bar
+                div#nav-items
+                    ul 
+                        li#home #[a(href='/') HOME]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/event') EVENT]
+                        li #[a(href='/franchise') FRANCHISE] 
+                        li #[a(href='/') RENTING]
+                        li #[a(href='/activities') ACTIVITIES]
+                        li #[a(href='/calender') BOOKING]
+                    div#navM-planet1
+                        picture
+                            source(type="image/webp" srcset="/static/img/navM-planet.webp")
+                            source(type="image/png" srcset="/static/img/navM-planet.png")
+                            img(src="../static/img/navM-planet.png" alt="")
+            //- div#planet-container
+            //-     div#navM-planet2
+            //-         picture
+            //-             source(type="image/webp" srcset="/static/img/navM-planet.webp")
+            //-             source(type="image/png" srcset="/static/img/navM-planet.png")
+            //-             img(src="../static/img/navM-planet.png" alt="")
+
+
+            div#activities-banner
+                div#activities-banner-content
+                    h1#green OTHER ACTIVITIES
+                    div#desktop-activities-para FROM BIRTHDAYS TO CORPORATE PARTIES, WE HAVE
+                        p EVERYTHING YOU NEED TO MAKE YOUR EVENT MEMORABLE.
+                    div#mobile-activities-para FROM BIRTHDAYS TO CORPORATE PARTIES, WE HAVE EVERYTHING YOU NEED TO MAKE YOUR EVENT MEMORABLE.
+                div#activities-banner-rDesign
+                    img(src="../static/img/activities-banner-rDesign.png" alt="")
+                div#activities-banner-lDesign
+                    img(src="../static/img/activities-banner-lDesign.png" alt="")
+                div#kid-jumping
+                    img(src="../static/img/kid-jumping.png" alt="")
+                div#console-controls
+                    img(src="../static/img/console-controls.png" alt="")
+
+                div#activities-banner-mobile 
+                    img(src="../static/img/activities-banner-mobile.png" alt="")
+
+                div#arrow-container
+                    div#arrow1
+                        img(src="../static/img/arrow1.png" alt="")
+                    div#arrow2
+                        img(src="../static/img/arrow2.png" alt="")
+                    div#arrow3
+                        img(src="../static/img/arrow3.png" alt="")
+                div#mobile-arrow
+                    img(src="../static/img/mobile-arrow.png" alt="")
+
+            h1#types-heading TYPES OF 
+                span#green ACTIVITIES
+            div#type1
+                div#type1-content
+                    h3#green PAINTBALL
+                    p Paintball is a high adrenaline, highly strenuous game where participants shoot each other with paintball projectiles at a high rate of speed.
+                div#type1-bg
+                    img#type1-bgD(src="../static/img/type1-bg.png" alt="")
+                    img#type1-bgM(src="../static/img/type1-bgM.png" alt="")
+
+            div.type2
+                div.type2-bg
+                    img(src="../static/img/type2-bg.png" alt="")
+                div.type2-content
+                    h3#green BODY ZORBING
+                    p Body Zorbs are suitable for a huge age group; from children aged 6 years+ right up to adults. The idea is to fit inside a Zorb ball and play.
+
+            div.type2#order-change
+                div.type2-content
+                    h3#green INFLATABLE GAME
+                    p inflatable game rentals aren't just for kids! We have entertainment options for all ages. From Meltdown to bounce houses.
+                div.type2-bg
+                    img(src="../static/img/type3-bg.png" alt="")
+
+            div.type2
+                div.type2-bg
+                    img(src="../static/img/type4-bg.png" alt="")
+                div.type2-content
+                    h3#green TRAMPOLINE
+                    p Trampoline is fun for kids to jump and play during their playtime. It is the best physical activity to boost their spirit.  free Delivery and Setup.
+
+            div#knowMore
+                div#knowMore-bg
+                    img(src="../static/img/knowMore-bg.png" alt="")
+                div#knowMore-content
+                    div#knowMore-content-img
+                        img(src="../static/img/activities-knowMore-content-img.png" alt="")
+                    div#knowMore-content-para
+                        p To know more about LaZer Craer Laser tag Parties and ur party packages, 
+                        p call 8840175266
+                        p Are you event or a PARTY planner ? 
+                            a#green(href='#clientAndForm') Get in touch
+
+
+
+            div#clientAndForm
+                div#event-parallax11
+                    img#move11(src="../static/img/parallax-object1.png" alt="")
+                div#knowMore-blend
+                div#event-formBg
+                    img#event-formBgD(src="../static/img/event-formBg.png" alt="")
+                    img#event-formBgM(src="../static/img/event-formBgM.png" alt="")
+
+                div#contact-form
+                    form#contactForm
+                        p#formHeading HAVE THE BEST PARTY EVER
+                        p GET IN TOUCH WITH US
+                        div#row1
+                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name")
+
+                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone")
+
+                        div#row2
+                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email")
+
+                            select.myInput(name="Parties")
+                                option#placeholder(value="" disabled selected) Types of parties
+                                option(value="Birthday") Birthday 
+                                option(value="Corporate") Corporate
+                                option(value="Private") Private
+                        div#row3
+                            textarea.textarea.myInput(name="message" id='message' cols="30" rows="10" placeholder="Send Comments")
+                        div#btn-container
+                            button(type="submit")#sendRequest SEND REQUEST
+
+            div#clients-bg
+                div#clients
+                    img(src="../static/img/client1.png" alt="")
+                    img(src="../static/img/client2.png" alt="")
+                    img(src="../static/img/client3.png" alt="")
+                    img(src="../static/img/client4.png" alt="")
+                    img(src="../static/img/client5.png" alt="")
+                    img(src="../static/img/client6.png" alt="")
+
+            div#clients2
+                p#trusted TRUSTED BY
+                div.clients-container
+                    img(src="../static/img/client1.png" alt="")
+                    img(src="../static/img/client2.png" alt="")
+                    img(src="../static/img/client3.png" alt="")
+                div.clients-container
+                    img(src="../static/img/client4.png" alt="")
+                    img(src="../static/img/client5.png" alt="")
+                    img(src="../static/img/client6.png" alt="")
+
+            div#client-blend
+
+
+            footer#footer            
+                div#footer-design
+                    img(src="../static/img/footer-design.png" alt="")
+                div#footer-design-right
+                    img(src="../static/img/footer-design-right.png" alt="")
+                div#footer-design2
+                    img(src="../static/img/footer-design2.png" alt="")
+                div#footer-content
+                    div#brand-section
+                        div#brand-logo
+                            img(src="../static/img/footer-logo.png" alt="")
+                        p DELHI’S LARGEST AND TOP RATED LASER TAG ARENA IN HAUZ KHAS VILLAGE
+                    div#mid-section
+                        p Lazer Crazer Laser Tag
+                        div#pixy Website by 
+                            a(href='https://pixysquare.com/' target='_blank')  www.pixysquare.com 
+                                div (click & connect)
+                        div#social-icons
+                            a(href='https://www.facebook.com/lazercrazer1' target='_blank')
+                                img(src="../static/img/fb.png" alt="")
+                            a(href='https://www.instagram.com/lazercrazer/' target='_blank')
+                                img(src="../static/img/insta.png" alt="")
+                            a(href='https://www.youtube.com/@lazercrazer4544' target='_blank')
+                                img(src="../static/img/youtube.png" alt="")
+                    div#contact-section
+                        div#address
+                            img(src="../static/img/location.png" alt="")
+                            a(href='https://goo.gl/maps/3E7CiTjJRayBFssh7' target='_blank') 1A Hauz khas village, New delhi, india, 110016
+                        div#mobile
+                            img(src="../static/img/phone.png" alt="")
+                            p +91 8840175266/ 9971385510
+                        div#mail
+                            img(src="../static/img/envelope.png" alt="")
+                            p Contact@lazercrazer.in
+
+            div#copyright
+                p Copyright © 2022 Lazer Crazer. All rights reserved / 
+                    a(href='/privacy') Privacy Policy 
+
+            div#loading
+                div#loading-design1
+                    picture
+                        source(type="image/webp" srcset="/static/img/loading-design1.webp")
+                        source(type="image/png" srcset="/static/img/loading-design1.png")
+                        img(src="../static/img/loading-design1.png" alt="")
+
+                div#loading-planet
+                    picture
+                        source(type="image/webp" srcset="/static/img/loading-planet.webp")
+                        source(type="image/png" srcset="/static/img/loading-planet.png")
+                        img(src="../static/img/loading-planet.png" alt="")
+                div#progressBar
+                    div#progress
+                    div#progress-perc 0%
+
+                div#loading-design2
+                    picture
+                        source(type="image/webp" srcset="/static/img/loading-design2.webp")
+                        source(type="image/png" srcset="/static/img/loading-design2.png")
+                        img(src="../static/img/loading-design2.png" alt="")
+
+            a(href='https://wa.me/918840175266?text=Hello')#whatsapp-icon
+                svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="wa-messenger-svg-whatsapp wh-svg-icon")
+                    path(d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd")
+                p#message-us Message Us
+
+
+            block scripts
+                script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
+                script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
+                script 
+                    include ../static/script.js
+                script(type='text/javascript').
+                    // STONES PARALLAX
+                    const eventParallax11 = document.getElementById("move11");
+
+                    window.addEventListener('scroll', function () {
+                        var value = window.scrollY;
+                        eventParallax11.style.top = value * 0.09 + 'px';
+                    });

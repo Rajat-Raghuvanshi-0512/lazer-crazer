@@ -1,0 +1,75 @@
+#rental-banner {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #010B32 0%, #010827 100%);
+}
+
+#rental-bg {
+    position: absolute;
+    bottom: -16%;
+}
+
+#rental-bg img {
+    height: 100%;
+    width: 100%;
+}
+
+#rental-content {
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    position: absolute;
+    top: 32%;
+    z-index: 10;
+    width: 100%;
+    padding: 0 30%;
+}
+
+#rental-content h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 132.9%;
+    text-align: center;
+    letter-spacing: 0.105em;
+    color: #2CF80B;
+}
+
+#rental-content h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    line-height: 129.4%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    text-shadow: 0px 19.8584px 23.358px rgba(255, 255, 255, 0.29);
+}
+
+#why-rental {
+    position: relative;
+    margin-top: 200px;
+}
+
+#why-rental h1 {
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 215.9%;
+    text-align: center;
+    color: #FFFFFF;
+}
+#why-rental h1 #green {
+    font-family: 'potta one';
+}
+
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    #rental-content h1 {
+        font-size: 1.8rem;
+    }
+
+    #rental-content h2 {
+        font-size: 1.2rem;
+    }
+
+}
