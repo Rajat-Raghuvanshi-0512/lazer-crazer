@@ -36,11 +36,7 @@ header .icons span{
   width: 38px;
   margin: 0 1px;
   cursor: pointer;
-<<<<<<< HEAD
-  color: #878787;
-=======
   color: white;
->>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
   text-align: center;
   line-height: 38px;
   font-size: 0.90rem;
@@ -52,10 +48,7 @@ header .icons span{
 }
 header .icons span:hover{
   background: #f2f2f2;
-<<<<<<< HEAD
-=======
   color: black;
->>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
 }
 .dateheading{
     display: flex;
@@ -122,11 +115,4 @@ header .current-date{
   border-color: #2CF70B;
   box-shadow: 0 0 20px #2CF70B;
 }
-<<<<<<< HEAD
-.days li:not(.active):not(.todaysdate):hover::before{
-  background: black;
-}
-=======
-
->>>>>>> 30c6b01901ad9f939a2066f82400eff08b221c54
 
