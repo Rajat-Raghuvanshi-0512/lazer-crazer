@@ -87,6 +87,7 @@
 
 }
 
+
 .submainsection {
     padding: 47px 52px;
 }
@@ -96,7 +97,6 @@
 .textsection {
     font-family: 'IBM Plex Sans';
     color: white;
-
 }
 
 .adder {
@@ -105,26 +105,183 @@
     gap: 15px;
 }
 
+.leftadder {
+    color: white;
+    height: 25px;
+    display: flex;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.rightadder {
+    color: white;
+    height: 25px;
+    display: flex;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.middlesection {
+    color: white;
+    height: 25px;
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2CF80B;
+    box-shadow: 0 0 5px #2CF70B;
+    border-radius: 5px;
+}
+
+.calendersection {
+    display: flex;
+    margin-top: 40px;
+    gap: 50px;
+}
+
+.calendertext {
+    color: white;
+    margin-top: 5px;
+
+    font-family: 'IBM Plex Sans';
+}
+
 .bottomsection {
-    flex-direction: column;
-    align-items: center
+    display: flex;
+    align-items: flex-end;
+}
+
+.slotsection {
+    margin-top: 5px;
+    color: white;
+    font-family: 'IBM Plex Sans';
+}
+
+/* .slottext{
+    
+    
+} */
+.slotlist {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    align-items: center;
+    width: 50vw;
+}
+
+.slots {
+    /* margin-right: 5px;
+    margin-left: 5px; */
+    border: 1px solid white;
+    width: 102px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .submitsection {
-    position: static;
-    /* top: 48px;
-        right: ; */
+    color: black;
+    font-family: 'Lexend Giga';
+    /* position: absolute; */
+    font-size: 0.6rem;
+    /* margin-left: 18vw; */
+    /* top: 85.4%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 109px;
+    height: 31px;
+    background-color: #2CF80B;
 
-    margin-top: 40px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
-header .current-date {
-    color: #2CF80B;
+.submitsectiontext {
+    font-family: 'Lexend Giga';
+
 }
 
+#contact-sectionB {
+    background: linear-gradient(180deg, #007cb4 20.62%, rgba(67, 197, 247, 0) 100%);
+    position: relative;
+    top: -250px;
+}
+#box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+}
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 45%;
+    border: 1px solid #2CF80B;
+    padding: 6% 2%;
+}
+.contact-content img {
+    height: auto;
+    width: 68px;
+}
 
-/*  */
-@media only screen and (max-width: 753px) {
+.contact-content p {
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .85rem;
+    line-height: 129.4%;
+    letter-spacing: -0.11em;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 672px) {
+    .bookingsection {
+        /* height: 700px; */
+        width: 100%;
+    }
+
+    .mainsection {
+        /* height: 650px; */
+    }
+
+    .submainsection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 47px 20px;
+    }
+
+    .calendersection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .wrapper header {
+        padding: 10px 30px 5px;
+    }
+
     .slotsection {
         margin-top: 20px;
         display: flex;
@@ -151,11 +308,14 @@ header .current-date {
 
         margin-top: 40px;
     }
+
+    header .current-date {
+        color: #2CF80B;
+    }
 }
 
 
-
-
+/*  */
 
 @media only screen and (max-width: 723px) {
     .slotlist {
@@ -174,11 +334,16 @@ header .current-date {
     }
   } */
 
-<<<<<<< HEAD=======>>>>>>>30c6b01901ad9f939a2066f82400eff08b221c54 <<<<<<< HEAD
+
+
+
+
+
+
+
+
+
 /* popup css starts here */
-
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lexend+Giga&family=Nunito+Sans&family=Potta+One&display=swap');
 
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lexend+Giga&family=Nunito+Sans&family=Potta+One&display=swap');
@@ -190,7 +355,6 @@ header .current-date {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
@@ -199,39 +363,7 @@ header .current-date {
     background-color: #263238;
     border: 3px solid #2CF80B;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.popupsubmitsection {
-    margin-top: 23px;
-
-}
-
-.popupsubmitsection form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-}
-
-.innerpopup {
-    padding: 30px 40px;
-}
-
-.popuptext {
-    font-family: 'Potta One', cursive;
-    color: white;
-}
-
-.popupsections {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0px;
-}
-
-.popupsection span {
-    border: 3px solid #2CF80B;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ;
 }
 
 .popupsubmitsection {
@@ -269,7 +401,7 @@ header .current-date {
 }
 
 .popupsections input {
-    >>>>>>>30c6b01901ad9f939a2066f82400eff08b221c54 border: 1px solid #2CF80B;
+    border: 1px solid #2CF80B;
     height: 25px;
     width: 315px;
     background-color: #263238;
@@ -277,7 +409,7 @@ header .current-date {
 }
 
 .popupsections select {
-    >>>>>>>30c6b01901ad9f939a2066f82400eff08b221c54 border: 1px solid #2CF80B;
+    border: 1px solid #2CF80B;
     height: 25px;
     width: 315px;
     background-color: #263238;
@@ -296,18 +428,6 @@ header .current-date {
     font-family: 'Lexend Giga', sans-serif;
     width: 109px;
     height: 31px;
-    background-color: #2CF80B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    border: none;
-
-}
-
-#cancel {
     background-color: #2CF80B;
     display: flex;
     align-items: center;
@@ -347,7 +467,7 @@ header .current-date {
     top: 0;
 }
 
-@media (min-width: 1000px) and (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px) { 
     #contact-sectionB {
         top: -130px;
     }
@@ -430,7 +550,6 @@ header .current-date {
     #contact-sectionB {
         top: 150px;
     }
-
     .contact-content p {
         font-weight: 400;
         font-size: .75rem;
@@ -438,23 +557,19 @@ header .current-date {
         margin-top: 14px;
         text-align: center
     }
-
     .contact-content img {
         height: auto;
         width: 50px;
     }
-
     #footer {
         margin-top: 275px !important;
     }
 }
-
 @media only screen and (max-width: 390px) {
     #contact-sectionB {
         top: 194px;
         z-index: -1;
     }
-
     #footer {
         margin-top: 300px !important;
     }
@@ -478,61 +593,10 @@ header .current-date {
     }
 
     .innerpopup {
-        background-color: #2CF80B;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10px;
-        margin-left: 10px;
-        cursor: pointer;
-        border: none;
-        margin-left: 453px;
-
-    }
-
-
-
-    @media only screen and (max-width: 753px) {
-        .mainsection {
-            width: 88%;
-        }
-
-        .popupsubsection {
-
-            width: 340px;
-            height: 550px;
-
-        }
-
-        .submainsection {
-            padding: 47px 39px;
-        }
-
-        .innerpopup {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .slotlist {
-            width: 87vw;
-        }
-
-        .slots {
-            width: 87px;
-        }
-
-        .popupsubmit {
-            margin-top: 40px;
-            flex-direction: column;
-
-        }
-
-        #cancel {
-            margin-left: 10px;
-        }
-
+        flex-direction: column;
     }
 
     .slotlist {
