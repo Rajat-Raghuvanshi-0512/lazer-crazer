@@ -11,6 +11,33 @@ function unglow(x) {
     x.classList.remove("active");
 };
 
+// NAVBAR HIDE ON SCROLL
+
+// var lastScrollTop = 0;
+// navbar = document.getElementById('mobile-navbar');
+// window.addEventListener('touchmove', function () {
+// }
+// });
+// var lastScrollTop = 0;
+// window.addEventListener('touchmove', function () {
+//     // console.log(window)
+//     var st = $('this').scrollTop();
+//     console.log(window.scrollY)
+//     // var banner = $('#mobile-navbar');
+//     banner = document.getElementById('mobile-navbar');
+
+//     // console.log(banner)
+//     setTimeout(function () {
+//         if (st > lastScrollTop) {
+//             banner.style.top='0';
+//         } else {
+//             banner.style.top='-100px';
+
+//         }
+//         lastScrollTop = st;
+//     }, 100);
+// });
+
 // STONES PARALLAX
 const parallaxObject1 = document.getElementById("move");
 const parallaxObject2 = document.getElementById("move2");
@@ -48,7 +75,7 @@ window.addEventListener('scroll', function () {
     parallaxObject13.style.top = value * 0.15 + 'px';
     parallaxObject14.style.top = value * 0.15 + 'px';
     parallaxObject15.style.top = value * 0.15 + 'px';
-    
+
     galleryRow1.style.left = value * -0.5 + 'px';
     galleryRow2.style.left = value * 0.5 + 'px';
 });
@@ -169,13 +196,16 @@ contactForm.addEventListener('submit', (e) => {
         message: message.value,
     }
     let xhr = new XMLHttpRequest();
+    function thankYou() {
+        window.location.assign("/thank");
+    };
 
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
     xhr.onload = function () {
         console.log(xhr.responseText);
-
+        thankYou();
         if (xhr.responseText == 'success') {
             name.value = '';
             email.value = '';

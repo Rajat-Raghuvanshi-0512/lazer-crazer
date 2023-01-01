@@ -70,12 +70,17 @@ contactForm.addEventListener('submit', (e) => {
         message: message.value,
     }
     let xhr = new XMLHttpRequest();
+    function thankYou() {
+        window.location.assign("/thank");
+    };
 
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
     xhr.onload = function () {
         console.log(xhr.responseText);
+        thankYou();
+        
 
         if (xhr.responseText == 'success') {
             name.value = '';

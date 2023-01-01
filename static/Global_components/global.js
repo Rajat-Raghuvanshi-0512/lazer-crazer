@@ -7,7 +7,7 @@ const slottag = document.querySelector('.slotlist');
 
 let time = "";
 
-console.log(slottag)
+// console.log(slottag)
 let count = 1;
 counttag.innerHTML = `${count}`;
 
@@ -15,14 +15,15 @@ counttag.innerHTML = `${count}`;
 
 
 
-
+let flag = 0;
 
 const slots = document.getElementsByClassName('slots');
-console.log(slots);
+// console.log(slots);
 slottag.addEventListener('click', (event) => {
     currenttarget = event.target;
-    console.log(currenttarget.classList);
+    // console.log(currenttarget.classList);
     if (currenttarget.classList.contains('slots')) {
+        flag = 1;
         currenttarget.style.borderColor = '#2CF80B'
         currenttarget.style.boxShadow = '0 0 20px #2CF70B'
         time = currenttarget.innerHTML;
@@ -31,8 +32,7 @@ slottag.addEventListener('click', (event) => {
             const element = slots[i];
             if (element === currenttarget) {
                 continue;
-            }
-            else {
+            } else {
                 element.style.borderColor = 'white'
                 element.style.removeProperty('box-shadow')
             }
@@ -53,7 +53,8 @@ let date = new Date(),
 
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
-    "August", "September", "October", "November", "December"];
+    "August", "September", "October", "November", "December"
+];
 
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
@@ -68,8 +69,8 @@ const renderCalendar = () => {
 
     for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
         // adding active class to li if the current day, month, and year matched
-        let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-            && currYear === new Date().getFullYear() ? "active" : "";
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth() &&
+            currYear === new Date().getFullYear() ? "active" : "";
         liTag += `<li class="${isToday}">${i}</li>`;
     }
 
@@ -80,6 +81,34 @@ const renderCalendar = () => {
     daysTag.innerHTML = liTag;
 }
 renderCalendar();
+
+
+
+
+
+
+
+const todaysmonthyear = document.getElementsByClassName('current-date')[0];
+const changeddate = todaysmonthyear.innerHTML;
+let givenmonth = date.getMonth();
+let y = changeddate.substring(0, changeddate.length - 5)
+let z = changeddate.substring(changeddate.length - 4);
+for (let i = 0; i < 12; i++) {
+    const element = months[i];
+    if (element == y) {
+        givenmonth = i;
+    }
+}
+
+
+let selecteddate = date.getDate();
+let selectedmonth = givenmonth;
+let selectedyear = z;
+
+
+
+
+
 
 prevNextIcon.forEach(icon => { // getting prev and next icons
     icon.addEventListener("click", () => { // adding click event on both icons
@@ -95,19 +124,34 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
             date = new Date(); // pass the current date as date value
         }
         renderCalendar(); // calling renderCalendar function
+        const todaysmonthyear = document.getElementsByClassName('current-date')[0];
+        const changeddate = todaysmonthyear.innerHTML;
+        let givenmonth = date.getMonth();
+        let y = changeddate.substring(0, changeddate.length - 5)
+        let z = changeddate.substring(changeddate.length - 4);
+        for (let i = 0; i < 12; i++) {
+            const element = months[i];
+            if (element == y) {
+                givenmonth = i;
+            }
+        }
+
+
+        selecteddate = date.getDate();
+        selectedmonth = givenmonth;
+        selectedyear = z;
+
     });
 });
 
 
 
-let selecteddate = date.getDate();
-let selectedmonth = date.getMonth();
-let selectedyear = date.getFullYear();
+
 
 
 const fetchslots = () => {
     let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-    console.log(todaysdate)
+    // console.log(todaysdate)
 
 
     //fetching the API 
@@ -129,7 +173,7 @@ const fetchslots = () => {
             return response.json();
         }
     }).then(function (data) {
-        console.log(data);
+        // console.log(data);
         fetchedslots = data.slots
     }).then(function () {
 
@@ -159,23 +203,28 @@ fetchslots();
 
 
 
-const linkele = document.querySelectorAll(".days li")
-// console.log(linkele)
+//calender date elements link  element was there
+
+
+
+// // console.log(linkele)
 
 daysTag.addEventListener("click", (event) => {
     currenttarget = event.target;
-    console.log(currenttarget.tagName)
+    // console.log(currenttarget.tagName)
+    const linkele = document.querySelectorAll(".days li")
+
     if (currenttarget.tagName === 'LI') {
+        flag = 0;
         currenttarget.classList.add('active');
         selecteddate = currenttarget.innerHTML;
-        console.log(selecteddate)
+        // console.log(selecteddate)
 
         for (let i = 0; i < linkele.length; i++) {
             const element = linkele[i];
             if (element === currenttarget) {
                 continue;
-            }
-            else {
+            } else {
                 element.classList.remove('active');
             }
         }
@@ -189,24 +238,26 @@ daysTag.addEventListener("click", (event) => {
     }
 
 
-}
-)
+})
 
 
 const submitbutton = document.getElementsByClassName('submitsection')[0];
 submitbutton.addEventListener('click', (event) => {
-    let today = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-    console.log(today)
-    console.log(count)
-    console.log(time)
-    const bookingsection = document.getElementsByClassName('bookingsection')[0];
-    bookingsection.classList.add('blurback')
-    const popupsection = document.getElementsByClassName('popupsubsection')[0];
-    popupsection.style.top = '50%';
-    popupsection.style.visibility = 'visible';
-    popupsection.style.opacity = '1';
-    popupsection.style.transition = '0.5s';
-    popupsection.style.zIndex = '1';
+    if (flag) {
+        let today = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
+        // console.log(today)
+        // console.log(count)
+        // console.log(time)
+        const bookingsection = document.getElementsByClassName('bookingsection')[0];
+        bookingsection.classList.add('blurback')
+        const popupsection = document.getElementsByClassName('popupsubsection')[0];
+        popupsection.style.top = '50%';
+        popupsection.style.visibility = 'visible';
+        popupsection.style.opacity = '1';
+        popupsection.style.transition = '0.5s';
+        popupsection.style.zIndex = '1';
+    }
+
 
 
 
@@ -268,7 +319,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
     let package = arrp[0].value
 
     let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-    console.log(todaysdate)
+    // console.log(todaysdate)
 
 
 
@@ -289,8 +340,18 @@ finalsubmitbutton.addEventListener('click', (event) => {
     //         return response.json();
     //     }
     // }).then(function (data) {
-    //     console.log(data);
+    //     // console.log(data);
     // });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -341,11 +402,16 @@ finalsubmitbutton.addEventListener('click', (event) => {
             }
             let xhr = new XMLHttpRequest();
 
+            function thankYou() {
+                window.location.assign("/thank");
+            };
+
             xhr.open('POST', '/');
             xhr.setRequestHeader('content-type', 'application/json');
             xhr.send(JSON.stringify(formData));
             xhr.onload = function () {
                 console.log(xhr.responseText);
+                thankYou();
 
                 if (xhr.responseText == 'success') {
                     name.value = '';
@@ -359,7 +425,14 @@ finalsubmitbutton.addEventListener('click', (event) => {
         });
 
 
+
+
+
         //SMTP request ends here
+
+
+
+
 
 
         const api_url1 = "https://www.lazercrazer.in/api/date/bookslot"
@@ -378,7 +451,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
                 return response.json();
             }
         }).then(function (data) {
-            console.log(data);
+            // console.log(data);
         });
 
 

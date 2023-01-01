@@ -55,6 +55,10 @@ app.get('/calender', (req, res) => {
     const params = {}
     res.status(200).render('calender.pug', params);
 });
+app.get('/thank', (req, res) => {
+    const params = {}
+    res.status(200).render('thank.pug', params);
+});
 
 app.post('/', (req, res) => {
     let transporter = nodemailer.createTransport({

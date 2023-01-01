@@ -10,17 +10,17 @@ $(window).on("load", function () {
 });
 
 // NAVBAR EVENTS
-$('body').on({ 'touchmove': onScroll });
-function onScroll() {
-    var prevScrollpos = window.pageYOffset;
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-        document.getElementById("navbar").style.top = "-50px";
-    }
-    prevScrollpos = currentScrollPos;
-};
+// $('body').on({ 'touchmove': onScroll });
+// function onScroll() {
+//     var prevScrollpos = window.pageYOffset;
+//     var currentScrollPos = window.pageYOffset;
+//     if (prevScrollpos > currentScrollPos) {
+//         document.getElementById("navbar").style.top = "0";
+//     } else {
+//         document.getElementById("navbar").style.top = "-50px";
+//     }
+//     prevScrollpos = currentScrollPos;
+// };
 
 // Hamburger click events
 const hamburger = document.querySelector("#hamburger-icon");

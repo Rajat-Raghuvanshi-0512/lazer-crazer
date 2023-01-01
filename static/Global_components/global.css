@@ -3,9 +3,9 @@
 
 
 .blurback {
-    /* filter: blur(20px); */
-    /* pointer-events: none; */
-    /* user-select: none; */
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
 }
 
 #booking-planet {
@@ -150,8 +150,9 @@
 .calendertext {
     color: white;
     margin-top: 5px;
-
-    font-family: 'IBM Plex Sans';
+    font-family: 'Lexend Giga';
+    /* font-weight: 500; */
+    font-size: 12px;
 }
 
 .bottomsection {
@@ -165,10 +166,10 @@
     font-family: 'IBM Plex Sans';
 }
 
-/* .slottext{
-    
-    
-} */
+.slottext {
+    font-family: 'Lexend Giga';
+    font-size: 12px;
+}
 .slotlist {
     display: flex;
     gap: 25px;
@@ -196,7 +197,7 @@
     font-family: 'Lexend Giga';
     /* position: absolute; */
     font-size: 0.6rem;
-    /* margin-left: 18vw; */
+    margin-left: 9vw;
     /* top: 85.4%; */
     display: flex;
     align-items: center;
@@ -314,6 +315,34 @@
     }
 }
 
+@media only screen and (max-width: 753px) {
+    .slotsection {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .slotlist {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .bottomsection {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .submitsection {
+        position: static;
+        /* top: 48px;
+        right: ; */
+
+        margin-top: 40px;
+    }
+}
 
 /*  */
 

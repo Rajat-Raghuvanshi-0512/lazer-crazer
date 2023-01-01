@@ -1,16 +1,35 @@
 doctype html 
 html 
     head
+        //- Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NZ24JXK');
+        //- End Google Tag Manager
         title Lazer Crazer
         block style
         style
             include ../static/style.css
             include ../static/franchise.css
             include ../static/event.css
+
+        //- LINK TAGS FOR WEBSITE"S FAVICON
+        link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon_io/favicon-16x16.png")
+        link(rel="manifest" href="../static/img/favicon_io/site.webmanifest")
+        
         meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
+            //- Google Tag Manager (noscript)
+            noscript
+                iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+            //- End Google Tag Manager (noscript)
             div#navbar
                 div#ul1-wrapper
                     ul#ul1
@@ -52,12 +71,21 @@ html
                         li#home #[a(href='/') HOME]
                             img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/event') EVENT]
+                            img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/franchise') FRANCHISE] 
+                            img#navigator.main(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/') RENTING]
+                            img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/activities') ACTIVITIES]
+                            img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/calender') BOOKING]
-                    div#navM-planet1
-                        img(src="../static/img/navM-planet.png" alt="")
+                            img#navigator(src="../static/img/home-navigator.png" alt="")
+                    div#nav-lightining1
+                        img(src="../static/img/nav-lightining1.png" alt="")
+                    div#nav-lightining2
+                        img(src="../static/img/nav-lightining2.png" alt="")
+                    div#nav-bottom-tower
+                        img(src="../static/img/nav-bottom-tower.png", alt="")
             div#planet-container
                 div#navM-planet2
                     img(src="../static/img/navM-planet.png" alt="")
@@ -466,3 +494,4 @@ html
                 script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
                 script 
                     include ../static/script.js
+                    include ../static/franchise.js

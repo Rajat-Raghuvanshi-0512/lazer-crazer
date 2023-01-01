@@ -2,6 +2,15 @@ doctype html
 // Coding By CodingNepal - youtube.com/codingnepal
 html(lang='en' dir='ltr')
   head
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NZ24JXK');
+    //- End Google Tag Manager
+
     meta(charset='utf-8')
     title Lazer Crazer booking section
     link(rel='stylesheet' href='../static/calender components//calender.css')
@@ -11,10 +20,20 @@ html(lang='en' dir='ltr')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200')
     style
       include ../static/style.css
+    
+    //- LINK TAGS FOR WEBSITE"S FAVICON
+    link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon_io/favicon-16x16.png")
+    link(rel="manifest" href="../static/img/favicon_io/site.webmanifest")
     link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     script(src='../static/calender components/calender.js' defer='')
     script(src='../static/Global_components/global.js' defer='')
   body
+    //- Google Tag Manager (noscript)
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+    //- End Google Tag Manager (noscript)
     div#navbar
       div#ul1-wrapper
         ul#ul1
@@ -85,10 +104,36 @@ html(lang='en' dir='ltr')
               source(type="image/png" srcset="/static/img/home-navigator.png")
               img#navigator(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/event') EVENT]
+            picture
+              source(type="image/webp" srcset="/static/img/home-navigator.webp")
+              source(type="image/png" srcset="/static/img/home-navigator.png")
+              img#navigator(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/franchise') FRANCHISE] 
+            picture
+              source(type="image/webp" srcset="/static/img/home-navigator.webp")
+              source(type="image/png" srcset="/static/img/home-navigator.png")
+              img#navigator(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/') RENTING]
+            picture
+              source(type="image/webp" srcset="/static/img/home-navigator.webp")
+              source(type="image/png" srcset="/static/img/home-navigator.png")
+              img#navigator(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/activities') ACTIVITIES]
+            picture
+              source(type="image/webp" srcset="/static/img/home-navigator.webp")
+              source(type="image/png" srcset="/static/img/home-navigator.png")
+              img#navigator(src="../static/img/home-navigator.png" alt="")
           li #[a(href='/calender') BOOKING]
+            picture
+              source(type="image/webp" srcset="/static/img/home-navigator.webp")
+              source(type="image/png" srcset="/static/img/home-navigator.png")
+              img#navigator.main(src="../static/img/home-navigator.png" alt="")
+        div#nav-lightining1
+          img(src="../static/img/nav-lightining1.png" alt="")
+        div#nav-lightining2
+            img(src="../static/img/nav-lightining2.png" alt="")
+        div#nav-bottom-tower
+            img(src="../static/img/nav-bottom-tower.png", alt="")
         div#navM-planet1
           picture
             source(type="image/webp" srcset="/static/img/navM-planet.webp")
@@ -104,9 +149,9 @@ html(lang='en' dir='ltr')
         h2 BOOK YOUR NEXT EVENT WITH US!
       .wholebookingsection
         .booking-bg
-          img(src="../static/img/booking-bg.png", alt="")
+          img(src="../static/img/booking-bg.png" alt="")
         .booking-bgM
-          img(src="../static/img/booking-bgM.png", alt="")
+          img(src="../static/img/booking-bgM.png" alt="")
         .bookingsection
           .mainsection
             .submainsection
@@ -215,13 +260,13 @@ html(lang='en' dir='ltr')
     div#contact-sectionB
       div#box-container
         div.contact-content
-          img(src="../static/img/booking-loc.png", alt="")
+          img(src="../static/img/booking-loc.png" alt="")
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mauris scelerisque 
         div.contact-content
-          img(src="../static/img/booking-message.png", alt="")
+          img(src="../static/img/booking-message.png" alt="")
           p Lorem ipsum dolor sit amet,
         div.contact-content
-          img(src="../static/img/booking-call.png", alt="")
+          img(src="../static/img/booking-call.png" alt="")
           p 1234567890 
 
     footer#footer            
@@ -284,7 +329,7 @@ html(lang='en' dir='ltr')
           source(type="image/webp" srcset="/static/img/loading-design2.webp")
           source(type="image/png" srcset="/static/img/loading-design2.png")
           img(src="../static/img/loading-design2.png" alt="")
-    
+
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
 
     script 
