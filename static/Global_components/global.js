@@ -248,7 +248,7 @@ submitbutton.addEventListener('click', (event) => {
         // console.log(today)
         // console.log(count)
         // console.log(time)
-        const bookingsection = document.getElementsByClassName('bookingsection')[0];
+        const bookingsection = document.getElementById('booking')
         bookingsection.classList.add('blurback')
         const popupsection = document.getElementsByClassName('popupsubsection')[0];
         popupsection.style.top = '50%';
@@ -256,6 +256,9 @@ submitbutton.addEventListener('click', (event) => {
         popupsection.style.opacity = '1';
         popupsection.style.transition = '0.5s';
         popupsection.style.zIndex = '1';
+    }
+    else{
+        alert("Select a given slot to continue");
     }
 
 
@@ -290,7 +293,7 @@ leftsub.addEventListener("click", (event) => {
 //popup cancel Javascript
 const cancelbutton = document.getElementById('cancel');
 cancelbutton.addEventListener('click', (event) => {
-    const bookingsection = document.getElementsByClassName('bookingsection')[0];
+    const bookingsection = document.getElementById('booking')
     bookingsection.classList.remove('blurback')
     const popupsection = document.getElementsByClassName('popupsubsection')[0];
     popupsection.style.top = '40%';
@@ -384,21 +387,21 @@ finalsubmitbutton.addEventListener('click', (event) => {
 
         // paste SMTP request here
 
-        const contactFormB = document.querySelector("#contactFormB");
-        let name = document.getElementById("name");
-        let phone = document.getElementById("phone");
-        let email = document.getElementById("email");
-        let select2 = document.getElementById("package");
+        // const contactFormB = document.querySelector("#contactFormB");
+        // let name = document.getElementById("name");
+        // let phone = document.getElementById("phone");
+        // let email = document.getElementById("email");
+        // let select2 = document.getElementById("package");
         // let submitButton = document.querySelector("#sendRequest2");
 
 
-        contactFormB.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // contactFormB.addEventListener('submit', (e) => {
+            // e.preventDefault();
             let formData = {
-                name: name.value,
-                phone: phone.value,
-                email: email.value,
-                select2: select2.value,
+                name: clientname,
+                phone: clientphoneno,
+                email: clientemail,
+                select2: package,
             }
             let xhr = new XMLHttpRequest();
 
@@ -414,15 +417,15 @@ finalsubmitbutton.addEventListener('click', (event) => {
                 thankYou();
 
                 if (xhr.responseText == 'success') {
-                    name.value = '';
-                    email.value = '';
-                    phone.value = '';
-                    select2.value = '';
+                    clientname = '';
+                    clientemail = '';
+                    clientphoneno = '';
+                    package = '';
                 } else {
                     alert('Something went wrong!')
                 }
             }
-        });
+        // });
 
 
 
@@ -458,7 +461,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
 
 
 
-        const bookingsection = document.getElementsByClassName('bookingsection')[0];
+        const bookingsection = document.getElementById('booking')
         bookingsection.classList.remove('blurback')
         const popupsection = document.getElementsByClassName('popupsubsection')[0];
         popupsection.style.top = '40%';

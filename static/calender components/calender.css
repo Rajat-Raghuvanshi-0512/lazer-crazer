@@ -131,7 +131,7 @@ header .current-date {
 
 .days li.active::before {
   background: black;
-  border-color: #2CF70B;
+  border: 2px solid #2CF70B;
   box-shadow: 0 0 20px #2CF70B;
 }
 
