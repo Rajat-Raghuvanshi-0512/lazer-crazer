@@ -212,7 +212,8 @@
 
 .submitsectiontext {
     font-family: 'Lexend Giga';
-
+    font-weight: 700;
+    font-size: 10px;
 }
 
 #contact-sectionB {
@@ -635,7 +636,9 @@
     .slots {
         width: 87px;
     }
-
+    .submitsection{
+        margin-left: 0vw;
+    }
     .popupsubmit {
         margin-top: 40px;
         flex-direction: column;
