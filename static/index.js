@@ -11,32 +11,47 @@ function unglow(x) {
     x.classList.remove("active");
 };
 
+
+function bookA(x) {
+    x.classList.add("active");
+};
+function book(x) {
+    x.classList.remove("active");
+};
+
 // NAVBAR HIDE ON SCROLL
 
-// var lastScrollTop = 0;
-// navbar = document.getElementById('mobile-navbar');
-// window.addEventListener('touchmove', function () {
-// }
-// });
-// var lastScrollTop = 0;
-// window.addEventListener('touchmove', function () {
-//     // console.log(window)
-//     var st = $('this').scrollTop();
-//     console.log(window.scrollY)
-//     // var banner = $('#mobile-navbar');
-//     banner = document.getElementById('mobile-navbar');
-
-//     // console.log(banner)
-//     setTimeout(function () {
-//         if (st > lastScrollTop) {
-//             banner.style.top='0';
-//         } else {
-//             banner.style.top='-100px';
-
-//         }
-//         lastScrollTop = st;
-//     }, 100);
-// });
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('#mobile-navbar').outerHeight();
+console.log(navbarHeight)
+setInterval(function () {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+$(window).scroll(function (event) {
+    didScroll = true;
+});
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    if (Math.abs(lastScrollTop - st) <= delta) {
+        return;
+    }
+    if (st > lastScrollTop && st > navbarHeight) {
+        $('#mobile-navbar').removeClass('nav-down').addClass('nav-up');
+    } else {
+        if (st + $(window).height() < $(document).height()) {
+            $('#mobile-navbar').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    if (st < 100) {
+        $('#mobile-navbar').removeClass('nav-down');
+    }
+    lastScrollTop = st;
+}
 
 // STONES PARALLAX
 const parallaxObject1 = document.getElementById("move");
@@ -200,12 +215,12 @@ contactForm.addEventListener('submit', (e) => {
         window.location.assign("/thank");
     };
 
+    thankYou();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
     xhr.onload = function () {
         console.log(xhr.responseText);
-        thankYou();
         if (xhr.responseText == 'success') {
             name.value = '';
             email.value = '';

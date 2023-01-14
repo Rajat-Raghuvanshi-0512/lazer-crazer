@@ -5,14 +5,20 @@
 html {
     scroll-behavior: smooth;
 }
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
+    width: 8px;  /* Remove scrollbar space */
+    height: 3px;
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: #28e40a;
+    border-radius: 20px;
 }
 
 
@@ -178,6 +184,7 @@ body {
 }
 
 /* NAVBAR */
+
 
 #navbar {
     display: flex;
@@ -376,17 +383,18 @@ body {
     transition: .3s all;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    /* z-index: 1000; */
 }
 
-#bookNow:hover {
+#bookNow.active {
     box-shadow: 0px 0px 13px 0px #28e40a;
 }
 
-#bookNow:hover .button-design {
-    visibility: visible;
+#bookNow.active .button-design {
+    filter: brightness(1);
 }
 
-#bookNow:hover #now {
+#bookNow.active #now {
     color: #FFFFFF;
 }
 
@@ -417,7 +425,7 @@ body {
     right: 0;
     top: -5px;
     height: 35px;
-    visibility: hidden;
+    filter: brightness(0);
     transition: .1s all ease-in;
 }
 
@@ -1362,6 +1370,7 @@ body {
     width: 330px;
     text-decoration: none;
     color: #FFFFFF;
+    z-index: 10;
 }
 
 

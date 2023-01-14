@@ -1,6 +1,14 @@
 doctype html 
 html 
     head
+        //- Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NZ24JXK');
+        //- End Google Tag Manager
         title Lazer Crazer
         block style
         style
@@ -10,38 +18,68 @@ html
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
+            //- Google Tag Manager (noscript)
+            noscript
+                iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+            //- End Google Tag Manager (noscript)
             div#navbar
                 div#ul1-wrapper
                     ul#ul1
                         li #[a(href='/') HOME]
-                            img#home-navigator(src="../static/img/home-navigator.png" alt="")
-
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/event') EVENT]
-                            img#home-navigator(src="../static/img/home-navigator.png" alt="")
-
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/franchise') FRANCHISE]
-                            img#home-navigator.main(src="../static/img/home-navigator.png" alt="")
-                div#nav-logo
-                    img#logo-background(src="../static/img/logo-background.png" alt="")
-                    img#main-logo(src="../static/img/logo.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
+                #nav-logo
+                    picture
+                        source(type="image/webp" srcset="/static/img/logo-background.webp")
+                        source(type="image/png" srcset="/static/img/logo-background.png")
+                        img#logo-background(src="../static/img/logo-background.png" alt="")
+                    a(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img#main-logo(src="../static/img/logo.png" alt="")
                 div#ul2-wrapper
                     ul#ul2 
-                        li #[a(href='/') RENTING]
-                            img#home-navigator(src="../static/img/home-navigator.png" alt="")
-
+                        li #[a(href='/rental') RENTING]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator.main(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/activities') ACTIVITIES]
-                            img#home-navigator(src="../static/img/home-navigator.png" alt="")
-
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/calender') BOOKING]
-                            img#home-navigator(src="../static/img/home-navigator.png" alt="")
-
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#home-navigator(src="../static/img/home-navigator.png" alt="")
                 div#nav-planet 
-                    img(src="../static/img/nav-planet.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/nav-planet.webp")
+                        source(type="image/png" srcset="/static/img/nav-planet.png")
+                        img(src="../static/img/nav-planet.png" alt="")
 
             div#mobile-navbar
                 div#visible-navbar
-                    div#mobile-logo
-                        img(src="../static/img/logo.png" alt="")
+                    a#mobile-logo(href='/')
+                        picture
+                            source(type="image/webp" srcset="/static/img/logo.webp")
+                            source(type="image/png" srcset="/static/img/logo.png")
+                            img(src="../static/img/logo.png" alt="")
                     div#hamburger-icon
                         span.bar
                         span.bar
@@ -49,43 +87,174 @@ html
                 div#nav-items
                     ul 
                         li#home #[a(href='/') HOME]
-                            img#navigator(src="../static/img/home-navigator.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/event') EVENT]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/franchise') FRANCHISE] 
-                        li #[a(href='/') RENTING]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator(src="../static/img/home-navigator.png" alt="")
+                        li #[a(href='/rental') RENTING]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator.main(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/activities') ACTIVITIES]
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator(src="../static/img/home-navigator.png" alt="")
                         li #[a(href='/calender') BOOKING]
-                    div#navM-planet1
-                        img(src="../static/img/navM-planet.png" alt="")
-            div#planet-container
-                div#navM-planet2
-                    img(src="../static/img/navM-planet.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/home-navigator.webp")
+                                source(type="image/png" srcset="/static/img/home-navigator.png")
+                                img#navigator(src="../static/img/home-navigator.png" alt="")
+                    div#nav-lightining1
+                        img(src="../static/img/nav-lightining1.png" alt="")
+                    div#nav-lightining2
+                        img(src="../static/img/nav-lightining2.png" alt="")
+                    div#nav-bottom-tower
+                        img(src="../static/img/nav-bottom-tower.png" alt="")
+            //- div#planet-container
+            //-     div#navM-planet2
+            //-         picture
+            //-             source(type="image/webp" srcset="/static/img/navM-planet.webp")
+            //-             source(type="image/png" srcset="/static/img/navM-planet.png")
+            //-             img(src="../static/img/navM-planet.png" alt="")
 
-            
+
             div#rental-banner
                 div#rental-content
                     h1 RENTING
                     h2 WE RENT AND SHIP LESSER TAG ADVENTURES COAST TO COAST
 
                 div#rental-bg
-                    img(src="../static/img/rental-bg.png", alt="")
+                    img(src="../static/img/rental-bg.png" alt="")
+                div#rental-bgM
+                    img(src="../static/img/rental-bgM.png" alt="")
 
             div#why-rental
                 h1 WHY 
                     span#green RENTAL
 
                 div#why-rental-containers
+                    div#rental-gun
+                        img(src="../static/img/rental-gun.png" alt="")
+                    div#rental-gunM
+                        img(src="../static/img/rental-gunM.png" alt="")
                     div.rental-Containers
                         div.rental-Containers-img
-                            img(src="../static/img/rental-Containers1.png", alt="")
-                        p AFFORDABLE PRICING
+                            img(src="../static/img/rental-Containers1.png" alt="")
+                        p#cont-heading AFFORDABLE PRICING
                         p Don’t buy - rent Lesser Tag Source has quality products at a price that won’t break the bank
                         a(href='/') PRICING
+                    div.rental-Containers
+                        div.rental-Containers-img
+                            img(src="../static/img/rental-Containers1.png" alt="")
+                        p#cont-heading YOUR TURF, YOUR TERMS
+                        p No need to travel in order to enjoy Lasser Tag. We ship the adventure straight to your door step. This means your terrain, your games, and your rules
+                        a(href='/') PRICING
+                    div.rental-Containers
+                        div.rental-Containers-img
+                            img(src="../static/img/rental-Containers1.png" alt="")
+                        p#cont-heading COUSTOM ORDER
+                        p No need to travel in order to enjoy Lasser Tag. We ship the adventure straight to your door step. This means your terrain, your games, and your rules
+                        a(href='/') PRICING
+
+            div#process
+                h1 OUR 
+                    span#green PROCESS
+
+                div#process1 
+                    div#process-num1
+                        img(src="../static/img/process-num1.png" alt="")
+                    div.process-text
+                        h5 THROW A PARTY
+                        p No matter where in the country you are located find a great reason to throw a party!
+                    div.process-bg1
+                        img(src="../static/img/process-bg1.png" alt="")
+
+                div#process2 
+                    div#process-num2
+                        img(src="../static/img/process-num2.png" alt="")
+                    div.process-bg1
+                        img(src="../static/img/process-bg2.png" alt="")
+                    div.process-text
+                        h5 FIND OUR HOME ON THE WEB 
+                        p @ WWW.lasertagsource.com and browse our individual guns and packages. Place and pay for your reservation!
+
+                div#process3
+                    div#process-num3
+                        img(src="../static/img/process-num3.png" alt="")
+                    div.process-text
+                        h5 OUR WAREHOUSE
+                        p Our warehouse tests and lovingly packages up your order. We even throw in bounuses like batteries and a screwdriver ,if we know what kind of event you are hosting
+                    div.process-bg1
+                        img(src="../static/img/process-bg3.png" alt="")
+                    div#process-bgM1
+                        img(src="../static/img/process-bgM3.png" alt="")
+
+                div#process4
+                    div#process-num4
+                        img(src="../static/img/process-num3.png" alt="")
+                    div.process-bg1
+                        img(src="../static/img/process-bg4.png" alt="")
+                    div.process-text
+                        h5 DELIVER AT YOUR DOR STEP
+                        p Thanks to the folks at UPS the equipement shows up on your doorstep 1-2 days prior to your event. Pull everythings out of that box! Play with it ! Be sure to keep that bubble wrap & packaging for the return trip
 
 
+            div#equipment
+                h1 OUR 
+                    span#green EQUIPMENT
+
+                div#equipment-containers
+                    div#eq-row1
+                        div.eq-container#eq1
+                            img(src="../static/img/eq1.png" alt="")
+                            p BRX
+                        div.eq-container#eq2
+                            img(src="../static/img/eq2.png" alt="")
+                            p BATTLE TAG 
+                        div.eq-container#eq3
+                            img(src="../static/img/eq3.png" alt="")
+                            p SPEAKERS
+                    div#eq-row2
+                        div.eq-container#eq4
+                            img(src="../static/img/eq4.png" alt="")
+                            p PARTY 
+                                span#green LIGHT
+                        div.eq-container#eq5
+                            img(src="../static/img/eq5.png" alt="")
+                            p BUNKER
+                        div.eq-container#eq6
+                            img(src="../static/img/eq6.png" alt="")
+                            p SCORING 
+                                span#green SYSTEM
+
+            div#knowMore
+                div#knowMore-bg
+                    img(src="../static/img/knowMore-bg.png" alt="")
+                div#knowMore-content
+                    div#knowMore-content-img
+                        img(src="../static/img/know-more-rental.png" alt="")
+                    div#knowMore-content-para
+                        p To know more about Lazer Crazer Laser tag Parties and our party packages, 
+                        p
+                            a(href="tel:+918840175266") call 8840175266
+                        p Are you event or a PARTY planner ? 
+                            a#green(href='#clientAndForm') Get in touch
 
 
             div#testimonials
+                div#knowMore-blend
                 h1 TESTIMONIALS
                 div#testimonials-content
                     div#testimonials-bg
@@ -304,11 +473,11 @@ html
                     form#contactForm
                         p GET IN TOUCH WITH US
                         div#row1
-                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name")
+                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
 
-                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone")
+                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
 
-                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email")
+                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
                         div#row2
                             textarea.textarea.myInput(name="message" id='message' cols="30" rows="10" placeholder="Send Comments")
                         div#btn-container
@@ -387,4 +556,3 @@ html
                 script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
                 script 
                     include ../static/script.js
-                    include ../static/index.js

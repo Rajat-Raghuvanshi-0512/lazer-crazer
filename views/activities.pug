@@ -51,7 +51,7 @@ html
                             img#main-logo(src="../static/img/logo.png" alt="")
                 div#ul2-wrapper
                     ul#ul2 
-                        li #[a(href='/') RENTING]
+                        li #[a(href='/rental') RENTING]
                             picture
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
@@ -100,7 +100,7 @@ html
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#navigator(src="../static/img/home-navigator.png" alt="")
-                        li #[a(href='/') RENTING]
+                        li #[a(href='/rental') RENTING]
                             picture
                                 source(type="image/webp" srcset="/static/img/home-navigator.webp")
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
@@ -212,17 +212,17 @@ html
 
                 div#contact-form
                     form#contactForm
-                        p#formHeading HAVE THE BEST PARTY EVER
+                        p#formHeading PUT AN END TO BORING PARTIES
                         p GET IN TOUCH WITH US
                         div#row1
-                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name")
+                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
 
-                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone")
+                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
 
                         div#row2
-                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email")
+                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
 
-                            select.myInput(name="Parties")
+                            select.myInput(name="Parties" id='select1')
                                 option#placeholder(value="" disabled selected) Types of parties
                                 option(value="Birthday") Birthday 
                                 option(value="Corporate") Corporate
@@ -327,6 +327,7 @@ html
                 script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
                 script 
                     include ../static/script.js
+                    include ../static/activities.js
                 script(type='text/javascript').
                     // STONES PARALLAX
                     const eventParallax11 = document.getElementById("move11");

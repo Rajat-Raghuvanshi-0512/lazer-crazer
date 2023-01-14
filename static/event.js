@@ -71,15 +71,15 @@ contactForm.addEventListener('submit', (e) => {
     }
     let xhr = new XMLHttpRequest();
     function thankYou() {
-        window.location.assign("/thank");
+        window.location.assign("/eventThank");
     };
 
+    thankYou();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
     xhr.onload = function () {
         console.log(xhr.responseText);
-        thankYou();
         
 
         if (xhr.responseText == 'success') {

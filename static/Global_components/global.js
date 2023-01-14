@@ -7,7 +7,7 @@ const slottag = document.querySelector('.slotlist');
 
 let time = "";
 
-// console.log(slottag)
+console.log(slottag)
 let count = 1;
 counttag.innerHTML = `${count}`;
 
@@ -18,10 +18,10 @@ counttag.innerHTML = `${count}`;
 let flag = 0;
 
 const slots = document.getElementsByClassName('slots');
-// console.log(slots);
+console.log(slots);
 slottag.addEventListener('click', (event) => {
     currenttarget = event.target;
-    // console.log(currenttarget.classList);
+    console.log(currenttarget.classList);
     if (currenttarget.classList.contains('slots')) {
         flag = 1;
         currenttarget.style.borderColor = '#2CF80B'
@@ -151,7 +151,7 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 
 const fetchslots = () => {
     let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-    // console.log(todaysdate)
+    console.log(todaysdate)
 
 
     //fetching the API 
@@ -173,7 +173,7 @@ const fetchslots = () => {
             return response.json();
         }
     }).then(function (data) {
-        // console.log(data);
+        console.log(data);
         fetchedslots = data.slots
     }).then(function () {
 
@@ -234,14 +234,14 @@ fetchslots();
 
 daysTag.addEventListener("click", (event) => {
     currenttarget = event.target;
-    // console.log(currenttarget.tagName)
+    console.log(currenttarget.tagName)
     const linkele = document.querySelectorAll(".days li")
 
     if (currenttarget.tagName === 'LI') {
         flag = 0;
         currenttarget.classList.add('active');
         selecteddate = currenttarget.innerHTML;
-        // console.log(selecteddate)
+        console.log(selecteddate)
 
         for (let i = 0; i < linkele.length; i++) {
             const element = linkele[i];
@@ -268,9 +268,9 @@ const submitbutton = document.getElementsByClassName('submitsection')[0];
 submitbutton.addEventListener('click', (event) => {
     if (flag) {
         let today = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-        // console.log(today)
-        // console.log(count)
-        // console.log(time)
+        console.log(today)
+        console.log(count)
+        console.log(time)
         const bookingsection = document.getElementById('booking')
         bookingsection.classList.add('blurback')
         const popupsection = document.getElementsByClassName('popupsubsection')[0];
@@ -280,7 +280,7 @@ submitbutton.addEventListener('click', (event) => {
         popupsection.style.transition = '0.5s';
         popupsection.style.zIndex = '1';
     }
-    else{
+    else {
         alert("Select a given slot to continue");
     }
 
@@ -345,7 +345,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
     let package = arrp[0].value
 
     let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-    // console.log(todaysdate)
+    console.log(todaysdate)
 
 
 
@@ -393,7 +393,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
             date: todaysdate,
             slotcount: count,
             slot: time,
-            package: package
+            package:package
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -419,35 +419,41 @@ finalsubmitbutton.addEventListener('click', (event) => {
 
 
         // contactFormB.addEventListener('submit', (e) => {
-            // e.preventDefault();
-            let formData = {
-                name: clientname,
-                phone: clientphoneno,
-                email: clientemail,
-                select2: package,
+        // e.preventDefault();
+        let formData = {
+            name: clientname,
+            phone: clientphoneno,
+            email: clientemail,
+            date: todaysdate,
+            slotcount: count,
+            slot: time,
+            package:package,
+        }
+        let xhr = new XMLHttpRequest();
+
+        function thankYou() {
+            window.location.assign("/bookingThank");
+        };
+
+        thankYou();
+        xhr.open('POST', '/calender');
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.send(JSON.stringify(formData));
+        xhr.onload = function () {
+            console.log(xhr.responseText);
+
+            if (xhr.responseText == 'success') {
+                clientname = '';
+                clientemail = '';
+                clientphoneno = '';
+                todaysdate = '';
+                count = '';
+                time = '';
+                package = '';
+            } else {
+                alert('Something went wrong!')
             }
-            let xhr = new XMLHttpRequest();
-
-            function thankYou() {
-                window.location.assign("/thank");
-            };
-
-            xhr.open('POST', '/');
-            xhr.setRequestHeader('content-type', 'application/json');
-            xhr.send(JSON.stringify(formData));
-            xhr.onload = function () {
-                console.log(xhr.responseText);
-                thankYou();
-
-                if (xhr.responseText == 'success') {
-                    clientname = '';
-                    clientemail = '';
-                    clientphoneno = '';
-                    package = '';
-                } else {
-                    alert('Something went wrong!')
-                }
-            }
+        }
         // });
 
 
