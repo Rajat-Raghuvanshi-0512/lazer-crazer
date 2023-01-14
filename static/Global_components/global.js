@@ -184,6 +184,29 @@ const fetchslots = () => {
         for (let i = 0; i < fetchedslots.length; i++) {
             const element = fetchedslots[i];
             if (element.slotcount >= count) {
+                if(selecteddate==date.getDate()&&selectedmonth==date.getMonth()){
+
+                    const x=element.slottime;
+
+                    // console.log("hey todays date selected");
+                    let h=parseInt(x.substring(0,x.indexOf(":")),10);
+                    const m=parseInt(x.substring(x.indexOf(":")+1,x.indexOf(":")+3),10);
+                    // const tf=1;
+                    if(x.substring(x.length-2,x.length)!='AM'&&h!=12){
+                        h+=12;
+                    }
+                    if(date.getHours()>=h){
+                        if(h<date.getHours()){
+                            continue;
+                        }
+                        else{
+                            if(date.getMinutes()>=m){
+                                continue;
+                            }
+                        }
+                        
+                    }
+                }
                 slots += `<div class="slots">${element.slottime}</div>`;
             }
 
