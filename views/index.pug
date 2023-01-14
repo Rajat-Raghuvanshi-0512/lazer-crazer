@@ -138,7 +138,6 @@ html
 
 
 
-
             div#banner
                 div#logo-background2
                     picture
@@ -166,7 +165,7 @@ html
                     p#mobile-banner-para NEW DESTINATION OF 
                         span#green FUN!
                 div#bookNow-btn
-                    a(href='https://appoint.ly/s/lazer.craz/introduction')#bookNow 
+                    a(href='/calender' onmouseover="bookA(this)" onmouseout="book(this)")#bookNow
                         span.bookNow-txt BOOK
                             span#now  NOW
                         div.bookNow-bg
@@ -248,7 +247,7 @@ html
                     div#about-us-para
                         h3 NEW DESTINATION OF 
                             span#green FUN!
-                        p Strategical, fun & real-life battlefield are the words that portray the soul of Lazer Crazer. The bright side of the culture of gaming and Lazer Tag is that it comes with no age boundaries, allowing a larger audience to experience gaming in real life. Fun challenges and methods to win, making the public even more indulgent towards the Idea of having a real-life experience of online gaming.
+                        p Strategical, fun & real-life battlefield are the words that portray the soul of Lazer Crazer laser tag. The bright side of the culture of Laser Tag is that it comes with no age boundaries, allowing a larger audience to experience gaming in real life. Fun challenges and methods to win, making the public even more indulgent towards the Idea of having a real-life experience of online gaming.
                     div#weapon-container
                         div#weapon
                             picture
@@ -361,7 +360,7 @@ html
 
             div#pricing
                 h1 GAME OPTIONS
-                p#pricing-para With multiple game formats, we have something for everyone, regardless of their skill level
+                p#pricing-para With multiple laser tag game formats, we have something for everyone, regardless of their skill level
 
                 div#parallax-object4
                     picture
@@ -414,7 +413,7 @@ html
                                 p.container-back-desc ONE 
                                     span.color-change SOLO ROUND 
                                     span FOR ALL THE PLAYERS
-                                a(href="https://appoint.ly/s/lazer.craz/introduction").container-cta#ctaColor1 BOOK NOW
+                                a(href="/calender").container-cta#ctaColor1 BOOK NOW
                     div.pContainer#pc2(onmouseover="glow(this)" onmouseout="unglow(this)")
                         div.flip-card-inner
                             div.flip-card-front
@@ -440,7 +439,7 @@ html
                                     span.color-change UNLIMITED LIVES 
                                     span 1 SAME FORMAT & MAP
 
-                                a(href="https://appoint.ly/s/lazer.craz/introduction").container-cta#ctaColor2 BOOK NOW
+                                a(href="/calender").container-cta#ctaColor2 BOOK NOW
                     div.pContainer#pc3(onmouseover="glow(this)" onmouseout="unglow(this)")
                         div.flip-card-inner
                             div.flip-card-front
@@ -467,14 +466,14 @@ html
                                     p#desc-space ZONES & PACKS
                                     p 3 DIFF FORMATS & MAPS
 
-                                a(href="https://appoint.ly/s/lazer.craz/introduction").container-cta#ctaColor3 BOOK NOW
+                                a(href="/calender").container-cta#ctaColor3 BOOK NOW
                     div.pContainer#pc4(onmouseover="glow(this)" onmouseout="unglow(this)")
                         div.flip-card-inner
                             div.flip-card-front
                                 div#container-logo4
 
                                 p.container-heading PRO
-                                p.container-duration 45 MINS
+                                p.container-duration 60 MINS
                                 p.container-cta#ctaColor4 LEARN MORE
 
                             div.flip-card-back
@@ -494,43 +493,69 @@ html
                                     p#desc-space 1-1.5hrs 
                                     p CONTAINS ALL LEVELS + SOLO ROUNDS
 
-                                a(href="https://appoint.ly/s/lazer.craz/introduction").container-cta#ctaColor4 BOOK NOW
+                                a(href="/calender").container-cta#ctaColor4 BOOK NOW
 
             div#mobile-gallery
                 h1 Our Gallery
                 p Lazer crazer laser tag is a special experience for all who come.
 
                 div#gallery-caraousel
+                    //- div.caraousel-container
+                    //-     picture
+                    //-         source(type="image/webp" srcset="/static/img/gallery-img1.webp")
+                    //-         source(type="image/png" srcset="/static/img/gallery-img1.png")
+                    //-         img(src="../static/img/gallery-img1.png" alt="")
+                    //- div.caraousel-container
+                    //-     picture
+                    //-         source(type="image/webp" srcset="/static/img/gallery-img2.webp")
+                    //-         source(type="image/png" srcset="/static/img/gallery-img2.png")
+                    //-         img(src="../static/img/gallery-img2.png" alt="")
+                    //- div.caraousel-container
+                    //-     picture
+                    //-         source(type="image/webp" srcset="/static/img/gallery-img3.webp")
+                    //-         source(type="image/png" srcset="/static/img/gallery-img3.png")
+                    //-         img(src="../static/img/gallery-img7.png" alt="")
                     div.caraousel-container
                         picture
-                            source(type="image/webp" srcset="/static/img/gallery-img1.webp")
-                            source(type="image/png" srcset="/static/img/gallery-img1.png")
-                            img(src="../static/img/gallery-img1.png" alt="")
-                    div.caraousel-container
-                        picture
-                            source(type="image/webp" srcset="/static/img/gallery-img2.webp")
-                            source(type="image/png" srcset="/static/img/gallery-img2.png")
-                            img(src="../static/img/gallery-img2.png" alt="")
-                    div.caraousel-container
-                        picture
-                            source(type="image/webp" srcset="/static/img/gallery-img3.webp")
-                            source(type="image/png" srcset="/static/img/gallery-img3.png")
-                            img(src="../static/img/gallery-img7.png" alt="")
+                            source(type="image/webp" srcset="/static/img/gallery-imgM9.webp")
+                            source(type="image/png" srcset="/static/img/gallery-imgM9.png")
+                            img(src="../static/img/gallery-imgM9.png" alt="")
                     div.caraousel-container
                         picture
                             source(type="image/webp" srcset="/static/img/gallery-img4.webp")
                             source(type="image/png" srcset="/static/img/gallery-img4.png")
                             img(src="../static/img/gallery-img4.png" alt="")
-                    div.caraousel-container
-                        picture
-                            source(type="image/webp" srcset="/static/img/gallery-img5.webp")
-                            source(type="image/png" srcset="/static/img/gallery-img5.png")
-                            img(src="../static/img/gallery-img5.png" alt="")
+                    //- div.caraousel-container
+                    //-     picture
+                    //-         source(type="image/webp" srcset="/static/img/gallery-img5.webp")
+                    //-         source(type="image/png" srcset="/static/img/gallery-img5.png")
+                    //-         img(src="../static/img/gallery-img5.png" alt="")
                     div.caraousel-container
                         picture
                             source(type="image/webp" srcset="/static/img/gallery-img6.webp")
                             source(type="image/png" srcset="/static/img/gallery-img6.png")
                             img(src="../static/img/gallery-img6.png" alt="")
+                    div.caraousel-container
+                        picture
+                            source(type="image/webp" srcset="/static/img/gallery-imgM7.webp")
+                            source(type="image/png" srcset="/static/img/gallery-imgM7.png")
+                            img(src="../static/img/gallery-imgM7.png" alt="")
+                    div.caraousel-container
+                        picture
+                            source(type="image/webp" srcset="/static/img/gallery-imgM8.webp")
+                            source(type="image/png" srcset="/static/img/gallery-imgM8.png")
+                            img(src="../static/img/gallery-imgM8.png" alt="")
+                    
+                    div.caraousel-container
+                        picture
+                            source(type="image/webp" srcset="/static/img/gallery-imgM10.webp")
+                            source(type="image/png" srcset="/static/img/gallery-imgM10.png")
+                            img(src="../static/img/gallery-imgM10.png" alt="")
+                    //- div.caraousel-container
+                    //-     picture
+                    //-         source(type="image/webp" srcset="/static/img/gallery-imgM11.webp")
+                    //-         source(type="image/png" srcset="/static/img/gallery-imgM11.png")
+                    //-         img(src="../static/img/gallery-imgM11.png" alt="")
 
             div#cta 
                 h1 WE OFFER
@@ -570,7 +595,7 @@ html
                         h3 Private Party
                         p Get your party started at the city's most thrilling Laser tag arena. Just tell us what you need, and we will do our best to fulfill it.
                         p.learnMore learn more &#8594;
-                    a.cta-box(onmouseover="incSize(this)" onmouseout="decSize(this)" href='https://appoint.ly/s/lazer.craz/introduction')
+                    a.cta-box(onmouseover="incSize(this)" onmouseout="decSize(this)" href='/calender')
                         div.cta-box-img
                             picture
                                 source(type="image/webp" srcset="/static/img/cta-img2.webp")
@@ -614,7 +639,7 @@ html
                         h3 Private Party
                         p Get your party started at the city's most thrilling Laser tag arena
                         p.learnMore learn more &#8594;
-                    a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='https://appoint.ly/s/lazer.craz/introduction')
+                    a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='/calender')
                         div.cta-box-img
                             picture
                                 source(type="image/webp" srcset="/static/img/cta-img2.webp")
@@ -866,11 +891,11 @@ html
                     form#contactForm
                         p GET IN TOUCH WITH US
                         div#row1
-                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name")
+                            input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
 
-                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone")
+                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
 
-                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email")
+                            input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
                         div#row2
                             textarea.textarea.myInput(name="message" id='message' cols="30" rows="10" placeholder="Send Comments")
                         div#btn-container

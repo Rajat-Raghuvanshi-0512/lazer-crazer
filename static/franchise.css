@@ -1,18 +1,199 @@
 .bold {
-    font-weight: bold;
+    font-weight: 600;
+}
+
+/* parallax stones */
+
+#franchise-parallax1 {
+    position: absolute;
+    left: 18%;
+    top: 8%;
+    height: 85px;
+}
+
+#franchise-parallax1 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax2 {
+    position: absolute;
+    right: 20%;
+    top: 55%;
+    z-index: -1;
+    height: 85px;
+}
+
+#franchise-parallax2 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax3 {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    z-index: -1;
+    height: 60px;
+}
+
+#franchise-parallax3 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax4 {
+    position: absolute;
+    right: 7%;
+    top: -10%;
+    z-index: -1;
+    height: 83px;
+}
+
+#franchise-parallax4 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax5 {
+    position: absolute;
+    left: 10%;
+    top: 0%;
+    z-index: -1;
+    height: 70px;
+}
+
+#franchise-parallax5 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax6 {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    z-index: -1;
+    height: 35px;
+}
+
+#franchise-parallax6 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax7 {
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    z-index: -1;
+    height: 72px;
+}
+
+#franchise-parallax7 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax8 {
+    position: absolute;
+    left: 10%;
+    top: 63%;
+    z-index: -1;
+    height: 72px;
+}
+
+#franchise-parallax8 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax9 {
+    position: absolute;
+    left: 10%;
+    top: 0%;
+    z-index: 1;
+    height: 35px;
+}
+
+#franchise-parallax9 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax10 {
+    position: absolute;
+    right: 10%;
+    top: -15%;
+    z-index: 1;
+    height: 75px;
+}
+
+#franchise-parallax10 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax11 {
+    position: absolute;
+    right: -3%;
+    top: -103%;
+    z-index: 1;
+    height: 140px;
+}
+
+#franchise-parallax11 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
+}
+
+#franchise-parallax12 {
+    position: absolute;
+    left: 10%;
+    top: -80%;
+    z-index: 1;
+    height: 83px;
+}
+
+#franchise-parallax12 img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: .25s all;
 }
 
 
 #franchise-banner {
-    background: #010825;
-    backdrop-filter: blur(6.5px);
-    -webkit-backdrop-filter: blur(6.5px);
     height: 100vh;
     width: 100%;
     position: relative;
     top: 0;
     max-width: 100vw !important;
     width: 100vw !important;
+    background: linear-gradient(180deg, #010D3C 0%, #010827 100%);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
 }
 
 #franchise-heading {
@@ -40,7 +221,7 @@
     text-align: center;
     letter-spacing: 0.105em;
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 10px;
 }
 
@@ -57,18 +238,26 @@
     left: 11%;
 }
 
-#franchise-banner-text button {
+#franchise-banner-text a {
     background: #2CF70B;
     font-family: 'Lexend Giga';
     font-style: normal;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: .8rem;
     line-height: 129.4%;
     letter-spacing: -0.01em;
     color: #010825;
-    text-shadow: 0px 18.0531px 21.2345px rgba(255, 255, 255, 0.29);
+    text-shadow: 0px 18.0531px 21.2345px rgb(255 255 255 / 29%);
     padding: 10px;
     margin-left: 4%;
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    /* color: #FFFFFF; */
+}
+
+#franchise-banner-text a:hover {
+    background: #29b812;
 }
 
 
@@ -93,7 +282,7 @@
     height: 550px;
     width: auto;
     position: absolute;
-    bottom: 8%;
+    bottom: 3%;
     right: 0;
 }
 
@@ -104,7 +293,7 @@
 
 #franchise-base {
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     width: 100%;
 }
 
@@ -121,6 +310,7 @@
     position: relative;
     font-family: 'Lexend Giga';
     font-style: normal;
+    top: 45px;
 }
 
 #franchise-model h3 {
@@ -170,7 +360,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 145px;
+    position: relative;
 }
 
 #franchise-model-containersR1 {
@@ -353,6 +544,7 @@
     align-items: center;
     justify-content: center;
     padding: 5px 50px;
+    width: 500px;
 }
 
 .lContainers-img img {
@@ -384,6 +576,7 @@
     font-family: 'Lexend Giga';
     font-style: normal;
     margin-top: 100px;
+    position: relative;
 }
 
 #roi-lazerTag h1 {
@@ -431,7 +624,7 @@
 }
 
 #google-trends-bg img {
-    height: 115vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -442,7 +635,7 @@
 
 #google-heading {
     position: absolute;
-    top: 3%;
+    top: 16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -464,12 +657,23 @@
 
 #google-blend {
     position: absolute;
-    top: -14%;
-    z-index: -1;
+    top: -4%;
+    /* z-index: -1; */
     background: linear-gradient(180deg, #010825 0%, #1D0A44 100%);
     filter: blur(5.5px);
     width: 100%;
     height: 200px;
+}
+
+#google-stars {
+    position: absolute;
+    top: 0;
+
+}
+
+#google-stars img {
+    height: 100%;
+    width: 100%;
 }
 
 #google-trends-content {
@@ -496,6 +700,8 @@
     align-items: center;
     justify-content: space-around;
     width: 1050px;
+    position: relative;
+    top: 3%;
     /* margin: auto; */
 }
 
@@ -538,6 +744,16 @@
     color: #FFFFFF;
 }
 
+#gtContainer2-content h5 {
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 197.9%;
+    letter-spacing: -0.09em;
+    color: #FFFFFF;
+}
+
 .trends-line {
     height: auto;
     width: 115px;
@@ -561,7 +777,7 @@
 
 #gtContainer2-content {
     position: relative;
-    top: 63px;
+    top: 0;
 }
 
 #gtContainer2-content .trends-line {
@@ -580,7 +796,7 @@
 
 #trends-blend {
     position: relative;
-    top: -13px;
+    top: -33px;
     z-index: -1;
     height: 230px;
     width: 100%;
@@ -633,6 +849,8 @@
     margin: 0 3.5%;
     position: relative;
     top: 0;
+    width: 260px;
+    height: 636px;
 }
 
 .formats-cards-bg {
@@ -681,6 +899,11 @@
     font-size: .9rem;
 }
 
+#lastP {
+    font-size: .65rem;
+    margin-top: 20px;
+}
+
 .small {
     font-size: .5rem;
     padding: 0px 10%;
@@ -699,6 +922,8 @@
     text-align: center;
     letter-spacing: 0.105em;
     transition: .3s all;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .format-learnMore:hover {
@@ -736,6 +961,7 @@
 
 #choose-lazerTag-para ul {
     margin-left: 15px;
+    position: relative;
 }
 
 #choose-lazerTag-para ul li {
@@ -763,12 +989,32 @@
 }
 
 @media (min-width: 1000px) and (max-width: 1300px) {
+    #google-blend {
+        top: -9%;
+    }
+
+    #google-heading {
+        top: 12%;
+    }
+
+    #franchise-parallax1 {
+        position: absolute;
+        left: 10%;
+        top: 8%;
+        height: 85px;
+    }
+
+    #franchise-heading {
+        position: relative;
+        top: 180px;
+    }
+
     #franchise-banner h1 {
         font-size: 2rem;
     }
 
     #franchise-banner h2 {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     #franchise-temple {
@@ -790,6 +1036,60 @@
 }
 
 @media screen and (max-width: 1000px) {
+    #franchise-parallax1 {
+        display: none;
+    }
+
+    #franchise-parallax2 {
+        display: none;
+    }
+
+    #franchise-parallax3 {
+        display: none;
+    }
+
+    #franchise-parallax4 {
+        display: none;
+    }
+
+    #franchise-parallax5 {
+        display: none;
+    }
+
+    #franchise-parallax6 {
+        display: none;
+    }
+
+    #franchise-parallax7 {
+        display: none;
+    }
+
+    #franchise-parallax8 {
+        display: none;
+    }
+
+    #franchise-parallax9 {
+        display: none;
+    }
+
+    #franchise-parallax10 {
+        display: none;
+    }
+
+    #franchise-parallax11 {
+        /* display: none; */
+        position: absolute;
+        right: -5%;
+        top: -60px;
+        z-index: -1;
+        height: 100px;
+        width: 66px;
+    }
+
+    #franchise-parallax12 {
+        display: none;
+    }
+
     #franchise-banner {
         background: linear-gradient(0deg, #001272 0%, #000832 85.73%, #00116B 99.99%);
         height: 90%;
@@ -838,7 +1138,8 @@
     }
 
     #franchise-banner-text {
-        bottom: 33%;
+        bottom: 27%;
+        z-index: 1;
         left: 3%;
     }
 
@@ -909,6 +1210,7 @@
     .fContainer-bg {
         width: 168px;
     }
+
     .fContainer-bgActive {
         width: 168px;
     }
@@ -968,6 +1270,7 @@
     .lContainers {
         padding: 5px 10px;
         margin: 0 23px;
+        width: 80%;
     }
 
     #roi-lazerTag h1 {
@@ -1009,6 +1312,7 @@
 
     #google-heading {
         font-size: .63rem;
+        top: 0;
     }
 
     #google-heading img {
@@ -1054,6 +1358,10 @@
     }
 
     #gtContainer1-content h5 {
+        font-size: .95rem;
+    }
+
+    #gtContainer2-content h5 {
         font-size: .95rem;
     }
 
@@ -1107,6 +1415,7 @@
     #choose-lazerTag-para {
         width: 90%;
         border-radius: unset;
+        padding: 30px 0;
     }
 
     #choose-lazerTag-para ul {
@@ -1134,6 +1443,7 @@
     #choose-lazerTag h1 {
         font-size: 1.6rem;
     }
+
 }
 
 @media screen and (max-width: 390px) {

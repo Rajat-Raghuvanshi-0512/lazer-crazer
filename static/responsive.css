@@ -28,13 +28,17 @@ body {
     top: 0;
     width: 100%;
     z-index: 10000;
+    height: 70px;
     background: #020235;
     /* box-shadow: 0px 5px 4px #010824; */
     backdrop-filter: blur(1.5px);
 }
 
-#mobile-navbar.hide {
-    transform: translateY(-50px);
+#mobile-navbar.nav-up {
+    top: -100px;
+}
+#mobile-navbar.nav-down {
+    background: chartreuse;
 }
 
 
@@ -766,6 +770,12 @@ body {
     right: 0;
     visibility: visible;
     transition: all .1s;
+    height: 99px;
+    width: 99px;
+}
+.cta-sno img {
+    height: 100%;
+    width: 100%;
 }
 
 .cta-box {

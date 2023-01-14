@@ -245,6 +245,17 @@
     height: auto;
     width: 68px;
 }
+.contact-content a {
+    text-decoration: none;
+    font-family: 'Lexend Giga';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .85rem;
+    line-height: 129.4%;
+    letter-spacing: -0.11em;
+    color: #FFFFFF;
+
+}
 
 .contact-content p {
     font-family: 'Lexend Giga';
@@ -581,6 +592,13 @@
         top: 150px;
     }
     .contact-content p {
+        font-weight: 400;
+        font-size: .75rem;
+        padding: 0 10px;
+        margin-top: 14px;
+        text-align: center
+    }
+    .contact-content a {
         font-weight: 400;
         font-size: .75rem;
         padding: 0 10px;

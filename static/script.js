@@ -22,6 +22,9 @@ $(window).on("load", function () {
 //     prevScrollpos = currentScrollPos;
 // };
 
+
+
+
 // Hamburger click events
 const hamburger = document.querySelector("#hamburger-icon");
 const items = document.querySelector("#nav-items");
