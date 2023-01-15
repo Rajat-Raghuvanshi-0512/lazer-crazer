@@ -145,6 +145,10 @@
     text-shadow: 0px 1.56957px 0.784784px rgba(0, 0, 0, 0.22), 0px 15.5846px 25.1131px #FFFFFF;
 }
 
+.rental-Containers a:hover {
+    background: #1ca607;
+}
+
 #cont-heading {
     font-weight: 600;
     font-size: .87rem;
@@ -455,7 +459,7 @@
     height: 817px;
     width: auto;
     position: absolute;
-    right: 0;
+    right: -6%;
     bottom: 15%;
 }
 
@@ -472,12 +476,16 @@
     padding-left: 45px;
     padding-top: 2px;
 }
+
 #knowMore-content-para a {
     text-decoration: none;
 }
 
 #testimonials {
     margin-top: 230px;
+}
+#laserKidM {
+    display: none;
 }
 
 
@@ -520,6 +528,9 @@
 }
 
 @media screen and (max-width: 1000px) {
+    
+
+
     #rental-banner {
         background: linear-gradient(180deg, #0E0849 0%, #010827 100%);
         position: relative;
@@ -543,7 +554,7 @@
 
     #rental-content {
         padding: 0 0 0 20px;
-        top: 30%;
+        top: 24%;
     }
 
     #rental-content h1 {
@@ -560,10 +571,12 @@
 
     #why-rental-containers {
         flex-direction: column;
+        width: 100%;
     }
 
     .rental-Containers {
-        margin: 26px 20px;
+        margin: 26px 0;
+        width: 87%;
     }
 
     .rental-Containers a {
@@ -579,7 +592,7 @@
         display: block;
         position: absolute;
         right: 0;
-        top: -13%;
+        top: -11.5%;
         z-index: 1;
         width: 440px;
         height: 857px;
@@ -619,6 +632,7 @@
         height: 100%;
         width: 100% !important;
         min-width: 100%;
+        margin-top: 30px;
     }
 
     .process-text {
@@ -640,6 +654,7 @@
     #process2 {
         flex-direction: column;
         width: 90%;
+        height: 460px;
     }
 
     #process-num2 {
@@ -661,12 +676,14 @@
         top: 0;
         left: 0;
         order: 2;
+        margin-top: 50px;
     }
 
     #process3 {
         flex-direction: column;
         width: 90%;
-        height: 100%;
+        height: 500px;
+        justify-content: start;
     }
 
     #process-num3 {
@@ -686,8 +703,9 @@
 
     #process3 .process-text {
         position: relative;
-        top: 30px;
+        top: 0;
         padding: 0 57px 0 19px !important;
+        z-index: 1;
     }
 
     #process3 .process-bg1 {
@@ -696,11 +714,13 @@
 
     #process-bgM1 {
         display: block;
-        height: 330px;
-        position: relative;
-        top: -6px;
-        width: 278px;
+        height: 412px;
+        position: absolute;
+        bottom: -16%;
+        width: 344px;
+        right: 3%;
     }
+
     #process-bgM1 img {
         height: 100%;
         width: 100%;
@@ -711,6 +731,7 @@
         width: 90%;
         height: 100%;
     }
+
     #process-num4 {
         height: 65px;
         width: 100%;
@@ -725,16 +746,20 @@
         height: 100%;
         width: 65px;
     }
+
     #process4 .process-bg1 {
         order: 2;
         left: 176px;
     }
+
     #process4 .process-text p {
         padding-right: 0px;
     }
+
     #why-rental h1 {
         font-size: 1.7rem;
     }
+
     #process h1 {
         font-size: 1.7rem;
     }
@@ -742,23 +767,27 @@
     #equipment h1 {
         font-size: 1.7rem;
     }
+
     #equipment-containers {
         background: url('../static/img/eq-stars.png') no-repeat center center/cover;
         width: 100%;
         padding: 0 0;
         margin: 50px auto 0 auto;
     }
+
     #eq-row1 {
         flex-direction: column;
         min-width: 100%;
         width: 100%;
     }
+
     #eq-row2 {
         flex-direction: column;
         min-width: 100%;
         width: 100%;
         margin-top: 0;
     }
+
     .eq-container {
         flex-direction: row;
         width: 85%;
@@ -766,62 +795,77 @@
         height: 135px;
         justify-content: space-between;
     }
+
     .eq-container p {
         font-weight: 400;
         font-size: .88rem;
         padding: 0 14px;
     }
+
     #eq1 {
         flex-direction: row-reverse;
         justify-content: space-between;
         background: linear-gradient(89.66deg, #010B33 -6.35%, rgba(1, 11, 51, 0) 104.01%);
     }
+
     #eq1 img {
         height: 154px;
         width: 231px;
         margin-right: -17%;
     }
+
     #eq1 p {
         margin-left: 18%;
     }
+
     #eq2 {
         flex-direction: row;
         background: linear-gradient(270deg, #010B33 -8.75%, rgba(1, 11, 51, 0) 100%);
     }
+
     #eq2 img {
         height: 125px;
         width: 187px;
     }
+
     #eq3 {
         flex-direction: row-reverse;
         background: linear-gradient(89.66deg, #010B33 -6.35%, rgba(1, 11, 51, 0) 104.01%);
     }
+
     #eq3 img {
         height: 130px;
         width: 195px;
     }
+
     #eq4 {
         flex-direction: row;
         background: linear-gradient(270deg, #010B33 -8.75%, rgba(1, 11, 51, 0) 100%);
     }
+
     #eq5 {
         flex-direction: row-reverse;
         background: linear-gradient(89.66deg, #010B33 -6.35%, rgba(1, 11, 51, 0) 104.01%);
     }
+
     #eq6 {
         flex-direction: row;
         background: linear-gradient(270deg, #010B33 -8.75%, rgba(1, 11, 51, 0) 100%);
     }
+
     .eq-container img {
         height: 140px;
         width: 210px;
     }
+
     #testimonials {
         top: 126px !important;
     }
+
     #clientAndForm {
         margin-top: 150px !important;
     }
+
     #knowMore-bg {
         height: 200px;
     }
@@ -831,13 +875,19 @@
     }
 
     #knowMore-content-img {
-        height: 453px;
-        width: 200px;
+        height: 232px;
+        width: 220px;
         position: absolute;
         left: -10%;
         bottom: 85%;
         z-index: -1;
     }
+    #laserKidM {
+        display: block;
+    } 
+    #laserKid {
+        display: none;
+    } 
 
     #knowMore-content-para {
         position: relative;
@@ -848,5 +898,5 @@
         padding: 0 7px;
         font-size: .65rem;
     }
-    
+
 }

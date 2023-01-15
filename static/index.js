@@ -1,16 +1,10 @@
-// $(document).on("click", function (){ 
-//     $("#laser-img").css("transform","rotateY(90deg)");
-// });
-
 // PRICING
-
 function glow(x) {
     x.classList.add("active");
 };
 function unglow(x) {
     x.classList.remove("active");
 };
-
 
 function bookA(x) {
     x.classList.add("active");
@@ -21,37 +15,37 @@ function book(x) {
 
 // NAVBAR HIDE ON SCROLL
 
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('#mobile-navbar').outerHeight();
-console.log(navbarHeight)
-setInterval(function () {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-$(window).scroll(function (event) {
-    didScroll = true;
-});
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    if (Math.abs(lastScrollTop - st) <= delta) {
-        return;
-    }
-    if (st > lastScrollTop && st > navbarHeight) {
-        $('#mobile-navbar').removeClass('nav-down').addClass('nav-up');
-    } else {
-        if (st + $(window).height() < $(document).height()) {
-            $('#mobile-navbar').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-    if (st < 100) {
-        $('#mobile-navbar').removeClass('nav-down');
-    }
-    lastScrollTop = st;
-}
+// var didScroll;
+// var lastScrollTop = 0;
+// var delta = 5;
+// var navbarHeight = $('#mobile-navbar').outerHeight();
+// console.log(navbarHeight)
+// setInterval(function () {
+//     if (didScroll) {
+//         hasScrolled();
+//         didScroll = false;
+//     }
+// }, 250);
+// $(window).scroll(function (event) {
+//     didScroll = true;
+// });
+// function hasScrolled() {
+//     var st = $(this).scrollTop();
+//     if (Math.abs(lastScrollTop - st) <= delta) {
+//         return;
+//     }
+//     if (st > lastScrollTop && st > navbarHeight) {
+//         $('#mobile-navbar').removeClass('nav-down').addClass('nav-up');
+//     } else {
+//         if (st + $(window).height() < $(document).height()) {
+//             $('#mobile-navbar').removeClass('nav-up').addClass('nav-down');
+//         }
+//     }
+//     if (st < 100) {
+//         $('#mobile-navbar').removeClass('nav-down');
+//     }
+//     lastScrollTop = st;
+// }
 
 // STONES PARALLAX
 const parallaxObject1 = document.getElementById("move");
@@ -95,68 +89,6 @@ window.addEventListener('scroll', function () {
     galleryRow2.style.left = value * 0.5 + 'px';
 });
 
-// const slider = document.querySelector('#gallery-container');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-
-// slider.addEventListener('mousedown', (e) => {
-//     isDown = true;
-//     slider.classList.add('active');
-//     startX = e.pageX - slider.offsetLeft;
-//     scrollLeft = slider.scrollLeft;
-//     cancelMomentumTracking();
-// });
-
-
-// slider.addEventListener('mouseleave', () => {
-//     isDown = false;
-//     slider.classList.remove('active');
-// });
-
-
-// slider.addEventListener('mouseup', () => {
-//     isDown = false;
-//     slider.classList.remove('active');
-//     beginMomentumTracking();
-// });
-
-
-// slider.addEventListener('mousemove', (e) => {
-//     if (!isDown) return;
-//     e.preventDefault();
-//     const x = e.pageX - slider.offsetLeft;
-//     const walk = (x - startX) * 3; //scroll-fast
-//     var prevScrollLeft = slider.scrollLeft;
-//     slider.scrollLeft = scrollLeft - walk;
-//     velX = slider.scrollLeft - prevScrollLeft;
-// });
-
-// // Momentum of slider
-
-// var velX = 0;
-// var momentumID;
-
-// slider.addEventListener('wheel', (e) => {
-//     cancelMomentumTracking();
-// });
-
-// function beginMomentumTracking() {
-//     cancelMomentumTracking();
-//     momentumID = requestAnimationFrame(momentumLoop);
-// }
-// function cancelMomentumTracking() {
-//     cancelAnimationFrame(momentumID);
-// }
-// function momentumLoop() {
-//     slider.scrollLeft += velX;
-//     velX *= 0.95;
-//     if (Math.abs(velX) > 0.5) {
-//         momentumID = requestAnimationFrame(momentumLoop);
-//     }
-// }
-
-
 // CTAs
 function incSize(x) {
     x.classList.add("active");
@@ -170,11 +102,6 @@ function incSize2(x) {
 function decSize2(x) {
     x.classList.remove("activeM");
 };
-
-// $(".cta-box2").on("tap",function(){
-//     $(this).classList.add("activeM");
-// });
-
 
 // TESTIMONIALS
 

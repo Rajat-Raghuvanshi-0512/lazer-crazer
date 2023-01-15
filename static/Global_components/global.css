@@ -59,7 +59,6 @@
 
 .wholebookingsection {
     position: relative;
-    /* top: 80px; */
 }
 
 .bookingsection {
@@ -68,31 +67,22 @@
     justify-content: center;
     position: absolute;
     top: 9.5%;
-    /* height: 100%; */
     width: 100%;
     z-index: 100;
 }
 
 .mainsection {
     width: 80%;
-    /* height: 527px; */
-    /* background-color:aquamarine ;
-    border: 3px solid blue; */
     background: linear-gradient(136.67deg, rgba(44, 247, 11, 0.07) 4.87%, rgba(11, 162, 247, 0.07) 99.53%);
     box-shadow: 0px 3.5707px 3.5707px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5.80239px);
-    /* Note: backdrop-filter has minimal browser support */
-
     border-radius: 8.03407px;
-
 }
 
 
 .submainsection {
     padding: 47px 52px;
 }
-
-.numbersection {}
 
 .textsection {
     font-family: 'IBM Plex Sans';
@@ -180,8 +170,6 @@
 }
 
 .slots {
-    /* margin-right: 5px;
-    margin-left: 5px; */
     border: 1px solid white;
     width: 102px;
     height: 28px;
@@ -195,17 +183,14 @@
 .submitsection {
     color: black;
     font-family: 'Lexend Giga';
-    /* position: absolute; */
     font-size: 0.6rem;
     margin-left: 9vw;
-    /* top: 85.4%; */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 109px;
     height: 31px;
     background-color: #2CF80B;
-
     cursor: pointer;
     font-weight: 500;
 }
@@ -269,12 +254,7 @@
 
 @media only screen and (max-width: 672px) {
     .bookingsection {
-        /* height: 700px; */
         width: 100%;
-    }
-
-    .mainsection {
-        /* height: 650px; */
     }
 
     .submainsection {
@@ -316,9 +296,6 @@
 
     .submitsection {
         position: static;
-        /* top: 48px;
-        right: ; */
-
         margin-top: 40px;
     }
 
@@ -349,14 +326,9 @@
 
     .submitsection {
         position: static;
-        /* top: 48px;
-        right: ; */
-
         margin-top: 40px;
     }
 }
-
-/*  */
 
 @media only screen and (max-width: 723px) {
     .slotlist {
@@ -367,22 +339,6 @@
         padding: 47px 39px;
     }
 }
-
-
-/* @media only screen and (max-width: 804px) {
-    .submitsection{
-        margin-left: 2vw;
-    }
-  } */
-
-
-
-
-
-
-
-
-
 
 /* popup css starts here */
 
@@ -666,5 +622,4 @@
     #cancel {
         margin-left: 10px;
     }
-
 }

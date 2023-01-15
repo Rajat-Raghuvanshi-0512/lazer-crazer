@@ -149,9 +149,15 @@ html(lang='en' dir='ltr')
         h2 GET THE TASTE OF PURE ADRENALINE!
       .wholebookingsection
         .booking-bg
-          img(src="../static/img/booking-bg.png" alt="")
+          picture
+            source(type="image/webp" srcset="/static/img/booking-bg.webp")
+            source(type="image/png" srcset="/static/img/booking-bg.png")
+            img(src="../static/img/booking-bg.png" alt="")
         .booking-bgM
-          img(src="../static/img/booking-bgM.png" alt="")
+          picture
+            source(type="image/webp" srcset="/static/img/booking-bgM.webp")
+            source(type="image/png" srcset="/static/img/booking-bgM.png")
+            img(src="../static/img/booking-bgM.png" alt="")
         .bookingsection
           .mainsection
             .submainsection
@@ -260,13 +266,22 @@ html(lang='en' dir='ltr')
     div#contact-sectionB
       div#box-container
         div.contact-content
-          img(src="../static/img/booking-loc.png" alt="")
+          picture
+            source(type="image/webp" srcset="/static/img/booking-loc.webp")
+            source(type="image/png" srcset="/static/img/booking-loc.png")
+            img(src="../static/img/booking-loc.png" alt="")
           a(href='https://goo.gl/maps/3E7CiTjJRayBFssh7' target='_blank') 1A Hauz khas village, New delhi, india, 110016
         div.contact-content
-          img(src="../static/img/booking-message.png" alt="")
+          picture
+            source(type="image/webp" srcset="/static/img/booking-message.webp")
+            source(type="image/png" srcset="/static/img/booking-message.png")
+            img(src="../static/img/booking-message.png" alt="")
           p Contact@lazercrazer.in
         div.contact-content
-          img(src="../static/img/booking-call.png" alt="")
+          picture
+            source(type="image/webp" srcset="/static/img/booking-call.webp")
+            source(type="image/png" srcset="/static/img/booking-call.png")
+            img(src="../static/img/booking-call.png" alt="")
           p +91 8840175266/ 9971385510
 
     footer#footer            

@@ -16,6 +16,13 @@ html
             include ../static/event.css
             include ../static/activities.css
         meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+
+        //- LINK TAGS FOR WEBSITE"S FAVICON
+        link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon_io/favicon-16x16.png")
+        link(rel="manifest" href="../static/img/favicon_io/site.webmanifest")
+        
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
@@ -116,17 +123,20 @@ html
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#navigator(src="../static/img/home-navigator.png" alt="")
                     div#nav-lightining1
-                        img(src="../static/img/nav-lightining1.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/nav-lightining1.webp")
+                            source(type="image/png" srcset="/static/img/nav-lightining1.png")
+                            img(src="../static/img/nav-lightining1.png" alt="")
                     div#nav-lightining2
-                        img(src="../static/img/nav-lightining2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/nav-lightining2.webp")
+                            source(type="image/png" srcset="/static/img/nav-lightining2.png")
+                            img(src="../static/img/nav-lightining2.png" alt="")
                     div#nav-bottom-tower
-                        img(src="../static/img/nav-bottom-tower.png", alt="")
-            //- div#planet-container
-            //-     div#navM-planet2
-            //-         picture
-            //-             source(type="image/webp" srcset="/static/img/navM-planet.webp")
-            //-             source(type="image/png" srcset="/static/img/navM-planet.png")
-            //-             img(src="../static/img/navM-planet.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/nav-bottom-tower.webp")
+                            source(type="image/png" srcset="/static/img/nav-bottom-tower.png")
+                            img(src="../static/img/nav-bottom-tower.png", alt="")
 
 
             div#activities-banner
@@ -136,26 +146,53 @@ html
                         p EVERYTHING YOU NEED TO MAKE YOUR EVENT MEMORABLE.
                     div#mobile-activities-para FROM BIRTHDAYS TO CORPORATE PARTIES, WE HAVE EVERYTHING YOU NEED TO MAKE YOUR EVENT MEMORABLE.
                 div#activities-banner-rDesign
-                    img(src="../static/img/activities-banner-rDesign.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/activities-banner-rDesign.webp")
+                        source(type="image/png" srcset="/static/img/activities-banner-rDesign.png")
+                        img(src="../static/img/activities-banner-rDesign.png" alt="")
                 div#activities-banner-lDesign
-                    img(src="../static/img/activities-banner-lDesign.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/activities-banner-lDesign.webp")
+                        source(type="image/png" srcset="/static/img/activities-banner-lDesign.png")
+                        img(src="../static/img/activities-banner-lDesign.png" alt="")
                 div#kid-jumping
-                    img(src="../static/img/kid-jumping.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/kid-jumping.webp")
+                        source(type="image/png" srcset="/static/img/kid-jumping.png")
+                        img(src="../static/img/kid-jumping.png" alt="")
                 div#console-controls
-                    img(src="../static/img/console-controls.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/console-controls.webp")
+                        source(type="image/png" srcset="/static/img/console-controls.png")
+                        img(src="../static/img/console-controls.png" alt="")
 
                 div#activities-banner-mobile 
-                    img(src="../static/img/activities-banner-mobile.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/activities-banner-mobile.webp")
+                        source(type="image/png" srcset="/static/img/activities-banner-mobile.png")
+                        img(src="../static/img/activities-banner-mobile.png" alt="")
 
                 div#arrow-container
                     div#arrow1
-                        img(src="../static/img/arrow1.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/arrow1.webp")
+                            source(type="image/png" srcset="/static/img/arrow1.png")
+                            img(src="../static/img/arrow1.png" alt="")
                     div#arrow2
-                        img(src="../static/img/arrow2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/arrow2.webp")
+                            source(type="image/png" srcset="/static/img/arrow2.png")
+                            img(src="../static/img/arrow2.png" alt="")
                     div#arrow3
-                        img(src="../static/img/arrow3.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/arrow3.webp")
+                            source(type="image/png" srcset="/static/img/arrow3.png")
+                            img(src="../static/img/arrow3.png" alt="")
                 div#mobile-arrow
-                    img(src="../static/img/mobile-arrow.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/mobile-arrow.webp")
+                        source(type="image/png" srcset="/static/img/mobile-arrow.png")
+                        img(src="../static/img/mobile-arrow.png" alt="")
 
             h1#types-heading TYPES OF 
                 span#green ACTIVITIES
@@ -164,12 +201,21 @@ html
                     h3#green PAINTBALL
                     p Paintball is a high adrenaline, highly strenuous game where participants shoot each other with paintball projectiles at a high rate of speed.
                 div#type1-bg
-                    img#type1-bgD(src="../static/img/type1-bg.png" alt="")
-                    img#type1-bgM(src="../static/img/type1-bgM.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/type1-bg.webp")
+                        source(type="image/png" srcset="/static/img/type1-bg.png")
+                        img#type1-bgD(src="../static/img/type1-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/type1-bgM.webp")
+                        source(type="image/png" srcset="/static/img/type1-bgM.png")
+                        img#type1-bgM(src="../static/img/type1-bgM.png" alt="")
 
             div.type2
                 div.type2-bg
-                    img(src="../static/img/type2-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/type2-bg.webp")
+                        source(type="image/png" srcset="/static/img/type2-bg.png")
+                        img(src="../static/img/type2-bg.png" alt="")
                 div.type2-content
                     h3#green BODY ZORBING
                     p Body Zorbs are suitable for a huge age group; from children aged 6 years+ right up to adults. The idea is to fit inside a Zorb ball and play.
@@ -179,21 +225,33 @@ html
                     h3#green INFLATABLE GAME
                     p inflatable game rentals aren't just for kids! We have entertainment options for all ages. From Meltdown to bounce houses.
                 div.type2-bg
-                    img(src="../static/img/type3-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/type3-bg.webp")
+                        source(type="image/png" srcset="/static/img/type3-bg.png")
+                        img(src="../static/img/type3-bg.png" alt="")
 
             div.type2
                 div.type2-bg
-                    img(src="../static/img/type4-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/type4-bg.webp")
+                        source(type="image/png" srcset="/static/img/type4-bg.png")
+                        img(src="../static/img/type4-bg.png" alt="")
                 div.type2-content
                     h3#green TRAMPOLINE
                     p Trampoline is fun for kids to jump and play during their playtime. It is the best physical activity to boost their spirit.  free Delivery and Setup.
 
             div#knowMore
                 div#knowMore-bg
-                    img(src="../static/img/knowMore-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/knowMore-bg.webp")
+                        source(type="image/png" srcset="/static/img/knowMore-bg.png")
+                        img(src="../static/img/knowMore-bg.png" alt="")
                 div#knowMore-content
                     div#knowMore-content-img
-                        img(src="../static/img/activities-knowMore-content-img.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/activities-knowMore-content-img.webp")
+                            source(type="image/png" srcset="/static/img/activities-knowMore-content-img.png")
+                            img(src="../static/img/activities-knowMore-content-img.png" alt="")
                     div#knowMore-content-para
                         p To know more about LaZer Craer Laser tag Parties and ur party packages, 
                         p call 8840175266
@@ -204,11 +262,20 @@ html
 
             div#clientAndForm
                 div#event-parallax11
-                    img#move11(src="../static/img/parallax-object1.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/parallax-object1.webp")
+                        source(type="image/png" srcset="/static/img/parallax-object1.png")
+                        img#move11(src="../static/img/parallax-object1.png" alt="")
                 div#knowMore-blend
                 div#event-formBg
-                    img#event-formBgD(src="../static/img/event-formBg.png" alt="")
-                    img#event-formBgM(src="../static/img/event-formBgM.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/event-formBg.webp")
+                        source(type="image/png" srcset="/static/img/event-formBg.png")
+                        img#event-formBgD(src="../static/img/event-formBg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/event-formBgM.webp")
+                        source(type="image/png" srcset="/static/img/event-formBgM.png")
+                        img#event-formBgM(src="../static/img/event-formBgM.png" alt="")
 
                 div#contact-form
                     form#contactForm
@@ -223,10 +290,12 @@ html
                             input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
 
                             select.myInput(name="Parties" id='select1')
-                                option#placeholder(value="" disabled selected) Types of parties
-                                option(value="Birthday") Birthday 
-                                option(value="Corporate") Corporate
-                                option(value="Private") Private
+                                option#placeholder(value="" disabled selected) Types of activities
+                                option(value="Birthday") Paintball 
+                                option(value="Corporate") Body Zorbing
+                                option(value="Private") Inflatable Game
+                                option(value="Corporate") Trampoline
+                                option(value="Corporate") Other
                         div#row3
                             textarea.textarea.myInput(name="message" id='message' cols="30" rows="10" placeholder="Send Comments")
                         div#btn-container
@@ -234,23 +303,59 @@ html
 
             div#clients-bg
                 div#clients
-                    img(src="../static/img/client1.png" alt="")
-                    img(src="../static/img/client2.png" alt="")
-                    img(src="../static/img/client3.png" alt="")
-                    img(src="../static/img/client4.png" alt="")
-                    img(src="../static/img/client5.png" alt="")
-                    img(src="../static/img/client6.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client1.webp")
+                        source(type="image/png" srcset="/static/img/client1.png")
+                        img(src="../static/img/client1.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client2.webp")
+                        source(type="image/png" srcset="/static/img/client2.png")
+                        img(src="../static/img/client2.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client3.webp")
+                        source(type="image/png" srcset="/static/img/client3.png")
+                        img(src="../static/img/client3.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client4.webp")
+                        source(type="image/png" srcset="/static/img/client4.png")
+                        img(src="../static/img/client4.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client5.webp")
+                        source(type="image/png" srcset="/static/img/client5.png")
+                        img(src="../static/img/client5.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client6.webp")
+                        source(type="image/png" srcset="/static/img/client6.png")
+                        img(src="../static/img/client6.png" alt="")
 
             div#clients2
                 p#trusted TRUSTED BY
                 div.clients-container
-                    img(src="../static/img/client1.png" alt="")
-                    img(src="../static/img/client2.png" alt="")
-                    img(src="../static/img/client3.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client1.webp")
+                        source(type="image/png" srcset="/static/img/client1.png")
+                        img(src="../static/img/client1.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client2.webp")
+                        source(type="image/png" srcset="/static/img/client2.png")
+                        img(src="../static/img/client2.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client3.webp")
+                        source(type="image/png" srcset="/static/img/client3.png")
+                        img(src="../static/img/client3.png" alt="")
                 div.clients-container
-                    img(src="../static/img/client4.png" alt="")
-                    img(src="../static/img/client5.png" alt="")
-                    img(src="../static/img/client6.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client4.webp")
+                        source(type="image/png" srcset="/static/img/client4.png")
+                        img(src="../static/img/client4.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client5.webp")
+                        source(type="image/png" srcset="/static/img/client5.png")
+                        img(src="../static/img/client5.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/client6.webp")
+                        source(type="image/png" srcset="/static/img/client6.png")
+                        img(src="../static/img/client6.png" alt="")
 
             div#client-blend
 

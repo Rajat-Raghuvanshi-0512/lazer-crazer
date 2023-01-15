@@ -15,6 +15,13 @@ html
             include ../static/style.css
             include ../static/rental.css
         meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+
+        //- LINK TAGS FOR WEBSITE"S FAVICON
+        link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon_io/favicon-16x16.png")
+        link(rel="manifest" href="../static/img/favicon_io/site.webmanifest")
+
         link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
     block content 
         body 
@@ -117,17 +124,20 @@ html
                                 source(type="image/png" srcset="/static/img/home-navigator.png")
                                 img#navigator(src="../static/img/home-navigator.png" alt="")
                     div#nav-lightining1
-                        img(src="../static/img/nav-lightining1.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/nav-lightining1.webp")
+                            source(type="image/png" srcset="/static/img/nav-lightining1.png")
+                            img(src="../static/img/nav-lightining1.png" alt="")
                     div#nav-lightining2
-                        img(src="../static/img/nav-lightining2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/nav-lightining2.webp")
+                            source(type="image/png" srcset="/static/img/nav-lightining2.png")
+                            img(src="../static/img/nav-lightining2.png" alt="")
                     div#nav-bottom-tower
-                        img(src="../static/img/nav-bottom-tower.png" alt="")
-            //- div#planet-container
-            //-     div#navM-planet2
-            //-         picture
-            //-             source(type="image/webp" srcset="/static/img/navM-planet.webp")
-            //-             source(type="image/png" srcset="/static/img/navM-planet.png")
-            //-             img(src="../static/img/navM-planet.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/nav-bottom-tower.webp")
+                            source(type="image/png" srcset="/static/img/nav-bottom-tower.png")
+                            img(src="../static/img/nav-bottom-tower.png" alt="")
 
 
             div#rental-banner
@@ -136,9 +146,15 @@ html
                     h2 WE RENT AND SHIP LESSER TAG ADVENTURES COAST TO COAST
 
                 div#rental-bg
-                    img(src="../static/img/rental-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/rental-bg.webp")
+                        source(type="image/png" srcset="/static/img/rental-bg.png")
+                        img(src="../static/img/rental-bg.png" alt="")
                 div#rental-bgM
-                    img(src="../static/img/rental-bgM.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/rental-bgM.webp")
+                        source(type="image/png" srcset="/static/img/rental-bgM.png")
+                        img(src="../static/img/rental-bgM.png" alt="")
 
             div#why-rental
                 h1 WHY 
@@ -146,27 +162,42 @@ html
 
                 div#why-rental-containers
                     div#rental-gun
-                        img(src="../static/img/rental-gun.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/rental-gun.webp")
+                            source(type="image/png" srcset="/static/img/rental-gun.png")
+                            img(src="../static/img/rental-gun.png" alt="")
                     div#rental-gunM
-                        img(src="../static/img/rental-gunM.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/rental-gunM.webp")
+                            source(type="image/png" srcset="/static/img/rental-gunM.png")
+                            img(src="../static/img/rental-gunM.png" alt="")
                     div.rental-Containers
                         div.rental-Containers-img
-                            img(src="../static/img/rental-Containers1.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/rental-Containers1.webp")
+                                source(type="image/png" srcset="/static/img/rental-Containers1.png")
+                                img(src="../static/img/rental-Containers1.png" alt="")
                         p#cont-heading AFFORDABLE PRICING
                         p Don’t buy - rent Lesser Tag Source has quality products at a price that won’t break the bank
-                        a(href='/') PRICING
+                        a(href='#clientAndForm') PRICING
                     div.rental-Containers
                         div.rental-Containers-img
-                            img(src="../static/img/rental-Containers1.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/rental-Containers2.webp")
+                                source(type="image/png" srcset="/static/img/rental-Containers2.png")
+                                img(src="../static/img/rental-Containers2.png" alt="")
                         p#cont-heading YOUR TURF, YOUR TERMS
                         p No need to travel in order to enjoy Lasser Tag. We ship the adventure straight to your door step. This means your terrain, your games, and your rules
-                        a(href='/') PRICING
+                        a(href='#clientAndForm') PRICING
                     div.rental-Containers
                         div.rental-Containers-img
-                            img(src="../static/img/rental-Containers1.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/rental-Containers3.webp")
+                                source(type="image/png" srcset="/static/img/rental-Containers3.png")
+                                img(src="../static/img/rental-Containers3.png" alt="")
                         p#cont-heading COUSTOM ORDER
                         p No need to travel in order to enjoy Lasser Tag. We ship the adventure straight to your door step. This means your terrain, your games, and your rules
-                        a(href='/') PRICING
+                        a(href='#clientAndForm') PRICING
 
             div#process
                 h1 OUR 
@@ -174,38 +205,65 @@ html
 
                 div#process1 
                     div#process-num1
-                        img(src="../static/img/process-num1.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-num1.webp")
+                            source(type="image/png" srcset="/static/img/process-num1.png")
+                            img(src="../static/img/process-num1.png" alt="")
                     div.process-text
                         h5 THROW A PARTY
                         p No matter where in the country you are located find a great reason to throw a party!
                     div.process-bg1
-                        img(src="../static/img/process-bg1.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-bg1.webp")
+                            source(type="image/png" srcset="/static/img/process-bg1.png")
+                            img(src="../static/img/process-bg1.png" alt="")
 
                 div#process2 
                     div#process-num2
-                        img(src="../static/img/process-num2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-num2.webp")
+                            source(type="image/png" srcset="/static/img/process-num2.png")
+                            img(src="../static/img/process-num2.png" alt="")
                     div.process-bg1
-                        img(src="../static/img/process-bg2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-bg2.webp")
+                            source(type="image/png" srcset="/static/img/process-bg2.png")
+                            img(src="../static/img/process-bg2.png" alt="")
                     div.process-text
                         h5 FIND OUR HOME ON THE WEB 
                         p @ WWW.lasertagsource.com and browse our individual guns and packages. Place and pay for your reservation!
 
                 div#process3
                     div#process-num3
-                        img(src="../static/img/process-num3.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-num3.webp")
+                            source(type="image/png" srcset="/static/img/process-num3.png")
+                            img(src="../static/img/process-num3.png" alt="")
                     div.process-text
                         h5 OUR WAREHOUSE
                         p Our warehouse tests and lovingly packages up your order. We even throw in bounuses like batteries and a screwdriver ,if we know what kind of event you are hosting
                     div.process-bg1
-                        img(src="../static/img/process-bg3.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-bg3.webp")
+                            source(type="image/png" srcset="/static/img/process-bg3.png")
+                            img(src="../static/img/process-bg3.png" alt="")
                     div#process-bgM1
-                        img(src="../static/img/process-bgM3.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-bgM3.webp")
+                            source(type="image/png" srcset="/static/img/process-bgM3.png")
+                            img(src="../static/img/process-bgM3.png" alt="")
 
                 div#process4
                     div#process-num4
-                        img(src="../static/img/process-num3.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-num3.webp")
+                            source(type="image/png" srcset="/static/img/process-num3.png")
+                            img(src="../static/img/process-num3.png" alt="")
                     div.process-bg1
-                        img(src="../static/img/process-bg4.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/process-bg4.webp")
+                            source(type="image/png" srcset="/static/img/process-bg4.png")
+                            img(src="../static/img/process-bg4.png" alt="")
                     div.process-text
                         h5 DELIVER AT YOUR DOR STEP
                         p Thanks to the folks at UPS the equipement shows up on your doorstep 1-2 days prior to your event. Pull everythings out of that box! Play with it ! Be sure to keep that bubble wrap & packaging for the return trip
@@ -218,33 +276,61 @@ html
                 div#equipment-containers
                     div#eq-row1
                         div.eq-container#eq1
-                            img(src="../static/img/eq1.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/eq1.webp")
+                                source(type="image/png" srcset="/static/img/eq1.png")
+                                img(src="../static/img/eq1.png" alt="")
                             p BRX
                         div.eq-container#eq2
-                            img(src="../static/img/eq2.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/eq2.webp")
+                                source(type="image/png" srcset="/static/img/eq2.png")
+                                img(src="../static/img/eq2.png" alt="")
                             p BATTLE TAG 
                         div.eq-container#eq3
-                            img(src="../static/img/eq3.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/eq3.webp")
+                                source(type="image/png" srcset="/static/img/eq3.png")
+                                img(src="../static/img/eq3.png" alt="")
                             p SPEAKERS
                     div#eq-row2
                         div.eq-container#eq4
-                            img(src="../static/img/eq4.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/eq4.webp")
+                                source(type="image/png" srcset="/static/img/eq4.png")
+                                img(src="../static/img/eq4.png" alt="")
                             p PARTY 
                                 span#green LIGHT
                         div.eq-container#eq5
-                            img(src="../static/img/eq5.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/eq5.webp")
+                                source(type="image/png" srcset="/static/img/eq5.png")
+                                img(src="../static/img/eq5.png" alt="")
                             p BUNKER
                         div.eq-container#eq6
-                            img(src="../static/img/eq6.png" alt="")
+                            picture
+                                source(type="image/webp" srcset="/static/img/eq6.webp")
+                                source(type="image/png" srcset="/static/img/eq6.png")
+                                img(src="../static/img/eq6.png" alt="")
                             p SCORING 
                                 span#green SYSTEM
 
             div#knowMore
                 div#knowMore-bg
-                    img(src="../static/img/knowMore-bg.png" alt="")
+                    picture
+                        source(type="image/webp" srcset="/static/img/knowMore-bg.webp")
+                        source(type="image/png" srcset="/static/img/knowMore-bg.png")
+                        img(src="../static/img/knowMore-bg.png" alt="")
                 div#knowMore-content
                     div#knowMore-content-img
-                        img(src="../static/img/know-more-rental.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/laserKid.webp")
+                            source(type="image/png" srcset="/static/img/laserKid.png")
+                            img#laserKid(src="../static/img/laserKid.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/know-more-rental.webp")
+                            source(type="image/png" srcset="/static/img/know-more-rental.png")
+                            img#laserKidM(src="../static/img/know-more-rental.png" alt="")
                     div#knowMore-content-para
                         p To know more about Lazer Crazer Laser tag Parties and our party packages, 
                         p
@@ -374,7 +460,10 @@ html
                     div#testimonials-bg2
                         div#testimonials-para2
                             p OVER 1000+ 5 STAR REVIEWS ON GOOGLE.
-                        img(src="../static/img/testimonials-bg2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/testimonials-bg2.webp")
+                            source(type="image/png" srcset="/static/img/testimonials-bg2.png")
+                            img(src="../static/img/testimonials-bg2.png" alt="")
 
                         p#trusted TRUSTED BY
 
@@ -462,9 +551,6 @@ html
                                     img.stars(src="../static/img/star.png" alt="")
                                     img.stars(src="../static/img/star.png" alt="")
                                     img.stars(src="../static/img/star.png" alt="")
-
-
-
 
 
             div#clientAndForm
@@ -556,3 +642,4 @@ html
                 script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
                 script 
                     include ../static/script.js
+                    include ../static/rental.js
