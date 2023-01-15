@@ -151,7 +151,6 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 
 const fetchslots = () => {
     let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
-<<<<<<< HEAD
     // console.log(todaysdate)
     let latestdate=new Date();
     let des=0;
@@ -172,9 +171,6 @@ const fetchslots = () => {
     }
     else{
             des=1;
-=======
-    console.log(todaysdate)
->>>>>>> 806d950eab84b9e71af3ad5ae3e16dbb097dd45d
 
     }
     }
