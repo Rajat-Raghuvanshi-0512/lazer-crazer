@@ -152,33 +152,34 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 const fetchslots = () => {
     let todaysdate = selectedyear + '/' + (selectedmonth + 1) + '/' + selecteddate;
     // console.log(todaysdate)
-    let latestdate=new Date();
-    let des=0;
-    if(latestdate.getFullYear()<=selectedyear){
-    if(latestdate.getFullYear()==selectedyear){
-            if(latestdate.getMonth()<=selectedmonth){
-                if(latestdate.getMonth()==selectedmonth){
-                    if(latestdate.getDate()<=selecteddate){
-                        des=1;
+    let latestdate = new Date();
+    let des = 0;
+    if (latestdate.getFullYear() <= selectedyear) {
+        if (latestdate.getFullYear() == selectedyear) {
+            if (latestdate.getMonth() <= selectedmonth) {
+                if (latestdate.getMonth() == selectedmonth) {
+                    if (latestdate.getDate() <= selecteddate) {
+                        des = 1;
                     }
-                    
+
                 }
-                else{
-                    des=1;
+                else {
+                    des = 1;
                 }
             }
-        
-    }
-    else{
-            des=1;
 
-    }
+        }
+        else {
+            des = 1;
+            console.log(todaysdate)
+
+        }
     }
 
-    if(des==0){
-            console.log("slot cannot be booked")
-            document.getElementsByClassName('slotlist')[0].innerHTML=`No slots Available`
-            return;
+    if (des == 0) {
+        console.log("slot cannot be booked")
+        document.getElementsByClassName('slotlist')[0].innerHTML = `No slots Available`
+        return;
     }
     //fetching the API 
     let fetchedslots = [];
@@ -205,32 +206,32 @@ const fetchslots = () => {
 
 
         const slotlist = document.getElementsByClassName('slotlist')[0];
-        let latestdate=new Date();
+        let latestdate = new Date();
         let slots = "";
 
         console.log(todaysdate)
 
-        let des=0;
-        if(date.getFullYear()<=selectedyear){
-        if(date.getFullYear()==selectedyear){
-                if(date.getMonth()<=selectedmonth){
-                    if(date.getMonth()==selectedmonth){
-                        if(date.getDate()<=selecteddate){
-                            des=1;
+        let des = 0;
+        if (date.getFullYear() <= selectedyear) {
+            if (date.getFullYear() == selectedyear) {
+                if (date.getMonth() <= selectedmonth) {
+                    if (date.getMonth() == selectedmonth) {
+                        if (date.getDate() <= selecteddate) {
+                            des = 1;
                         }
-                        
+
                     }
-                    else{
-                        des=1;
+                    else {
+                        des = 1;
                     }
                 }
-            
+
+            }
+            else {
+                des = 1;
+
+            }
         }
-        else{
-                des=1;
-
-        }
-        }
 
 
 
@@ -238,51 +239,51 @@ const fetchslots = () => {
 
 
 
-        if(des){
+        if (des) {
 
 
 
             for (let i = 0; i < fetchedslots.length; i++) {
                 const element = fetchedslots[i];
                 if (element.slotcount >= count) {
-                    if(selecteddate==latestdate.getDate()&&selectedmonth==latestdate.getMonth()){
-    
-                        const x=element.slottime;
-    
+                    if (selecteddate == latestdate.getDate() && selectedmonth == latestdate.getMonth()) {
+
+                        const x = element.slottime;
+
                         // console.log("hey todays date selected");
-                        let h=parseInt(x.substring(0,x.indexOf(":")),10);
-                        const m=parseInt(x.substring(x.indexOf(":")+1,x.indexOf(":")+3),10);
+                        let h = parseInt(x.substring(0, x.indexOf(":")), 10);
+                        const m = parseInt(x.substring(x.indexOf(":") + 1, x.indexOf(":") + 3), 10);
                         // const tf=1;
-                        if(x.substring(x.length-2,x.length)!='AM'&&h!=12){
-                            h+=12;
+                        if (x.substring(x.length - 2, x.length) != 'AM' && h != 12) {
+                            h += 12;
                         }
-                        if(date.getHours()>=h){
-                            if(h<date.getHours()){
+                        if (date.getHours() >= h) {
+                            if (h < date.getHours()) {
                                 continue;
                             }
-                            else{
-                                if(date.getMinutes()>=m){
+                            else {
+                                if (date.getMinutes() >= m) {
                                     continue;
                                 }
                             }
-                            
+
                         }
                     }
                     slots += `<div class="slots">${element.slottime}</div>`;
                 }
-    
+
             }
-    
-    
+
+
             slotlist.innerHTML = slots
         }
-        else{
+        else {
             console.log("slot cannot be booked")
-            slotlist.innerHTML=`No slots Available`
+            slotlist.innerHTML = `No slots Available`
             return;
 
         }
-        
+
 
 
     })
@@ -316,32 +317,32 @@ daysTag.addEventListener("click", (event) => {
 
 
 
-        
-
-            const todaysmonthyear = document.getElementsByClassName('current-date')[0];
-            const changeddate = todaysmonthyear.innerHTML;
-            let givenmonth = date.getMonth();
-            let y = changeddate.substring(0, changeddate.length - 5)
-            let z = changeddate.substring(changeddate.length - 4);
-            for (let i = 0; i < 12; i++) {
-                const element = months[i];
-                if (element == y) {
-                    givenmonth = i;
-                }
-            }
-            selectedmonth=givenmonth;
-            selectedyear=z;
-            if(currenttarget.classList.contains('inactive')){
-            if(selecteddate>=20&&selecteddate<=31){
-                selectedmonth=givenmonth-1;
-            }
-            else{
-                selectedmonth=givenmonth+1;
-            }
-            
 
 
-        
+        const todaysmonthyear = document.getElementsByClassName('current-date')[0];
+        const changeddate = todaysmonthyear.innerHTML;
+        let givenmonth = date.getMonth();
+        let y = changeddate.substring(0, changeddate.length - 5)
+        let z = changeddate.substring(changeddate.length - 4);
+        for (let i = 0; i < 12; i++) {
+            const element = months[i];
+            if (element == y) {
+                givenmonth = i;
+            }
+        }
+        selectedmonth = givenmonth;
+        selectedyear = z;
+        if (currenttarget.classList.contains('inactive')) {
+            if (selecteddate >= 20 && selecteddate <= 31) {
+                selectedmonth = givenmonth - 1;
+            }
+            else {
+                selectedmonth = givenmonth + 1;
+            }
+
+
+
+
         }
 
 
@@ -499,7 +500,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
             date: todaysdate,
             slotcount: count,
             slot: time,
-            package:package
+            package: package
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -533,7 +534,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
             date: todaysdate,
             slotcount: count,
             slot: time,
-            package:package,
+            package: package,
         }
         let xhr = new XMLHttpRequest();
 
@@ -541,7 +542,6 @@ finalsubmitbutton.addEventListener('click', (event) => {
             window.location.assign("/bookingThank");
         };
 
-        thankYou();
         xhr.open('POST', '/calender');
         xhr.setRequestHeader('content-type', 'application/json');
         xhr.send(JSON.stringify(formData));
@@ -559,6 +559,7 @@ finalsubmitbutton.addEventListener('click', (event) => {
             } else {
                 alert('Something went wrong!')
             }
+            thankYou();
         }
         // });
 

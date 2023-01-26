@@ -1,7 +1,20 @@
+$(window).on("load", function () {
+    $("#arrow-container").addClass('finished')
+
+    var x = 200; //y-axis pixel displacement
+    var y = 2700; //delay in milliseconds
+
+    setTimeout(function () {
+        window.scroll(0, x);
+        x = x + 5; //if you want to increase speed simply increase increment interval
+    }, y);
+});
+
+
 // PRICING
 function glow(x) {
-    x.classList.add("active");
-};
+        x.classList.add("active");
+    };
 function unglow(x) {
     x.classList.remove("active");
 };
@@ -15,37 +28,59 @@ function book(x) {
 
 // NAVBAR HIDE ON SCROLL
 
-// var didScroll;
-// var lastScrollTop = 0;
-// var delta = 5;
-// var navbarHeight = $('#mobile-navbar').outerHeight();
-// console.log(navbarHeight)
-// setInterval(function () {
-//     if (didScroll) {
-//         hasScrolled();
-//         didScroll = false;
+// var updated=0,st;
+// let navbar = document.getElementById('mobile-navbar')
+// $('body').on({
+//     'touchmove': function(e) { 
+//     st = $(this).scrollTop();
+//     if(st > updated) {
+//         console.log('down');
+//         navbar.classList.remove('nav-up')
+//         navbar.classList.add('nav-up')
 //     }
-// }, 250);
-// $(window).scroll(function (event) {
-//     didScroll = true;
+//     else {
+//         console.log('up');
+//         navbar.classList.add('nav-down')
+//         navbar.classList.remove('nav-down')
+//     }
+//     updated = st;
+//     }
 // });
-// function hasScrolled() {
-//     var st = $(this).scrollTop();
-//     if (Math.abs(lastScrollTop - st) <= delta) {
+
+
+
+
+
+
+// const body = document.body;
+// const nav = document.querySelector("#mobile-navbar");
+// const scrollUp = "nav-up";
+// const scrollDown = "nav-down";
+// let lastScroll = 0;
+
+
+// window.addEventListener("scroll", () => {
+//     const currentScroll = window.pageYOffset;
+//     if (currentScroll <= 0) {
+//         body.classList.remove(scrollUp);
 //         return;
 //     }
-//     if (st > lastScrollTop && st > navbarHeight) {
-//         $('#mobile-navbar').removeClass('nav-down').addClass('nav-up');
-//     } else {
-//         if (st + $(window).height() < $(document).height()) {
-//             $('#mobile-navbar').removeClass('nav-up').addClass('nav-down');
-//         }
+
+//     if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+//         // down
+//         body.classList.remove(scrollUp);
+//         body.classList.add(scrollDown);
+//     } else if (
+//         currentScroll < lastScroll &&
+//         body.classList.contains(scrollDown)
+//     ) {
+//         // up
+//         body.classList.remove(scrollDown);
+//         body.classList.add(scrollUp);
 //     }
-//     if (st < 100) {
-//         $('#mobile-navbar').removeClass('nav-down');
-//     }
-//     lastScrollTop = st;
-// }
+//     lastScroll = currentScroll;
+// });
+
 
 // STONES PARALLAX
 const parallaxObject1 = document.getElementById("move");
@@ -142,7 +177,6 @@ contactForm.addEventListener('submit', (e) => {
         window.location.assign("/thank");
     };
 
-    thankYou();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
@@ -156,6 +190,7 @@ contactForm.addEventListener('submit', (e) => {
         } else {
             alert('Something went wrong!')
         }
+        thankYou();
     }
 });
 

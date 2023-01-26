@@ -54,6 +54,7 @@ app.get('/calender', (req, res) => {
     app.post('/calender', (req, res) => {
         let transporter = nodemailer.createTransport({
             service: 'gmail',
+            secure: true,
             auth: {
                 user: "lazercrazer4@gmail.com",
                 pass: "ltogvuchttogpmne"
@@ -65,7 +66,8 @@ app.get('/calender', (req, res) => {
             from: "lazercrazer4@gmail.com",
             to: "lazer.craz@gmail.com",
             subject: `Message from ${req.body.name}: ${req.body.email}`,
-            text: `Name: ${req.body.name}, 
+            text: 
+            `Name: ${req.body.name}, 
             Email: ${req.body.email}, 
             Phone: ${req.body.phone}, 
             date: ${req.body.date},

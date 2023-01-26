@@ -238,7 +238,7 @@ html(lang='en' dir='ltr')
       .popupsubsection
         .innerpopup
           .popuptext
-            | Fill The Form To Download Price List
+            | Fill In The Form To Reserve Your Slot
           .popupsubmitsection
             form#contactFormB
               .popupsections
@@ -246,14 +246,14 @@ html(lang='en' dir='ltr')
                 input(type='text' id='name' required)
               .popupsections
                 span.details Mobile No
-                input(type='text' id='phone' minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
+                input(type="tel" value='+91' name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="13" maxlength="13" pattern="['+']{1}[1-9]{3}[0-9]{9}" title='Enter a valid 10-digit number' required)
               .popupsections
                 span.details Package
                 select#package(name='Packages')
                   option(value='LASER TAG ON THE GO') LASER TAG ON THE GO
                   option(value='BASIC MODE') BASIC MODE
-                  option(value='SEMI PRO') SEMI PRO
-                  option(value='PRO') PRO
+                  option(value='MULTI-LEVEL') MULTI-LEVEL
+                  option(value='SPECIAL EDITION') SPECIAL EDITION
               .popupsections
                 span.details Email
                 input(type='email' id='email' required)

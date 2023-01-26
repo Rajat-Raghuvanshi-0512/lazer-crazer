@@ -60,7 +60,7 @@ html
 
             div#mobile-navbar
                 div#visible-navbar
-                    div#mobile-logo
+                    a#mobile-logo(href='/')
                         img(src="../static/img/logo.png" alt="")
                     div#hamburger-icon
                         span.bar
@@ -325,7 +325,7 @@ html
                             img(src="../static/img/formats-cards-bg.png" alt="")
                         div.formats-cards-content
                             div.formats-cards-heading
-                                h3#green Military Laser Tag
+                                h3#green Laser Tag Arena
                             div.opening
                                 p Set-up Time :
                                 p.bold 15-20 Days
@@ -349,7 +349,7 @@ html
                             img(src="../static/img/formats-cards-bg.png" alt="")
                         div.formats-cards-content
                             div.formats-cards-heading
-                                h3#green Military Laser Tag
+                                h3#green Laser Tag + Other Activities
                             div.opening
                                 p Set-up Time :
                                 p.bold 30-40 Days
@@ -373,7 +373,7 @@ html
                             img(src="../static/img/formats-cards-bg.png" alt="")
                         div.formats-cards-content
                             div.formats-cards-heading
-                                h3#green Military Laser Tag
+                                h3#green Gaming Arena + Food Court
                             div.opening
                                 p Set-up Time :
                                 p.bold 50-60 Days
@@ -434,7 +434,7 @@ html
                         div#row1
                             input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
 
-                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
+                            input(type="tel" value='+91' name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="13" maxlength="13" pattern="['+']{1}[1-9]{3}[0-9]{9}" title='Enter a valid 10-digit number' required)
 
                         div#row2
                             input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)

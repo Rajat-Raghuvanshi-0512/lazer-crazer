@@ -139,6 +139,22 @@ html
 
 
             div#banner
+                div#arrow-container
+                    div#arrow1
+                        picture
+                            source(type="image/webp" srcset="/static/img/arrow1.webp")
+                            source(type="image/png" srcset="/static/img/arrow1.png")
+                            img(src="../static/img/arrow1.png" alt="")
+                    div#arrow2
+                        picture
+                            source(type="image/webp" srcset="/static/img/arrow2.webp")
+                            source(type="image/png" srcset="/static/img/arrow2.png")
+                            img(src="../static/img/arrow2.png" alt="")
+                    div#arrow3
+                        picture
+                            source(type="image/webp" srcset="/static/img/arrow3.webp")
+                            source(type="image/png" srcset="/static/img/arrow3.png")
+                            img(src="../static/img/arrow3.png" alt="")
                 div#logo-background2
                     picture
                         source(type="image/webp" srcset="/static/img/logo-background2.webp")
@@ -242,7 +258,11 @@ html
                         img(src="../static/img/gallery-underline2.png" alt="")
                 div#about-us-content
                     div#weapon-container2
-                        img(src="../static/img/laser-and-gunM.png" alt="")
+                        //- img(src="../static/img/laser-and-gunM.png" alt="")
+                        video(width="320" height="240" controls playsinline poster='../static/img/thumbnail.png')
+                            source(src="../static/img/lc-video.mp4" type="video/mp4")
+                            source(src="../static/img/lc-video.ogg" type="video/ogg")
+                            //- |Your browser does not support the video tag.
 
                     div#about-us-para
                         h3 NEW DESTINATION OF 
@@ -445,7 +465,7 @@ html
                             div.flip-card-front
                                 div#container-logo3
 
-                                p.container-heading SEMI PRO
+                                p.container-heading MULTI-LEVEL
                                 p.container-duration 45 MINS
                                 p.container-cta#ctaColor3 LEARN MORE
 
@@ -472,7 +492,7 @@ html
                             div.flip-card-front
                                 div#container-logo4
 
-                                p.container-heading PRO
+                                p.container-heading SPECIAL EDITION
                                 p.container-duration 60 MINS
                                 p.container-cta#ctaColor4 LEARN MORE
 
@@ -868,7 +888,7 @@ html
                         div#row1
                             input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
 
-                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
+                            input(type="tel" value='+91' name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="13" maxlength="13" pattern="['+']{1}[1-9]{3}[0-9]{9}" title='Enter a valid 10-digit number' required)
 
                             input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
                         div#row2

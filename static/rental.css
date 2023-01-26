@@ -277,7 +277,7 @@
 }
 
 #process2 .process-text {
-    padding: 0 118px 0 70px;
+    padding: 0 118px 0 70px !important;
 }
 
 #process3 {
@@ -582,6 +582,7 @@
     .rental-Containers a {
         position: relative;
         bottom: -16%;
+        padding: 9px 28px;
     }
 
     #rental-gun {
@@ -610,7 +611,7 @@
 
     #process1 {
         flex-direction: column;
-        width: 90%;
+        width: 326px;
     }
 
     #process-num1 {
@@ -653,7 +654,7 @@
 
     #process2 {
         flex-direction: column;
-        width: 90%;
+        width: 326px;
         height: 460px;
     }
 
@@ -681,7 +682,7 @@
 
     #process3 {
         flex-direction: column;
-        width: 90%;
+        width: 326px;
         height: 500px;
         justify-content: start;
     }
@@ -714,11 +715,11 @@
 
     #process-bgM1 {
         display: block;
-        height: 412px;
+        height: 413px;
         position: absolute;
-        bottom: -16%;
-        width: 344px;
-        right: 3%;
+        bottom: -15%;
+        width: 345px;
+        right: -3%;
     }
 
     #process-bgM1 img {
@@ -728,7 +729,7 @@
 
     #process4 {
         flex-direction: column;
-        width: 90%;
+        width: 326px;
         height: 100%;
     }
 

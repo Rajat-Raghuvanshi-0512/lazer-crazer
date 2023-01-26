@@ -9,60 +9,62 @@ $(window).on("load", function () {
     $("#arrow3").addClass('active')
 });
 
+
+
 // NAVBAR EVENTS
-(function () {
+// (function () {
 
-    var doc = document.documentElement;
-    var w = window;
+//     var doc = document.documentElement;
+//     var w = window;
 
-    var prevScroll = w.scrollY || doc.scrollTop;
-    var curScroll;
-    var direction = 0;
-    var prevDirection = 0;
+//     var prevScroll = w.scrollY || doc.scrollTop;
+//     var curScroll;
+//     var direction = 0;
+//     var prevDirection = 0;
 
-    var header = document.getElementById('mobile-navbar');
+//     var header = document.getElementById('mobile-navbar');
 
-    var checkScroll = function () {
+//     var checkScroll = function () {
 
-        /*
-        ** Find the direction of scroll
-        ** 0 - initial, 1 - up, 2 - down
-        */
+//         /*
+//         ** Find the direction of scroll
+//         ** 0 - initial, 1 - up, 2 - down
+//         */
 
-        curScroll = w.scrollY || doc.scrollTop;
-        if (curScroll > prevScroll) {
-            //scrolled up
-            direction = 2;
-        }
-        else if (curScroll < prevScroll) {
-            //scrolled down
-            direction = 1;
-        }
+//         curScroll = w.scrollY || doc.scrollTop;
+//         if (curScroll > prevScroll) {
+//             //scrolled up
+//             direction = 2;
+//         }
+//         else if (curScroll < prevScroll) {
+//             //scrolled down
+//             direction = 1;
+//         }
 
-        if (direction !== prevDirection) {
-            toggleHeader(direction, curScroll);
-        }
+//         if (direction !== prevDirection) {
+//             toggleHeader(direction, curScroll);
+//         }
 
-        prevScroll = curScroll;
-    };
+//         prevScroll = curScroll;
+//     };
 
-    var toggleHeader = function (direction, curScroll) {
-        if (direction === 2 && curScroll > 52) {
+//     var toggleHeader = function (direction, curScroll) {
+//         if (direction === 2 && curScroll > 52) {
 
-            //replace 52 with the height of your header in px
+//             //replace 52 with the height of your header in px
 
-            header.classList.add('hide');
-            prevDirection = direction;
-        }
-        else if (direction === 1) {
-            header.classList.remove('hide');
-            prevDirection = direction;
-        }
-    };
+//             header.classList.add('hide');
+//             prevDirection = direction;
+//         }
+//         else if (direction === 1) {
+//             header.classList.remove('hide');
+//             prevDirection = direction;
+//         }
+//     };
 
-    window.addEventListener('touchmove', checkScroll);
+//     window.addEventListener('scroll', checkScroll);
 
-})();
+// })();
 
 // Hamburger click events
 const hamburger = document.querySelector("#hamburger-icon");
@@ -94,3 +96,21 @@ function move() {
         }
     }
 }
+
+
+
+// Fixed Country Code '+91'
+var input = document.querySelector('input[type="tel"]');
+
+input.addEventListener("keydown", function() {
+  var oldVal = this.value;
+  console.log(oldVal);
+  var field = this;
+  console.log("funciona");
+  
+  setTimeout(function () {
+    if(field.value.indexOf('+91') !== 0) {
+        field.value = oldVal;
+    } 
+}, 1);
+});

@@ -13,7 +13,9 @@
     animation-fill-mode: forwards;
     animation-delay: 2s;
 }
-
+#knowMore-content-img {
+    height: 280px;
+}
 @keyframes rotate {
 
     0%,
@@ -59,6 +61,7 @@
     letter-spacing: 0.105em;
     color: #2CF80B;
     padding-bottom: 28px;
+    z-index: 100;
 }
 
 #desktop-activities-para {
@@ -367,6 +370,9 @@
 }
 
 @media screen and (max-width: 1000px) {
+    #clientAndForm {
+        margin-top: 195px;
+    }
     #client-blend {
         top: -7%;
     }
@@ -374,6 +380,7 @@
     #knowMore-content-img {
         width: 215px;
         bottom: 78%;
+        height: auto;
     }
 
     #activities-banner-lDesign {

@@ -74,14 +74,13 @@ contactForm.addEventListener('submit', (e) => {
         window.location.assign("/eventThank");
     };
 
-    thankYou();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
     xhr.onload = function () {
         console.log(xhr.responseText);
         
-
+        
         if (xhr.responseText == 'success') {
             name.value = '';
             email.value = '';
@@ -91,5 +90,6 @@ contactForm.addEventListener('submit', (e) => {
         } else {
             alert('Something went wrong!')
         }
+        thankYou();
     }
 });

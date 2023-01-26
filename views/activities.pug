@@ -141,10 +141,10 @@ html
 
             div#activities-banner
                 div#activities-banner-content
-                    h1#green OTHER ACTIVITIES
-                    div#desktop-activities-para FROM BIRTHDAYS TO CORPORATE PARTIES, WE HAVE
-                        p EVERYTHING YOU NEED TO MAKE YOUR EVENT MEMORABLE.
-                    div#mobile-activities-para FROM BIRTHDAYS TO CORPORATE PARTIES, WE HAVE EVERYTHING YOU NEED TO MAKE YOUR EVENT MEMORABLE.
+                    h1#green ACTIVITIES
+                    div#desktop-activities-para EXPERIENCE THE THRILL OF ADVENTURE AT YOUR OWN
+                        p PREMISES WITH OUR TOP ADRENALINE RUSH ACTIVITIES.
+                    div#mobile-activities-para GET YOUR HEART RACING WITH OUR TOP ADRENALINE RUSH ACTIVITIES.
                 div#activities-banner-rDesign
                     picture
                         source(type="image/webp" srcset="/static/img/activities-banner-rDesign.webp")
@@ -253,7 +253,7 @@ html
                             source(type="image/png" srcset="/static/img/activities-knowMore-content-img.png")
                             img(src="../static/img/activities-knowMore-content-img.png" alt="")
                     div#knowMore-content-para
-                        p To know more about LaZer Craer Laser tag Parties and ur party packages, 
+                        p To know more about rentals activities and our packages 
                         p call 8840175266
                         p Are you event or a PARTY planner ? 
                             a#green(href='#clientAndForm') Get in touch
@@ -279,13 +279,12 @@ html
 
                 div#contact-form
                     form#contactForm
-                        p#formHeading PUT AN END TO BORING PARTIES
+                        p#formHeading LOOKING FOR A LITTLE THRILL IN YOUR LIFE?
                         p GET IN TOUCH WITH US
                         div#row1
                             input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
 
-                            input(type="phone" name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required)
-
+                            input(type="tel" value='+91' name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="13" maxlength="13" pattern="['+']{1}[1-9]{3}[0-9]{9}" title='Enter a valid 10-digit number' required)
                         div#row2
                             input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
 

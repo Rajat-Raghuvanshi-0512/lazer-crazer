@@ -37,7 +37,6 @@ contactForm.addEventListener('submit', (e) => {
         window.location.assign("/thank");
     };
 
-    thankYou();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.send(JSON.stringify(formData));
@@ -51,5 +50,6 @@ contactForm.addEventListener('submit', (e) => {
         } else {
             alert('Something went wrong!')
         }
+        thankYou();
     }
 });
