@@ -1,5 +1,4 @@
 doctype html
-// Coding By CodingNepal - youtube.com/codingnepal
 html(lang='en' dir='ltr')
   head
     //- Google Tag Manager
@@ -10,7 +9,6 @@ html(lang='en' dir='ltr')
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-NZ24JXK');
     //- End Google Tag Manager
-
     meta(charset='utf-8')
     title Lazer Crazer booking section
     link(rel='stylesheet' href='../static/calender components//calender.css')
@@ -20,7 +18,6 @@ html(lang='en' dir='ltr')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200')
     style
       include ../static/style.css
-
     //- LINK TAGS FOR WEBSITE"S FAVICON
     link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
@@ -84,7 +81,6 @@ html(lang='en' dir='ltr')
           source(type="image/webp" srcset="/static/img/nav-planet.webp")
           source(type="image/png" srcset="/static/img/nav-planet.png")
           img(src="../static/img/nav-planet.png" alt="")
-
     div#mobile-navbar
       div#visible-navbar
         a#mobile-logo(href='/')
@@ -142,7 +138,6 @@ html(lang='en' dir='ltr')
     div#planet-container
       div#booking-planet
         img(src="../static/img/booking-planet.png" alt="")
-
     div#booking
       .booking-heading
         h1#green BOOKING
@@ -182,12 +177,7 @@ html(lang='en' dir='ltr')
                       .dateheading
                         p.current-date
                       .icons
-                        //- span#prev.material-symbols-rounded chevron_left
                         span#next.material-symbols-rounded chevron_right
-
-                        //
-                          <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                          <span id="next" class="material-symbols-rounded">chevron_right</span>
                     .calendar
                       ul.weeks
                         li Sun
@@ -207,33 +197,6 @@ html(lang='en' dir='ltr')
                 .submitsection
                   .submitsectiontext
                     | CONTINUE
-          // calender part start
-          //
-            <div class="wrapper">
-            <header>
-            <div class="dateheading">
-            <p class="current-date"></p>
-            </div>
-            <div class="icons">
-            <span id="prev" class="material-symbols-rounded">chevron_left</span>
-            <span id="next" class="material-symbols-rounded">chevron_right</span>
-            </div>
-            </header>
-            <div class="calendar">
-            <ul class="weeks">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-            </ul>
-            <ul class="days"></ul>
-            </div>
-            </div>
-          // calender part end
-          // booking section ended
     .popupsection
       .popupsubsection
         .innerpopup
@@ -259,10 +222,8 @@ html(lang='en' dir='ltr')
                 input(type='email' id='email' required)
           .popupsubmit
             input(type='Submit' id='sendRequest2')
-            // <div class="bookingstatus">Booked Successfully</div>
             #cancel
               | Cancel
-
     div#contact-sectionB
       div#box-container
         div.contact-content
@@ -283,7 +244,6 @@ html(lang='en' dir='ltr')
             source(type="image/png" srcset="/static/img/booking-call.png")
             img(src="../static/img/booking-call.png" alt="")
           p +91 8840175266/ 9971385510
-
     footer#footer            
       div#footer-design
         img(src="../static/img/footer-design.png" alt="")
@@ -318,18 +278,15 @@ html(lang='en' dir='ltr')
           div#mail
             img(src="../static/img/envelope.png" alt="")
             p Contact@lazercrazer.in
-
     div#copyright
       p Copyright © 2022 Lazer Crazer. All rights reserved / 
         a(href='/privacy') Privacy Policy 
-
     div#loading
       div#loading-design1
         picture
           source(type="image/webp" srcset="/static/img/loading-design1.webp")
           source(type="image/png" srcset="/static/img/loading-design1.png")
           img(src="../static/img/loading-design1.png" alt="")
-
       div#loading-planet
         picture
           source(type="image/webp" srcset="/static/img/loading-planet.webp")
@@ -338,19 +295,15 @@ html(lang='en' dir='ltr')
       div#progressBar
         div#progress
         div#progress-perc 0%
-
       div#loading-design2
         picture
           source(type="image/webp" srcset="/static/img/loading-design2.webp")
           source(type="image/png" srcset="/static/img/loading-design2.png")
           img(src="../static/img/loading-design2.png" alt="")
-
     a(href='https://wa.me/918840175266?text=Hello')#whatsapp-icon
       svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="wa-messenger-svg-whatsapp wh-svg-icon")
         path(d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd")
       p#message-us Message Us
-
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
-
     script 
       include ../static/script.js

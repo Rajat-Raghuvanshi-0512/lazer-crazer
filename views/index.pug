@@ -10,25 +10,26 @@ html
             })(window,document,'script','dataLayer','GTM-NZ24JXK');
         //- End Google Tag Manager
         title Lazer Crazer
+        link(rel='preconnect' href="https://www.facebook.com")
+        link(rel='preconnect' href="https://connect.facebook.net")
+        link(rel='preconnect' href="https://www.googletagmanager.com")
+        link(rel='preconnect' href="https://fonts.gstatic.com")
         block style
         style
-            include ../static/style.css
+            include ../static/style.min.css
         meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
-
         //- LINK TAGS FOR WEBSITE"S FAVICON
         link(rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon_io/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon_io/favicon-32x32.png")
         link(rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon_io/favicon-16x16.png")
         link(rel="manifest" href="../static/img/favicon_io/site.webmanifest")
-
-        link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.css')
+        link(rel='stylesheet' media='screen and (max-width: 1000px)' href='../static/responsive.min.css')
     block content 
         body 
             //- Google Tag Manager (noscript)
             noscript
                 iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
             //- End Google Tag Manager (noscript)
-
             div#navbar
                 div#ul1-wrapper
                     ul#ul1
@@ -144,9 +145,6 @@ html
                         source(type="image/webp" srcset="/static/img/navM-planet.webp")
                         source(type="image/png" srcset="/static/img/navM-planet.png")
                         img(src="../static/img/navM-planet.png" alt="")
-
-
-
             div#banner
                 div#arrow-container
                     div#arrow1
@@ -208,7 +206,6 @@ html
                                 source(type="image/webp" srcset="/static/img/button-design.webp")
                                 source(type="image/png" srcset="/static/img/button-design.png")
                                 img(src="../static/img/button-design.png" alt="")
-
                 div#banner-bottom-object
                     picture
                         source(type="image/webp" srcset="/static/img/banner-bottom-object.webp")
@@ -255,9 +252,7 @@ html
                         source(type="image/png" srcset="/static/img/parallax-object1.png")
                         img#move(src="../static/img/parallax-object1.png" alt="")
                 div#bottom-blend
-
             div#banner-about-blend
-
             div#about-us
                 h1#desktop-visible ABOUT US
                 h2#mobile-visible DELHI’S LARGEST AND 
@@ -273,7 +268,6 @@ html
                         video(width="320" height="240" controls playsinline poster='../static/img/thumbnail.png')
                             source(src="../static/img/lc-video.mp4" type="video/mp4")
                             source(src="../static/img/lc-video.ogg" type="video/ogg")
-
                     div#about-us-para
                         h3 NEW DESTINATION OF 
                             span#green FUN!
@@ -284,7 +278,6 @@ html
                                 source(type="image/webp" srcset="/static/img/laser-and-gun.webp")
                                 source(type="image/png" srcset="/static/img/laser-and-gun.png")
                                 img#laser-and-gun(src="../static/img/laser-and-gun.png" alt="")
-
             div#gallery
                 div#parallax-object2
                     picture
@@ -304,7 +297,6 @@ html
                         source(type="image/webp" srcset="/static/img/parallax-object3.webp")
                         source(type="image/png" srcset="/static/img/parallax-object3.png")
                         img#move3(src="../static/img/parallax-object3.png" alt="")
-
                 div#gallery-container
                     div#gallery-content
                         div#gallery-row1
@@ -343,7 +335,6 @@ html
                                     source(type="image/webp" srcset="/static/img/gallery-img7.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img7.png")
                                     img(src="../static/img/gallery-img7.png" alt="People having fun at Lazer Crazer Tag Arena")
-
                     div#gallery-content2
                         div#gallery-row2
                             div.gallery-img
@@ -386,8 +377,6 @@ html
                                     source(type="image/webp" srcset="/static/img/gallery-img15.webp")
                                     source(type="image/png" srcset="/static/img/gallery-img15.png")
                                     img(src="../static/img/gallery-img15.png" alt="People enjoying their time at Lazer Crazer Tag Arena")
-
-
             div#pricing
                 h1 GAME OPTIONS
                 p#pricing-para With multiple laser tag game formats, we have something for everyone, regardless of their skill level
@@ -422,23 +411,20 @@ html
                         source(type="image/webp" srcset="/static/img/parallax-object9.webp")
                         source(type="image/png" srcset="/static/img/parallax-object9.png")
                         img#move9(src="../static/img/parallax-object9.png" alt="")
-
                 div#pricing-container
                     div.pContainer#pc1(onmouseover="glow(this)" onmouseout="unglow(this)")
                         div.flip-card-inner
                             div.flip-card-front
                                 div#container-logo1
-
                                 p.container-heading LASER TAG ON THE GO
                                 p.container-duration MON-FRI
                                 p.container-cta#ctaColor1 LEARN MORE
                             div.flip-card-back
                                 div#container-logo1
-
                                 div.container-back-duration 
                                     p MON-FRI
                                         div Rs.
-                                            span.price-color 199
+                                            span.price-color 300
                                             span /P
                                 p.container-back-desc ONE 
                                     span.color-change SOLO ROUND 
@@ -448,22 +434,19 @@ html
                         div.flip-card-inner
                             div.flip-card-front
                                 div#container-logo2
-
                                 p.container-heading BASIC MODE
                                 p.container-duration 30 MINS
                                 p.container-cta#ctaColor2 LEARN MORE
-
                             div.flip-card-back
                                 div#container-logo2
-
                                 div.container-back-duration 
                                     div MON-THU
                                         p Rs.
-                                            span.price-color 300
+                                            span.price-color 400
                                             span /P
                                     div FRI-SUN
                                         p Rs.
-                                            span.price-color 400
+                                            span.price-color 500
                                             span /P
                                 p.container-back-desc 
                                     span.color-change UNLIMITED LIVES 
@@ -474,14 +457,11 @@ html
                         div.flip-card-inner
                             div.flip-card-front
                                 div#container-logo3
-
                                 p.container-heading MULTI-LEVEL
                                 p.container-duration 45 MINS
                                 p.container-cta#ctaColor3 LEARN MORE
-
                             div.flip-card-back
                                 div#container-logo3
-
                                 div.container-back-duration 
                                     div MON-THU
                                         p Rs.
@@ -495,20 +475,16 @@ html
                                     span.color-change TEAM BATTLE WITH REFILL 
                                     p#desc-space ZONES & PACKS
                                     p 3 DIFF FORMATS & MAPS
-
                                 a(href="/calender").container-cta#ctaColor3 BOOK NOW
                     div.pContainer#pc4(onmouseover="glow(this)" onmouseout="unglow(this)")
                         div.flip-card-inner
                             div.flip-card-front
                                 div#container-logo4
-
                                 p.container-heading SPECIAL EDITION
                                 p.container-duration 60 MINS
                                 p.container-cta#ctaColor4 LEARN MORE
-
                             div.flip-card-back
                                 div#container-logo4
-
                                 div.container-back-duration 
                                     div MON-THU
                                         p Rs.
@@ -522,13 +498,10 @@ html
                                     span.color-change SPECIAL EDITION
                                     p#desc-space 1-1.5hrs 
                                     p CONTAINS ALL LEVELS + SOLO ROUNDS
-
                                 a(href="/calender").container-cta#ctaColor4 BOOK NOW
-
             div#mobile-gallery
                 h1 Our Gallery
                 p Lazer crazer laser tag is a special experience for all who come.
-
                 div#gallery-caraousel
                     div.caraousel-container
                         picture
@@ -560,7 +533,6 @@ html
                             source(type="image/webp" srcset="/static/img/gallery-imgM10.webp")
                             source(type="image/png" srcset="/static/img/gallery-imgM10.png")
                             img(src="../static/img/gallery-imgM10.png" alt="")
-
             div#cta 
                 h1 WE OFFER
                 p#cta-para If you’re looking for a thrilling, safe and cost effective party idea, you’re at right place!
@@ -627,8 +599,6 @@ html
                         h3 Rental
                         p No need to travel in order to enjoy Laser Tag. We ship the adventure straight to your doorstep.
                         p.learnMore learn more &#8594;
-
-
                     a.cta-box2(onmouseover="incSize2(this)" onmouseout="decSize2(this)" href='/event')
                         div.cta-box-img
                             picture
@@ -671,7 +641,6 @@ html
                         h3 Rental
                         p We ship adventure straight to your doorstep
                         p.learnMore learn more &#8594;
-
             div#testimonials
                 div#parallax-object14
                     picture
@@ -693,7 +662,6 @@ html
                     div#testimonials-para
                         p OVER 1500+ 5 STAR REVIEWS ON GOOGLE.
                         p HEAR WHAT SOME OF OUR CUSTOMERS ARE SAYING
-
                     div#clients
                         picture
                             source(type="image/webp" srcset="/static/img/client1.webp")
@@ -719,86 +687,206 @@ html
                             source(type="image/webp" srcset="/static/img/client6.webp")
                             source(type="image/png" srcset="/static/img/client6.png")
                             img(src="../static/img/client6.png" alt="")
-
                     div#testimonials-box
                         div#testimonials-box-content
                             div.testimonials-scroller
                                 p We celebrated our friend's birthday birthday over here. It was an amazing experience and the hosts were extremely cordial and cheerful. Over-all, would recommend for a fun filled time in the midst of bustling Hauz khas village.
                                 p.author Ayush Agarwal, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p Worth every single penny. Extremely fun and adrenergic experience. Must try for youngsters seeking adrenaline pump. The crew is very helpful and polite.
-
                                 p.author Achint Rastogi, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p Had a very fun experience here I am not a big game fan but here the level was different, the materials provided, the atmosphere, and everything just makes the environment a whole different vibe! You must give it a try❤️❤️
                                 p.author Hibu abyang, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p Amazing experience!! This was our first time here and we had loads of fun!! ♥️😍🔥 Anyone looking out to chill and have an adventurous evening with your gang, this is the perfect place!! 😎 Overall the experience was awesome!! Would surely come here again!!
                                 p.author Christina Vasanth, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p Vikram organised it really well.  It was great fun. I had gone with the whole office team and it was worth the money spent.
                                 p.author Pranay Goel, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p Tooo much fun!! Mission based gaming is too good there. They have multiple formats with so many interesting refil packs like ( Med kit ) and all. If you are planning to do something New and energetic this is  the perfect place for you....
                                 p.author Ashish Parida, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p If you think life can't get crazier, head over to lazer crazer! The staff is really friendly and cooperative. Even if you are playing for the first time or think you are a noobie, they will make sure you understand every rule and are able to enjoy it to core. 
                                 p.author Mayank Jain, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller
                                 p One of the most exhilarating and wonderful experiences I have ever had! Truly a worth trying experience and the people who hosted us were so cool and accommodating.
                                 p.author Aditee Mishra, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                 div#testimonials-content2
                     div#stars2
-                        img(src="../static/img/stars2.png" alt="")
+                        picture
+                            source(type="image/webp" srcset="/static/img/stars2.webp")
+                            source(type="image/png" srcset="/static/img/stars2.png")
+                            img(src="../static/img/stars2.png" alt="")
                     div#testimonials-bg2
                         div#testimonials-para2
                             p OVER 1000+ 5 STAR REVIEWS ON GOOGLE.
@@ -806,112 +894,240 @@ html
                             source(type="image/webp" srcset="/static/img/testimonials-bg2.webp")
                             source(type="image/png" srcset="/static/img/testimonials-bg2.png")
                             img(src="../static/img/testimonials-bg2.png" alt="")
-
                         p#trusted TRUSTED BY
-
                         div#clients2
                             div.clients-container
-                                img(src="../static/img/client1.png" alt="")
-                                img(src="../static/img/client2.png" alt="")
-                                img(src="../static/img/client3.png" alt="")
+                                picture
+                                    source(type="image/webp" srcset="/static/img/client1.webp")
+                                    source(type="image/png" srcset="/static/img/client1.png")
+                                    img(src="../static/img/client1.png" alt="")
+                                picture
+                                    source(type="image/webp" srcset="/static/img/client2.webp")
+                                    source(type="image/png" srcset="/static/img/client2.png")
+                                    img(src="../static/img/client2.png" alt="")
+                                picture
+                                    source(type="image/webp" srcset="/static/img/client3.webp")
+                                    source(type="image/png" srcset="/static/img/client3.png")
+                                    img(src="../static/img/client3.png" alt="")
                             div.clients-container
-                                img(src="../static/img/client4.png" alt="")
-                                img(src="../static/img/client5.png" alt="")
-                                img(src="../static/img/client6.png" alt="")
-
+                                picture
+                                    source(type="image/webp" srcset="/static/img/client4.webp")
+                                    source(type="image/png" srcset="/static/img/client4.png")
+                                    img(src="../static/img/client4.png" alt="")
+                                picture
+                                    source(type="image/webp" srcset="/static/img/client5.webp")
+                                    source(type="image/png" srcset="/static/img/client5.png")
+                                    img(src="../static/img/client5.png" alt="")
+                                picture
+                                    source(type="image/webp" srcset="/static/img/client6.webp")
+                                    source(type="image/png" srcset="/static/img/client6.png")
+                                    img(src="../static/img/client6.png" alt="")
                     div#testimonials-box2
                         div#testimonials-box-content2
                             div.testimonials-scroller2
                                 p We celebrated our friend's birthday birthday over here. It was an amazing experience and the hosts were extremely cordial and cheerful. Over-all, would recommend for a fun filled time in the midst of bustling Hauz khas village.
                                 p.author Ayush Agarwal, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p Worth every single penny. Extremely fun and adrenergic experience. Must try for youngsters seeking adrenaline pump. The crew is very helpful and polite.
                                 p.author Achint Rastogi, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p Had a very fun experience here I am not a big game fan but here the level was different, the materials provided, the atmosphere, and everything just makes the environment a whole different vibe! You must give it a try❤️❤️
                                 p.author Hibu abyang, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p Amazing experience!! This was our first time here and we had loads of fun!! ♥️😍🔥 Anyone looking out to chill and have an adventurous evening with your gang, this is the perfect place!! 😎 Overall the experience was awesome!! Would surely come here again!!
                                 p.author Christina Vasanth, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p Vikram organised it really well.  It was great fun. I had gone with the whole office team and it was worth the money spent.
                                 p.author Pranay Goel, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p Tooo much fun!! Mission based gaming is too good there. They have multiple formats with so many interesting refil packs like ( Med kit ) and all. If you are planning to do something New and energetic this is  the perfect place for you....
                                 p.author Ashish Parida, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p If you think life can't get crazier, head over to lazer crazer! The staff is really friendly and cooperative. Even if you are playing for the first time or think you are a noobie, they will make sure you understand every rule and are able to enjoy it to core. 
                                 p.author Mayank Jain, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
                             div.testimonials-scroller2
                                 p One of the most exhilarating and wonderful experiences I have ever had! Truly a worth trying experience and the people who hosted us were so cool and accommodating.
                                 p.author Aditee Mishra, 
                                 div#review-stars
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-                                    img.stars(src="../static/img/star.png" alt="")
-
-
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
+                                    picture
+                                        source(type="image/webp" srcset="/static/img/star.webp")
+                                        source(type="image/png" srcset="/static/img/star.png")
+                                        img.stars(src="../static/img/star.png" alt="")
             div#clientAndForm
-
                 div#contact-form
                     form#contactForm
                         p GET IN TOUCH WITH US
                         div#row1
                             input(type="text" name="name" id='name' Class="myInput" placeholder="Your Name" required)
-
                             input(type="tel" value='+91' name="phone" id='phone' Class="myInput" placeholder="Phone" minlength="13" maxlength="13" pattern="['+']{1}[1-9]{3}[0-9]{9}" title='Enter a valid 10-digit number' required)
-
                             input(type="email" name="email" id='email' Class="myInput" placeholder="Email" required)
                         div#row2
                             textarea.textarea.myInput(name="message" id='message' cols="30" rows="10" placeholder="Send Comments")
                         div#btn-container
                             button(type="submit")#sendRequest SEND REQUEST
-
-
             footer#footer            
                 div#footer-design
                     picture
@@ -958,18 +1174,15 @@ html
                         div#mail
                             img(src="../static/img/envelope.png" alt="")
                             p Contact@lazercrazer.in
-
             div#copyright
                 p Copyright © 2022 Lazer Crazer. All rights reserved / 
                     a(href='/privacy') Privacy Policy 
-
             div#loading
                 div#loading-design1
                     picture
                         source(type="image/webp" srcset="/static/img/loading-design1.webp")
                         source(type="image/png" srcset="/static/img/loading-design1.png")
                         img(src="../static/img/loading-design1.png" alt="")
-
                 div#loading-planet
                     picture
                         source(type="image/webp" srcset="/static/img/loading-planet.webp")
@@ -978,23 +1191,18 @@ html
                 div#progressBar
                     div#progress
                     div#progress-perc 0%
-
                 div#loading-design2
                     picture
                         source(type="image/webp" srcset="/static/img/loading-design2.webp")
                         source(type="image/png" srcset="/static/img/loading-design2.png")
                         img(src="../static/img/loading-design2.png" alt="")
-
             a(href='https://wa.me/918840175266?text=Hello')#whatsapp-icon
                 svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="wa-messenger-svg-whatsapp wh-svg-icon")
                     path(d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd")
                 p#message-us Message Us
-
-
             block scripts
                 script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
                 script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js' integrity='sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==' crossorigin='anonymous' referrerpolicy='no-referrer')
-                script 
-                    include ../static/script.js
-                    include ../static/index.js
-                    
+                script
+                    include ../static/script.min.js
+                    include ../static/index.min.js

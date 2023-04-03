@@ -3,7 +3,6 @@ const path = require("path");
 const connectToMongo = require('./db');
 const cors = require('cors');
 const app = express();
-const nodemailer = require('nodemailer');
 const port = 3000;
 
 connectToMongo();

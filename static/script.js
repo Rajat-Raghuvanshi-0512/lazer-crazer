@@ -44,15 +44,15 @@ function move() {
 // Fixed Country Code '+91'
 var input = document.querySelector('input[type="tel"]');
 
-input.addEventListener("keydown", function() {
-  var oldVal = this.value;
-  console.log(oldVal);
-  var field = this;
-  console.log("funciona");
-  
-  setTimeout(function () {
-    if(field.value.indexOf('+91') !== 0) {
-        field.value = oldVal;
-    } 
-}, 1);
+input.addEventListener("keydown", function () {
+    var oldVal = this.value;
+    console.log(oldVal);
+    var field = this;
+    console.log("funciona");
+
+    setTimeout(function () {
+        if (field.value.indexOf('+91') !== 0) {
+            field.value = oldVal;
+        }
+    }, 1);
 });

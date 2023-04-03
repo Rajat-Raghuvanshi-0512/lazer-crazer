@@ -11,10 +11,6 @@ app.use(cors())
 app.use("/api/date",require("./routes/date"));
 app.use("/api/booking",require("./routes/booking"));
 
-
-
-
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

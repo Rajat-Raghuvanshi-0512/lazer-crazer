@@ -1679,7 +1679,7 @@ body {
 }
 
 #contactForm {
-    background: url(.png), linear-gradient(109.72deg, rgba(44, 247, 11, 0.2) -73.15%, rgba(30, 142, 190, 0.2) 84.2%, rgba(29, 145, 192, 0.2) 106.81%);
+    background: linear-gradient(109.72deg, rgba(44, 247, 11, 0.2) -73.15%, rgba(30, 142, 190, 0.2) 84.2%, rgba(29, 145, 192, 0.2) 106.81%);
     background-blend-mode: overlay, normal;
     box-shadow: 6px 10px 13px rgba(0, 0, 0, 0.4);
     transform: rotate(0.02deg);

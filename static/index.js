@@ -1,170 +1,100 @@
-$(window).on("load", function () {
-    $("#arrow-container").addClass('finished')
+$(window).on("load", () => {
+    $("#arrow-container").addClass("finished");
 
-    var x = 200; //y-axis pixel displacement
-    var y = 2700; //delay in milliseconds
+    let x = 200; //y-axis pixel displacement
+    const y = 2700; //delay in milliseconds
 
-    setTimeout(function () {
+    setTimeout(() => {
         window.scroll(0, x);
-        x = x + 5; //if you want to increase speed simply increase increment interval
+        x += 5; //if you want to increase speed simply increase increment interval
     }, y);
 });
 
-
 // PRICING
-function glow(x) {
-    x.classList.add("active");
-};
-function unglow(x) {
-    x.classList.remove("active");
-};
+const addClass = (x, className) => x.classList.add(className);
+const removeClass = (x, className) => x.classList.remove(className);
 
-function bookA(x) {
-    x.classList.add("active");
-};
-function book(x) {
-    x.classList.remove("active");
-};
+const glow = (x) => addClass(x, "active");
+const unglow = (x) => removeClass(x, "active");
+const bookA = (x) => addClass(x, "active");
+const book = (x) => removeClass(x, "active");
 
 // NAVBAR HIDE ON SCROLL
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+    const value = window.scrollY;
 
+    $("#move").css("top", value * 0.20 + "px");
+    $("#move2, #move3").css("top", value * 0.07 + "px");
+    $("#move4").css("top", value * 0.08 + "px");
+    $("#move5, #move6").css("top", value * 0.1 + "px");
+    $("#move7, #move8, #move9, #move10").css("top", value * 0.13 + "px");
+    $("#move11, #move12, #move13, #move14, #move15").css(
+        "top",
+        value * 0.15 + "px"
+    );
+    $("#gallery-row1").css("left", value * -0.5 + "px");
+    $("#gallery-row2").css("left", value * 0.5 + "px");
 
-// STONES PARALLAX
-const parallaxObject1 = document.getElementById("move");
-const parallaxObject2 = document.getElementById("move2");
-const parallaxObject3 = document.getElementById("move3");
-const parallaxObject4 = document.getElementById("move4");
-const parallaxObject5 = document.getElementById("move5");
-const parallaxObject6 = document.getElementById("move6");
-const parallaxObject7 = document.getElementById("move7");
-const parallaxObject8 = document.getElementById("move8");
-const parallaxObject9 = document.getElementById("move9");
-const parallaxObject10 = document.getElementById("move10");
-const parallaxObject11 = document.getElementById("move11");
-const parallaxObject12 = document.getElementById("move12");
-const parallaxObject13 = document.getElementById("move13");
-const parallaxObject14 = document.getElementById("move14");
-const parallaxObject15 = document.getElementById("move15");
-const galleryRow1 = document.getElementById("gallery-row1");
-const galleryRow2 = document.getElementById("gallery-row2");
-
-window.addEventListener('scroll', function () {
-    var value = window.scrollY;
-    parallaxObject1.style.top = value * 0.20 + 'px';
-    parallaxObject2.style.top = value * 0.07 + 'px';
-    parallaxObject3.style.top = value * 0.07 + 'px';
-    parallaxObject4.style.top = value * 0.08 + 'px';
-    parallaxObject5.style.top = value * 0.1 + 'px';
-    parallaxObject6.style.top = value * 0.1 + 'px';
-    parallaxObject7.style.top = value * 0.13 + 'px';
-    parallaxObject8.style.top = value * 0.13 + 'px';
-    parallaxObject9.style.top = value * 0.13 + 'px';
-    parallaxObject10.style.top = value * 0.13 + 'px';
-    parallaxObject11.style.top = value * 0.15 + 'px';
-    parallaxObject12.style.top = value * 0.15 + 'px';
-    parallaxObject13.style.top = value * 0.15 + 'px';
-    parallaxObject13.style.top = value * 0.15 + 'px';
-    parallaxObject14.style.top = value * 0.15 + 'px';
-    parallaxObject15.style.top = value * 0.15 + 'px';
-
-    galleryRow1.style.left = value * -0.5 + 'px';
-    galleryRow2.style.left = value * 0.5 + 'px';
-
-
-    // navbar visibility on scroll up and down
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    var header = document.querySelector('#mobile-navbar');
-
-    if(scrollY <= this.lastScroll) {
-        // header.style.visibility = 'visible'
-        header.classList.add('active')
-        header.classList.remove('hidden')
+    const header = $("#mobile-navbar")[0];
+    if (value <= lastScroll || value < 100) {
+        addClass(header, "active");
+        removeClass(header, "hidden");
+    } else {
+        addClass(header, "hidden");
+        removeClass(header, "active");
     }
-    else if (scrollY < 100){
-        // header.style.visibility = 'visible'
-        header.classList.add('active')
-        header.classList.remove('hidden')
-    } 
-    else {
-        // header.style.visibility = 'hidden';
-        header.classList.add('hidden')
-        header.classList.remove('active')
-    }  
 
-    this.lastScroll = scrollY;
+    lastScroll = value;
 });
 
 // CTAs
-function incSize(x) {
-    x.classList.add("active");
-};
-function decSize(x) {
-    x.classList.remove("active");
-};
-function incSize2(x) {
-    x.classList.add("activeM");
-};
-function decSize2(x) {
-    x.classList.remove("activeM");
-};
+const incSize = (x) => addClass(x, "active");
+const decSize = (x) => removeClass(x, "active");
+const incSize2 = (x) => addClass(x, "activeM");
+const decSize2 = (x) => removeClass(x, "activeM");
 
 // TESTIMONIALS
-
-$('#testimonials-box-content').slick({
-    prevArrow: "<img src= '../static/img/prevArrow.png'class='slick-prev pull-left'></img>",
-    nextArrow: "<img src= '../static/img/nextArrow.png' class='slick-next pull-right'></img>",
-    settings: {
-        arrows: true
-    }
-});
-$('#testimonials-box-content2').slick({
-    prevArrow: "<img src= '../static/img/prevArrow.png'class='slick-prev pull-left'></img>",
-    nextArrow: "<img src= '../static/img/nextArrow.png' class='slick-next pull-right'></img>",
-    mobileFirst: true,
-    settings: {
-        arrows: true
-    }
+$("#testimonials-box-content, #testimonials-box-content2").slick({
+    prevArrow:
+        "<img src= '../static/img/prevArrow.png'class='slick-prev pull-left'></img>",
+    nextArrow:
+        "<img src= '../static/img/nextArrow.png' class='slick-next pull-right'></img>",
+    settings: { arrows: true },
 });
 
 const contactForm = document.querySelector("#contactForm");
-let name = document.getElementById("name");
-let phone = document.getElementById("phone");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
-let submitButton = document.querySelector("#sendRequest");
+const name = document.getElementById("name");
+const phone = document.getElementById("phone");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+const submitButton = document.querySelector("#sendRequest");
 
-
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    let formData = {
+
+    const formData = {
         name: name.value,
         phone: phone.value,
         email: email.value,
         message: message.value,
-    }
-    let xhr = new XMLHttpRequest();
-    function thankYou() {
-        window.location.assign("/thank");
     };
+    const xhr = new XMLHttpRequest();
+    const thankYou = () => window.location.assign("/thank");
 
-    xhr.open('POST', '/');
-    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.open("POST", "/");
+    xhr.setRequestHeader("content-type", "application/json");
     xhr.send(JSON.stringify(formData));
-    xhr.onload = function () {
+    xhr.onload = () => {
         console.log(xhr.responseText);
-        if (xhr.responseText == 'success') {
-            name.value = '';
-            email.value = '';
-            phone.value = '';
-            message.value = '';
+        if (xhr.responseText == "success") {
+            name.value = "";
+            email.value = "";
+            phone.value = "";
+            message.value = "";
         } else {
-            alert('Something went wrong!')
+            alert("Something went wrong!");
         }
         thankYou();
-    }
+    };
 });
-
-
-
-
-
