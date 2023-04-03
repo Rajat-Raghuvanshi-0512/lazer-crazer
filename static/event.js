@@ -49,6 +49,28 @@ window.addEventListener('scroll', function () {
     eventParallax9.style.top = value * 0.09 + 'px';
     eventParallax10.style.top = value * 0.09 + 'px';
     eventParallax11.style.top = value * 0.09 + 'px';
+
+    // navbar visibility on scroll up and down
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var header = document.querySelector('#mobile-navbar');
+
+    if(scrollY <= this.lastScroll) {
+        // header.style.visibility = 'visible'
+        header.classList.add('active')
+        header.classList.remove('hidden')
+    }
+    else if (scrollY < 100){
+        // header.style.visibility = 'visible'
+        header.classList.add('active')
+        header.classList.remove('hidden')
+    } 
+    else {
+        // header.style.visibility = 'hidden';
+        header.classList.add('hidden')
+        header.classList.remove('active')
+    }  
+
+    this.lastScroll = scrollY;
 });
 
 const contactForm = document.querySelector("#contactForm");

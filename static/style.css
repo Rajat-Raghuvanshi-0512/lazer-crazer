@@ -36,7 +36,7 @@ a {
     border-radius: 111px;
     position: fixed;
     background: rgb(43 248 10 / 65%);
-    z-index: 1000;
+    z-index: 10000;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -175,14 +175,14 @@ a {
 
 html {
     scroll-behavior: smooth !important;
-    height: 100% !important;
+    height: 100%;
     width: 100%;
     overflow-x: hidden !important;
 }
 
 body {
     width: 100% !important;
-    min-height: 100% !important;
+    height: 100%;
     background: #010825;
 }
 

@@ -13,8 +13,8 @@ $(window).on("load", function () {
 
 // PRICING
 function glow(x) {
-        x.classList.add("active");
-    };
+    x.classList.add("active");
+};
 function unglow(x) {
     x.classList.remove("active");
 };
@@ -27,59 +27,6 @@ function book(x) {
 };
 
 // NAVBAR HIDE ON SCROLL
-
-// var updated=0,st;
-// let navbar = document.getElementById('mobile-navbar')
-// $('body').on({
-//     'touchmove': function(e) { 
-//     st = $(this).scrollTop();
-//     if(st > updated) {
-//         console.log('down');
-//         navbar.classList.remove('nav-up')
-//         navbar.classList.add('nav-up')
-//     }
-//     else {
-//         console.log('up');
-//         navbar.classList.add('nav-down')
-//         navbar.classList.remove('nav-down')
-//     }
-//     updated = st;
-//     }
-// });
-
-
-
-
-
-
-// const body = document.body;
-// const nav = document.querySelector("#mobile-navbar");
-// const scrollUp = "nav-up";
-// const scrollDown = "nav-down";
-// let lastScroll = 0;
-
-
-// window.addEventListener("scroll", () => {
-//     const currentScroll = window.pageYOffset;
-//     if (currentScroll <= 0) {
-//         body.classList.remove(scrollUp);
-//         return;
-//     }
-
-//     if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
-//         // down
-//         body.classList.remove(scrollUp);
-//         body.classList.add(scrollDown);
-//     } else if (
-//         currentScroll < lastScroll &&
-//         body.classList.contains(scrollDown)
-//     ) {
-//         // up
-//         body.classList.remove(scrollDown);
-//         body.classList.add(scrollUp);
-//     }
-//     lastScroll = currentScroll;
-// });
 
 
 // STONES PARALLAX
@@ -122,6 +69,29 @@ window.addEventListener('scroll', function () {
 
     galleryRow1.style.left = value * -0.5 + 'px';
     galleryRow2.style.left = value * 0.5 + 'px';
+
+
+    // navbar visibility on scroll up and down
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var header = document.querySelector('#mobile-navbar');
+
+    if(scrollY <= this.lastScroll) {
+        // header.style.visibility = 'visible'
+        header.classList.add('active')
+        header.classList.remove('hidden')
+    }
+    else if (scrollY < 100){
+        // header.style.visibility = 'visible'
+        header.classList.add('active')
+        header.classList.remove('hidden')
+    } 
+    else {
+        // header.style.visibility = 'hidden';
+        header.classList.add('hidden')
+        header.classList.remove('active')
+    }  
+
+    this.lastScroll = scrollY;
 });
 
 // CTAs

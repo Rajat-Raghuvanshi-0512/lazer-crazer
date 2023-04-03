@@ -424,10 +424,6 @@
         top: 20%;
     }
 
-    #activities-banner {
-        height: 100%;
-    }
-
     #activities-banner-mobile {
         display: block;
         position: absolute;

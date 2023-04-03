@@ -1091,7 +1091,7 @@
 
     #franchise-banner {
         background: linear-gradient(0deg, #001272 0%, #000832 85.73%, #00116B 99.99%);
-        height: 90%;
+        height: 90vh;
     }
 
     #franchise-banner h1 {
