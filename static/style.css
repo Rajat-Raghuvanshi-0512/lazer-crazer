@@ -1221,11 +1221,11 @@ body {
     line-height: 129.4%;
     letter-spacing: -0.11em;
     color: white;
-    border: 1px solid #650BF7;
+    border: 1px solid #5BF9FC;
 }
 
 .flip-card-back #ctaColor2:hover {
-    color: #650BF7;
+    color: #5BF9FC;
 }
 
 .flip-card-back #ctaColor3 {
@@ -1303,11 +1303,11 @@ body {
 }
 
 #pc2 .price-color {
-    color: #650BF7;
+    color: #5BF9FC;
 }
 
 #pc2 .color-change {
-    color: #650BF7;
+    color: #5BF9FC;
 }
 
 #pc3 .price-color {
@@ -1331,7 +1331,7 @@ body {
 }
 
 #pc2.active {
-    box-shadow: 0px 0px 25px 5px #650BF7;
+    box-shadow: 0px 0px 25px 5px #5BF9FC;
 }
 
 #pc3.active {
@@ -1392,8 +1392,8 @@ body {
 #ctaColor2 {
     line-height: 129.4%;
     letter-spacing: -0.11em;
-    color: #650BF7;
-    text-shadow: 0px 4px 18px #650BF7, 0px 19.8584px 23.358px rgba(255, 255, 255, 0.29);
+    color: #5BF9FC;
+    text-shadow: 0px 4px 18px #5BF9FC, 0px 19.8584px 23.358px rgba(255, 255, 255, 0.29);
 }
 
 #ctaColor3 {
