@@ -57,9 +57,9 @@ const decSize2 = (x) => removeClass(x, "activeM");
 // TESTIMONIALS
 $("#testimonials-box-content, #testimonials-box-content2").slick({
     prevArrow:
-        "<img src= '../static/img/prevArrow.png'class='slick-prev pull-left'></img>",
+        "<img src= '../static/img/prevArrow.png'class='slick-prev pull-left' alt='not-found'></img>",
     nextArrow:
-        "<img src= '../static/img/nextArrow.png' class='slick-next pull-right'></img>",
+        "<img src= '../static/img/nextArrow.png' class='slick-next pull-right' alt='not-found'></img>",
     settings: { arrows: true },
 });
 
