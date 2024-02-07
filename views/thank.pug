@@ -28,8 +28,12 @@ html
     block content 
         body 
             //- Google Tag Manager (noscript)
-            noscript
-                iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NZ24JXK' height='0' width='0' style='display:none;visibility:hidden')
+            script(async src="https://www.googletagmanager.com/gtag/js?id=AW-16448597625")
+            script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16448597625');
             //- End Google Tag Manager (noscript)
 
             div#loading2
